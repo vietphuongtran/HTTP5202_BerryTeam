@@ -1,0 +1,20 @@
+footer {
+    text-align:right;
+    background: #333;
+    margin-top:10em;
+}
+footer ul {
+    list-style-type: none;
+    background-color: #333;
+    padding: 1em;
+}
+
+footer li {
+    display: inline;
+    color: white;
+    text-align: center;
+    padding-right: 3em;
+}
+footer li a {
+    color: white;
+}

@@ -1,0 +1,44 @@
+header {
+    background: aliceblue;
+    height: 16em;
+}
+.flex-container {
+    display: flex;
+}
+#logo, #school_name, #contact {
+    flex: 1 0 0;
+    text-align:center;
+}
+#contact {
+    text-align:center;
+}
+#logo_image {
+    height:30%;
+    width:auto;
+    text-align:left;
+}
+#team_name {
+    text-align:center;
+}
+#hotline_symbol {
+    height:10%;
+    width:auto;
+}
+#student_registration_form {
+    text-align:center;
+}
+ul {
+    list-style-type: none;
+    background-color: #333;
+    padding: 1em;
+}
+
+li {
+    display: inline;
+    color: white;
+    text-align: center;
+    padding-right: 3em;
+}
+li a {
+    color: white;
+}

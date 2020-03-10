@@ -1,0 +1,14 @@
+form, h1, h2 {
+    text-align: center;
+}
+div {
+    margin-bottom: 1em;
+    text-align: center;
+}
+.flexbox {
+    display: flex;
+    flex-flow: row wrap;
+}
+.tasks {
+    flex: 1 0 0;
+}
