@@ -1,6 +1,6 @@
 <?php
-require_once 'Class/database.php';
-require_once 'Class/discussion.php';
+require_once 'Classes/database.php';
+require_once 'Classes/discussion.php';
 
 //generate new database connection
 $dbcon = Database::getDb();

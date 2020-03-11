@@ -1,6 +1,9 @@
 <?php
-require_once 'Class/database.php';
-require_once 'Class/task.php';
+require_once 'Classes/database.php';
+require_once 'Classes/task.php';
+use Classes\database;
+use Classes\task;
+
 
 if(isset($_POST['addTask'])){
     $name = $_POST['name'];

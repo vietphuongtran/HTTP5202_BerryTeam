@@ -1,6 +1,8 @@
 <?php
-require_once 'Class/database.php';
-require_once 'Class/task.php';
+require_once 'Classes/database.php';
+require_once 'Classes/task.php';
+use Classes\database;
+use Classes\task;
 
     //generate new database connection
     $dbcon = Database::getDb();

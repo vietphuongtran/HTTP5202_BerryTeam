@@ -1,4 +1,5 @@
 <?php
+namespace Classes;
  class Database {
     private static $user = 'root';
     private static $password = 'root';

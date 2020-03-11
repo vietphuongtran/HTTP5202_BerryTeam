@@ -1,4 +1,5 @@
 <?php
+namespace Classes;
 class Task {
     public function showAllTasks($dbcon){
         $sql = "SELECT * FROM tasks";
