@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b349daa-0b45-4fcd-8242-f91991c67937" name="Default Changelist" comment="changing color and comment out code">
-      <change afterPath="$PROJECT_DIR$/Stylesheets/navigation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navigation.php" afterDir="false" />
+    <list default="true" id="1b349daa-0b45-4fcd-8242-f91991c67937" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +82,7 @@
       <workItem from="1584025180759" duration="371000" />
       <workItem from="1584059592287" duration="4340000" />
       <workItem from="1584064310359" duration="1265000" />
+      <workItem from="1584146876613" duration="190000" />
     </task>
     <task id="LOCAL-00001" summary="add public and admin interface">
       <created>1583963261692</created>
@@ -93,7 +91,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583963261692</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="changing color and comment out code">
+      <created>1584146890659</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584146890659</updated>
+    </task>
+    <task id="LOCAL-00003" summary="changing color and comment out code">
+      <created>1584146937856</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584146937856</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,10 +130,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583799692263" />
-    <state x="406" y="12" key="CommitChangelistDialog2" timestamp="1584146922346">
+    <state x="406" y="12" key="CommitChangelistDialog2" timestamp="1584146937174">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="406" y="12" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584146922346" />
+    <state x="406" y="12" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584146937174" />
     <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1584025196843">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -198,9 +210,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584024591998" />
-    <state x="580" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583851658727">
+    <state x="580" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584146944523">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="580" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1583851658727" />
+    <state x="580" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1584146944523" />
   </component>
 </project>
