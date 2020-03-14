@@ -3,11 +3,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    color: whitesmoke;
+    color: darkblue;
 }
 body::after {
   content: "";
-  background: #FFE066;
   background-size: cover;
   opacity: 0.2;
   top: 0;
@@ -29,14 +28,13 @@ a {
     position: relative;
     margin: 0;
     padding: 0;
-    
     display: flex;
     flex-flow: row wrap;
     box-shadow: 0 0 #FFFFFF inset, 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 #header::after {
     content: "";
-    background: #EF767A;
+    background: #FFE066;
     opacity: 0.5;
     top: 0;
     left: 0;
@@ -47,12 +45,13 @@ a {
 }
 
 .h-logo {
-/*    flex: 2;*/
-    border: 1px black solid;
     width: 7em;
     height: 5em;
     margin-left: 4em;
     
+}
+.logoimg {
+    width: 7em;
 }
 
 .greetings {
@@ -125,7 +124,7 @@ a {
 
 #footer::after {
     content: "";
-    background: #EF767A;
+    background: #FFE066;
     opacity: 0.5;
     top: 0;
     left: 0;
@@ -136,6 +135,7 @@ a {
 }
 .footer-content {
     font-size: 0.8em;
+    line-height: 0.8em;
     position: absolute;
     left: 0;
     right: 0;
