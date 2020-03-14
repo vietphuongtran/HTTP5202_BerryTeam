@@ -1,0 +1,59 @@
+#container {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+#formcontainer {
+    width: 390px;
+    background: #FFE;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 77px 55px 33px 55px;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+#title{
+    display: block;
+    font-size: 2em;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 2em;
+}
+.inputfield {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px;
+}
+.inputtext {
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+}
+/*Button and sign up*/
+#buttoncontainer, #signup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#loginbutton {
+    font-size: 1em;
+    color: #000;
+    line-height: 1.2;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 20px;
+    width: 100%;
+    height: 50px;
+    margin: 1em;
+}
