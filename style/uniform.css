@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body::after {
+  content: "";
+  background: #FFE066;
+  background-size: cover;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -2;   
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*************** header ****************/
+#header {
+    width: 100%;
+    height: 6em;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    flex-flow: row wrap;
+}
+#header::after {
+    content: "";
+    background: #EF767A;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+.log {
+    position: absolute;
+    top: 1.4em;
+    right: 12em;
+}
+.h-logo {
+/*    flex: 2;*/
+    border: 1px black solid;
+    width: 7em;
+    height: 5em;
+    margin-left: 8em;
+    
+}
+.login {
+/*    flex: 2;*/
+    width: 5.5em;
+    padding: 0.8em 0.8em;
+    font-size: 18px;
+    margin-right: 2em;
+    border-radius: 0.8em;
+    border: none;
+/*    border: 1px solid #B0DB43;*/
+    background: #EF767A;
+    color: white;
+/*
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+*/
+/*
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px darkgray;
+*/
+           -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 8px #000000;
+/*
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+*/
+/*    box-shadow: 0 8px 8px -6px black;*/
+}
+.signup {
+/*    flex: 2;*/
+    width: 5.5em;
+    padding: 0.8em 0.8em;
+    font-size: 18px;
+    border-radius: 0.8em;
+    border: 1px solid #B493C1;
+    background: #B493C1;
+    color: white;
+           -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 8px #000000;
+}
+.faq {
+    position: absolute;
+    top: 2em;
+    right: 6em;
+    font-size: 18px;
+}
+
+
+
+/*************** body test ****************/
+.b-content {
+    height: 600px;
+}
+
+
+
+
+/*************** footer ****************/
+#footer {
+    width: 100%;
+    height: 3.5em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+}
+
+#footer::after {
+    content: "";
+    background: #EF767A;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+.footer-content {
+    margin: 1em auto;
+}
