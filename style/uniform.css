@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/*
+body::after {
+  content: "";
+  background: #FFE066;
+  background-size: cover;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -2;   
+}
+*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*************** header ****************/
+#header {
+    width: 100%;
+    height: 6em;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    flex-flow: row wrap;
+}
+#header::after {
+    content: "";
+    background: #FFE066;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.h-logo {
+    width: 7em;
+    height: 5em;
+    margin-left: 8em; 
+}
+
+.logoimg {
+    width: 7em;
+}
+
+.log {
+    position: absolute;
+    top: 1.4em;
+    right: 12em;
+}
+.login {
+    width: 5.5em;
+    padding: 0.8em 0.8em;
+    font-size: 18px;
+    margin-right: 2em;
+    border-radius: 0.8em;
+    border: none;
+    background: #EF767A;
+    color: white;
+
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 8px #000000;
+
+}
+.signup {
+    width: 5.5em;
+    padding: 0.8em 0.8em;
+    font-size: 18px;
+    border-radius: 0.8em;
+    border: 1px solid #B493C1;
+    background: #B493C1;
+    color: white;
+           -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 8px #000000;
+}
+.faq {
+    position: absolute;
+    top: 2em;
+    right: 6em;
+    font-size: 18px;
+}
+
+
+
+/*************** body test ****************/
+.b-content {
+    height: 600px;
+}
+
+
+
+
+/*************** footer ****************/
+#footer {
+    width: 100%;
+    height: 3.5em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: darkgray;
+}
+
+#footer::after {
+    content: "";
+    background: #FFE066;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+.footer-content {
+    margin: 1em auto;
+}

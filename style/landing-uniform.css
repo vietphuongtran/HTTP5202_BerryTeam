@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: darkblue;
+}
+body::after {
+  content: "";
+  background-size: cover;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -2;   
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*************** header ****************/
+#header {
+    width: 100%;
+    height: 6em;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    box-shadow: 0 0 #FFFFFF inset, 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+#header::after {
+    content: "";
+    background: #FFE066;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.h-logo {
+    width: 7em;
+    height: 5em;
+    margin-left: 4em;
+    
+}
+.logoimg {
+    width: 7em;
+}
+
+.greetings {
+    margin: 1em 2em;
+    font-size: 0.8em;
+}
+
+.h {
+    font-size: 1.7em;
+    color: #EF767A;
+}
+.e {
+    font-size: 1.7em;
+    color: #B493C1;
+}
+.l1 {
+    font-size: 1.7em;
+    color: #B0DB43;
+}
+.l2 {
+    font-size: 1.7em;
+    color: #FFE066;
+}
+.o {
+    font-size: 1.7em;
+    color: #12EAEA;
+}
+
+#username {
+    font-size: 1.7em;
+}
+
+.faq {
+    position: absolute;
+    top: 2.1em;
+    right: 3em;
+    font-size: 15px;
+    color: #12EAEA;
+}
+
+
+
+/*************** body test ****************/
+.b-content {
+    height: 400px;
+}
+.b-content::after {
+    width: 100%;
+    opacity: 0.6;
+    background: url("../img/team1.jpg") no-repeat top center;
+    background-size: cover;
+}
+
+
+
+
+/*************** footer ****************/
+#footer {
+    width: 100%;
+    height: 3em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+/*    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);*/
+}
+
+#footer::after {
+    content: "";
+    background: #FFE066;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+.footer-content {
+    font-size: 0.8em;
+    line-height: 0.8em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
