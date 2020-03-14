@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b349daa-0b45-4fcd-8242-f91991c67937" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/index-header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/navigation.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +55,18 @@
       <recent name="C:\MAMP\htdocs\PHP\FinalProject\Class" />
     </key>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -83,6 +98,7 @@
       <workItem from="1584059592287" duration="4340000" />
       <workItem from="1584064310359" duration="1265000" />
       <workItem from="1584146876613" duration="190000" />
+      <workItem from="1584152639930" duration="278000" />
     </task>
     <task id="LOCAL-00001" summary="add public and admin interface">
       <created>1583963261692</created>
@@ -202,10 +218,12 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="591" y="248" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1584059614084" />
-    <state x="604" y="345" key="NewPhpFileDialog" timestamp="1584059628372">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="588" y="390" key="NewPhpFileDialog" timestamp="1584152807558">
+      <screen x="36" y="23" width="1404" height="877" />
     </state>
     <state x="604" y="345" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1584059628372" />
+    <state x="588" y="390" key="NewPhpFileDialog/36.23.1404.877@36.23.1404.877" timestamp="1584152807558" />
+    <state x="589" y="390" key="NewPhpFileDialog/37.23.1403.877@37.23.1403.877" timestamp="1584152724370" />
     <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584024591998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
