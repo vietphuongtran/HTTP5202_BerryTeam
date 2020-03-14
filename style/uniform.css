@@ -4,20 +4,7 @@ body {
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
 }
-/*
-body::after {
-  content: "";
-  background: #FFE066;
-  background-size: cover;
-  opacity: 0.2;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -2;   
-}
-*/
+
 a {
     text-decoration: none;
     color: inherit;
@@ -94,7 +81,66 @@ a {
     right: 6em;
     font-size: 18px;
 }
+/*************** navigation ***************/
+ul {
+    list-style-type: none;
+    background-color: #FFE066;
+    padding: 1em;
+    margin: 0;
+}
 
+li {
+    display: inline;
+    color: darkgray;
+    text-align: center;
+    padding-right: 3em;
+}
+
+li a {
+    text-align: center;
+    line-height: 3em;
+    color: darkgray;
+    /*background: #2f3036;*/
+    text-decoration: none;
+}
+
+/*li:hover a {*/
+/*    background: #B0DB43;*/
+/*}*/
+
+.show-menu {
+    text-decoration: none;
+    color: #fff;
+    background: #B0DB43;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
+
+#mobilenav {
+    display: none;
+}
+
+#mobilenav:checked ~ #menu{
+    display: block;
+}
+
+@media screen and (max-width : 760px){
+    ul {
+        display: none;
+    }
+    li {
+        margin-bottom: 1px;
+    }
+    /*Make the menu appear full width*/
+    li a {
+        display: inline-block;
+        width: 100%;
+    }
+    .show-menu {
+        display:block;
+    }
+}
 
 
 /*************** body test ****************/
