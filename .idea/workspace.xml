@@ -82,7 +82,8 @@
       <workItem from="1584025180759" duration="371000" />
       <workItem from="1584059592287" duration="4340000" />
       <workItem from="1584064310359" duration="1265000" />
-      <workItem from="1584146876613" duration="190000" />
+      <workItem from="1584146876613" duration="555000" />
+      <workItem from="1584147497810" duration="231000" />
     </task>
     <task id="LOCAL-00001" summary="add public and admin interface">
       <created>1583963261692</created>
@@ -105,7 +106,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584146937856</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="adding login.css">
+      <created>1584147153407</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584147153407</updated>
+    </task>
+    <task id="LOCAL-00005" summary="adding login.css">
+      <created>1584147206203</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584147206203</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,7 +130,8 @@
     <MESSAGE value="add public and admin interface" />
     <MESSAGE value="add responsive navigation" />
     <MESSAGE value="changing color and comment out code" />
-    <option name="LAST_COMMIT_MESSAGE" value="changing color and comment out code" />
+    <MESSAGE value="adding login.css" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding login.css" />
   </component>
   <component name="WindowStateProjectService">
     <state x="492" y="19" key="#PHP" timestamp="1583853393736">
@@ -126,14 +142,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583847895800" />
-    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583799692263">
+    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584147368711">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583799692263" />
-    <state x="406" y="12" key="CommitChangelistDialog2" timestamp="1584147152185">
+    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584147368711" />
+    <state x="406" y="12" key="CommitChangelistDialog2" timestamp="1584147205512">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="406" y="12" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584147152185" />
+    <state x="406" y="12" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584147205512" />
     <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1584025196843">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
