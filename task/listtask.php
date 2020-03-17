@@ -1,13 +1,12 @@
 <?php
 require_once 'Classes/database.php';
 require_once 'Classes/task.php';
-use Classes\database;
-use Classes\task;
+use Classes\task as allTaskFunction;
 
     //generate new database connection
     $dbcon = Database::getDb();
     //instanciate a new instance of a class
-    $t = new Task();
+    $t = new allTaskFunction();
     $toDoTasks =  $t->showToDoTasks(Database::getDb());
 
     $doingTasks =  $t->showDoingTasks(Database::getDb());

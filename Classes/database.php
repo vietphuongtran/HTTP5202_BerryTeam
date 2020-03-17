@@ -1,8 +1,7 @@
 <?php
-namespace Classes;
  class Database {
-    private static $user = 'root';
-    private static $password = 'root';
+     private static $user = 'root';
+     private static $password = 'root';
      private static $dbname = 'berryteam';
      private static $dsn = 'mysql:host=localhost;dbname=berryteam' ;
      private static $dbcon;

@@ -2,7 +2,7 @@
 require_once 'Classes/database.php';
 require_once 'Classes/task.php';
 use Classes\database;
-use Classes\task;
+use Classes\task as allTaskFunction;
 
 
 if(isset($_POST['addTask'])){
@@ -12,7 +12,7 @@ if(isset($_POST['addTask'])){
 
 
     $db = Database::getDb();
-    $t = new Task();
+    $t = new allTaskFunction();
     $c = $t->addTasks($name, $description, $status, $db);
 
 
