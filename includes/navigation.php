@@ -11,13 +11,13 @@ function navigation()
     echo "</ul>";
 }
 ?>
-<!DOCTYPE html>
-<html>
+<!--<!DOCTYPE html>-->
+<!--<html>-->
     <head>
-        <link rel="stylesheet" type="text/css" href="Stylesheets/navigation.css">
+        <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body>
+<!--    <body>-->
         <div id="nav-bar">
             <label for="mobilenav" class="show-menu">Menu</label>
             <input type="checkbox" id="mobilenav" name="mobilenav">
@@ -25,6 +25,6 @@ function navigation()
             navigation();
             ?>
         </div>
-    </body>
+<!--    </body>-->
 </html>
 
