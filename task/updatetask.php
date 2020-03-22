@@ -1,16 +1,16 @@
 <?php
-require_once 'Classes/database.php';
-require_once 'Classes/task.php';
-use Classes\database;
-use Classes\task;
+require_once '../Classes/database.php';
+require_once '../Classes/task.php';
+use Classes\Task as allTaskFunction;
+use Classes\Database as dbConnect;
 
 $name = $description = $status = "";
 
 if(isset($_POST['updateTask'])){
     $id= $_POST['id'];
-    $db = Database::getDb();
+    $db = dbConnect::getDb();
 
-    $t = new Task();
+    $t = new allTaskFunction();
     $task = $t->getTaskById($id, $db);
 
     $name =  $task->name;
@@ -39,9 +39,9 @@ if(isset($_POST['updTask'])){
 <head>
     <title>Task management system</title>
     <meta name="description" content="Student Management System">
-    <link rel="stylesheet" href="Stylesheets/taskcrud.css">
-    <link rel="stylesheet" href="Stylesheets/header.css">
-    <link rel="stylesheet" href="Stylesheets/footer.css">
+    <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
+    <link rel="stylesheet" href="../Stylesheets/header.css">
+    <link rel="stylesheet" href="../Stylesheets/footer.css">
 </head>
 <body>
 <? include "header.php" ?>

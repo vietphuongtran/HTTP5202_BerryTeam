@@ -1,5 +1,6 @@
 <?php
 namespace Classes;
+use PDO;
 class Task {
     public function showAllTasks($dbcon){
         $sql = "SELECT * FROM tasks";

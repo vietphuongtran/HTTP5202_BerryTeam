@@ -1,8 +1,8 @@
 <?php
-require_once 'Classes/database.php';
-require_once 'Classes/task.php';
-use Classes\database;
-use Classes\task as allTaskFunction;
+require_once '../Classes/database.php';
+require_once '../Classes/task.php';
+use Classes\Task as allTaskFunction;
+use Classes\Database as dbConnect;
 
 
 if(isset($_POST['addTask'])){
@@ -11,7 +11,7 @@ if(isset($_POST['addTask'])){
     $status = $_POST['status'];
 
 
-    $db = Database::getDb();
+    $db = dbConnect::getDb();
     $t = new allTaskFunction();
     $c = $t->addTasks($name, $description, $status, $db);
 

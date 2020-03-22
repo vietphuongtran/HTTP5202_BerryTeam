@@ -1,4 +1,7 @@
 <?php
+namespace Classes;
+use PDO;
+use PDOException;
  class Database {
      private static $user = 'root';
      private static $password = 'root';

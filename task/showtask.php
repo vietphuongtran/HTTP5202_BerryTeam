@@ -1,25 +1,25 @@
 <?php
-require_once 'Classes/database.php';
-require_once 'Classes/task.php';
-use Classes\database;
-use Classes\task;
+require_once '../Classes/database.php';
+require_once '../Classes/task.php';
+use Classes\Task as allTaskFunction;
+use Classes\Database as dbConnect;
 
     $name = $description = $status = "";
 
     if(isset($_POST['showTask'])){
         $id= $_POST['id'];
-        $db = Database::getDb();
+        $db = dbConnect::getDb();
 
-        $t = new Task();
+        $t = new allTaskFunction();
         $task = $t->getTaskById($id, $db);
 
         $name =  $task->name;
         $description = $task->description;
         $status = $task->status;
     }
-    $e = new Employee();
-    $employees = $e->showEmployees($id, $db);
-    //        $employeename = $employee->id;
+//    $e = new Employee();
+//    $employees = $e->showEmployees($id, $db);
+//    //        $employeename = $employee->id;
 
 ?>
 <html lang="en">
@@ -46,11 +46,11 @@ use Classes\task;
                 <input type="submit" class="button btn btn-primary" name="deleteTask" value="Delete"/>
             </form>
         </div>
-        <div class="showemployee">
-            <? foreach ($employees as $employee) { ?>
-            <div><?= $employee->name ?></div>
-            <? } ?>
-        </div>
+<!--        <div class="showemployee">-->
+<!--            --><?// foreach ($employees as $employee) { ?>
+<!--            <div>--><?//= $employee->name ?><!--</div>-->
+<!--            --><?// } ?>
+<!--        </div>-->
 
     </div>
 
