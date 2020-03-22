@@ -1,12 +1,12 @@
 <?php
-require_once 'Classes/database.php';
-require_once 'Classes/task.php';
-use Classes\task as allTaskFunction;
+require_once 'database.php';
+require_once 'task.php';
+//use Classes\task as allTaskFunction;
 
     //generate new database connection
     $dbcon = Database::getDb();
     //instanciate a new instance of a class
-    $t = new allTaskFunction();
+    $t = new Task ();
     $toDoTasks =  $t->showToDoTasks(Database::getDb());
 
     $doingTasks =  $t->showDoingTasks(Database::getDb());
@@ -18,7 +18,7 @@ use Classes\task as allTaskFunction;
         <title>Berry Team</title>
         <meta name="description" content="Task Management System">
         <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
-        <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
+        <link rel="stylesheet" href="Stylesheets/taskcrud.css">
     </head>
     <body>
         <h2>Task Management System</h2>

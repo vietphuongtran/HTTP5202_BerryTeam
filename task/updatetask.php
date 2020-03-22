@@ -39,9 +39,9 @@ if(isset($_POST['updTask'])){
 <head>
     <title>Task management system</title>
     <meta name="description" content="Student Management System">
-    <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-    <link rel="stylesheet" href="../Stylesheets/header.css">
-    <link rel="stylesheet" href="../Stylesheets/footer.css">
+    <link rel="stylesheet" href="Stylesheets/taskcrud.css">
+    <link rel="stylesheet" href="Stylesheets/header.css">
+    <link rel="stylesheet" href="Stylesheets/footer.css">
 </head>
 <body>
 <? include "header.php" ?>
