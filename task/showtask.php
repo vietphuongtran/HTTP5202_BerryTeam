@@ -30,7 +30,10 @@ use Classes\Employee as allEmployeeFunction;
         $eid = $_GET['assignEmployee'];
         $count = $e->assignEmployee($tid, $eid, $db);
     }
-    //TO DO: debug assign employee to task
+    //TO DO:
+    // debug assign employee doing each task
+    // unassign employee for each task
+    // styling
 
 //    $e = new Employee();
 //    $employees = $e->showEmployees($id, $db);
@@ -69,11 +72,11 @@ use Classes\Employee as allEmployeeFunction;
                 </form>
             </div>
             <form action="updatetask.php" method="post">
-                <input type="hidden" name="id" value="<?= $id ?>"/>
+                <input type="hidden" name="id" value="<?= $tid ?>"/>
                 <input type="submit" name="updateTask" value="Update"/>
             </form>
             <form action="deletetask.php" method="post">
-                <input type="hidden" name="id" value="<?= $id ?>" />
+                <input type="hidden" name="id" value="<?= $tid ?>" />
                 <input type="submit" class="button btn btn-primary" name="deleteTask" value="Delete"/>
             </form>
         </div>
