@@ -31,18 +31,24 @@ if(isset($_POST['delTask'])) {
 
 ?>
 <html lang="en">
-<head>
-    <title>Task management system</title>
-    <meta name="description" content="Student Management System">
-    <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-    <link rel="stylesheet" href="../Stylesheets/header.css">
-    <link rel="stylesheet" href="../Stylesheets/footer.css">
-</head>
-<body>
-    <h2>Are you sure you want to delete <?= $name; ?> task?</h2>
-    <form method="POST" action="">
-        <input type="hidden" name="tid" value="<?= $id; ?>" />
-        <button type="submit" name="delTask" id="submit">Delete</button>
-        <a href="listtask.php">No, go back to list</a>
-    </form>
-</body>
+    <head>
+        <title>Task management system</title>
+        <meta name="description" content="Student Management System">
+        <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
+        <link rel="stylesheet" href ="../Stylesheets/landing-uniform.css">
+        <link rel="stylesheet" href ="../Stylesheets/uniform.css">
+        <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
+    </head>
+
+    <body>
+        <? include '../includes/index-header.php' ?>
+        <? include '../includes/navigation.php' ?>
+        <h2>Are you sure you want to delete <?= $name; ?> task?</h2>
+        <form method="POST" action="">
+            <input type="hidden" name="tid" value="<?= $id; ?>" />
+            <button type="submit" name="delTask" id="submit">Delete</button>
+            <a href="listtask.php">No, go back to list</a>
+        </form>
+        <? include '../includes/footer.php' ?>
+    </body>
+</html>

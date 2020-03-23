@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b349daa-0b45-4fcd-8242-f91991c67937" name="Default Changelist" comment="">
+    <list default="true" id="1b349daa-0b45-4fcd-8242-f91991c67937" name="Default Changelist" comment="to do list: debug assign employee, unassign employee and front end">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stylesheets/footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stylesheets/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stylesheets/taskcrud.css" beforeDir="false" afterPath="$PROJECT_DIR$/Stylesheets/taskcrud.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/index-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/index-header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/navigation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/landing-uniform.css" beforeDir="false" afterPath="$PROJECT_DIR$/Stylesheets/landing-uniform.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/uniform.css" beforeDir="false" afterPath="$PROJECT_DIR$/Stylesheets/uniform.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task/addtask.php" beforeDir="false" afterPath="$PROJECT_DIR$/task/addtask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task/deletetask.php" beforeDir="false" afterPath="$PROJECT_DIR$/task/deletetask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task/listtask.php" beforeDir="false" afterPath="$PROJECT_DIR$/task/listtask.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task/showtask.php" beforeDir="false" afterPath="$PROJECT_DIR$/task/showtask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task/updatetask.php" beforeDir="false" afterPath="$PROJECT_DIR$/task/updatetask.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,11 +60,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\PHP\FinalProject\Stylesheets" />
       <recent name="C:\MAMP\htdocs\PHP\FinalProject\Classes" />
       <recent name="C:\MAMP\htdocs\PHP\FinalProject" />
       <recent name="C:\MAMP\htdocs\PHP\FinalProject\task" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/includes" />
     </key>
   </component>
   <component name="RunManager">
@@ -125,6 +138,8 @@
       <workItem from="1584906580625" duration="633000" />
       <workItem from="1584918103738" duration="2165000" />
       <workItem from="1584920293972" duration="9364000" />
+      <workItem from="1584929792942" duration="193000" />
+      <workItem from="1584987199507" duration="8515000" />
     </task>
     <task id="LOCAL-00001" summary="add public and admin interface">
       <created>1583963261692</created>
@@ -182,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584929389521</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="to do list: debug assign employee, unassign employee and front end">
+      <created>1584929870101</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1584929870101</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +218,8 @@
     <MESSAGE value="trying to fix namespace" />
     <MESSAGE value="namespace and database connection fixed" />
     <MESSAGE value="show employee doing the task" />
-    <option name="LAST_COMMIT_MESSAGE" value="show employee doing the task" />
+    <MESSAGE value="to do list: debug assign employee, unassign employee and front end" />
+    <option name="LAST_COMMIT_MESSAGE" value="to do list: debug assign employee, unassign employee and front end" />
   </component>
   <component name="WindowStateProjectService">
     <state x="492" y="19" key="#PHP" timestamp="1583853393736">
@@ -211,14 +234,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="385" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1584918844166" />
-    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584923288332">
+    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584991830779">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584923288332" />
-    <state x="406" y="12" key="CommitChangelistDialog2" timestamp="1584929840366">
+    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584991830779" />
+    <state x="406" y="12" key="CommitChangelistDialog2" timestamp="1584929982106">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="406" y="12" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584929840366" />
+    <state x="406" y="12" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584929982106" />
     <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1584926417165">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -287,33 +310,28 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="591" y="248" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1584059614084" />
-    <state x="604" y="345" key="NewPhpFileDialog" timestamp="1584924469428">
+    <state x="604" y="345" key="NewPhpFileDialog" timestamp="1584991564592">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="345" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1584924469428" />
+    <state x="604" y="345" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1584991564592" />
     <state x="588" y="390" key="NewPhpFileDialog/36.23.1404.877@36.23.1404.877" timestamp="1584152807558" />
     <state x="589" y="390" key="NewPhpFileDialog/37.23.1403.877@37.23.1403.877" timestamp="1584154643201" />
     <state x="553" y="311" key="PhpMappingAdvancedResolveDialog" timestamp="1584891389088">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="553" y="311" key="PhpMappingAdvancedResolveDialog/0.0.1536.824@0.0.1536.824" timestamp="1584891389088" />
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584929793154">
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584996413525">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584929793154" />
-    <state x="580" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584929394272">
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584996413525" />
+    <state x="580" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584929882002">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="580" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1584929394272" />
+    <state x="580" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1584929882002" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/task/listtask.php</url>
-          <line>16</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/Classes/database.php</url>
           <line>12</line>
@@ -323,21 +341,6 @@
           <url>file://$PROJECT_DIR$/Classes/employee.php</url>
           <line>11</line>
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/task/listtask.php</url>
-          <line>20</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/task/listtask.php</url>
-          <line>42</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/task/showtask.php</url>
-          <line>65</line>
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/task/showtask.php</url>

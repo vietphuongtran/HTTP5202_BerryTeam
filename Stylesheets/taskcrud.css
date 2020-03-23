@@ -12,3 +12,9 @@ div {
 .tasks {
     flex: 1 0 0;
 }
+#showtaskemployee {
+    text-align: center;
+}
+.showemployee {
+    flex: 1 0 0;
+}
