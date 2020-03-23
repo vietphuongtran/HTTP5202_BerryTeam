@@ -24,8 +24,8 @@ if(isset($_POST['updTask'])){
     $description = $_POST['description'];
     $status = $_POST['status'];
 
-    $db = Database::getDb();
-    $s = new Task();
+    $db = dbConnect::getDb();
+    $s = new allTaskFunction();
     $count = $s->updateTask($id, $name, $description, $status, $db);
 
     if($count){
@@ -71,7 +71,7 @@ if(isset($_POST['updTask'])){
         </select>
     </div>
     <button type="submit" name="updTask" id="submit">Update</button>
-    <a href="listtasks.php" id="btn_back">Back to List</a>
+    <a href="listtask.php" id="btn_back">Back to List</a>
 </form>
 <? include "footer.php" ?>
 </body>

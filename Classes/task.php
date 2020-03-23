@@ -2,42 +2,39 @@
 namespace Classes;
 use PDO;
 class Task {
-    public function showAllTasks($dbcon){
+    public function showAllTasks($db){
         $sql = "SELECT * FROM tasks";
-        $pdostm = $dbcon->prepare($sql);
+        $pdostm = $db->prepare($sql);
         $pdostm->execute();
 
         $tasks = $pdostm->fetchAll(PDO::FETCH_OBJ);
         return $tasks;
     }
-    public function showToDoTasks($dbcon) {
+    public function showToDoTasks($db) {
 
         $sql = "Select * from tasks where status= "."'To Do'";
-        $pdostm = $dbcon->prepare($sql);
+        $pdostm = $db->prepare($sql);
         $pdostm->execute();
         $toDoTasks = $pdostm->fetchAll(PDO::FETCH_OBJ);
         return $toDoTasks;
 
     }
-    public function showDoingTasks($dbcon) {
+    public function showDoingTasks($db) {
 
         $sql = "Select * from tasks where status= "."'Doing'";
-        $pdostm = $dbcon->prepare($sql);
+        $pdostm = $db->prepare($sql);
         $pdostm->execute();
         $doingTasks = $pdostm->fetchAll(PDO::FETCH_OBJ);
         return $doingTasks;
 
     }
-    public function showDoneTasks($dbcon) {
+    public function showDoneTasks($db) {
 
         $sql = "Select * from tasks where status= "."'Done'";
-        $pdostm = $dbcon->prepare($sql);
+        $pdostm = $db->prepare($sql);
         $pdostm->execute();
         $doneTasks = $pdostm->fetchAll(PDO::FETCH_OBJ);
         return $doneTasks;
-    }
-    public function showTask($dbcon, $id) {
-        $sql = "Select * from tasks where id = :id";
     }
     public function addTasks($name, $description, $status, $db)
     {
@@ -86,15 +83,4 @@ class Task {
         $count = $pst->execute();
         return $count;
     }
-//    public function showEmployees($id, $db) {
-//        $sql = "select * from employees inner join employeesxtasks on
-//                employees.id = employeesxtasks.employee_id where employeesxtasks.task_id = :id";
-//        $pst = $db->prepare($sql);
-//
-//        $pst->bindParam(':id', $id);
-//
-//
-//        $count = $pst->execute();
-//        return $count;
-//    }
 }
