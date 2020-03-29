@@ -1,11 +1,13 @@
 <?php
-require_once 'Classes/database.php';
-require_once 'Classes/discussion.php';
+require_once '../Classes/database.php';
+require_once '../Classes/discussion.php';
 
+use Classes\Discussion as allDiscussionFunction;
+use Classes\Database as dbConnect;
 //generate new database connection
-$dbcon = Database::getDb();
+$dbcon = dbConnect::getDb();
 //instanciate a new instance of a class
-$d = new Discussion();
+$d = new allDiscussionFunction();
 $dicussions =  $d->showAllDiscussions($dbcon);
 ?>
 
@@ -17,7 +19,17 @@ $dicussions =  $d->showAllDiscussions($dbcon);
     </head>
     <body>
     <?php foreach ($dicussions as $discussion) { ?>
-        <div><?= $discussion ->topic ?></div>
-        <div><?= $discussion ->content ?></div>
+        <div><?= $discussion->topic ?></div>
+        <div><?= $discussion->content ?></div>
+        <div>
+            <form action="showdiscussion.php" method="post">
+                <input type="hidden" name="id" value="<?= $discussion->id ?>"/>
+                <input type="submit" name="showDiscussion" value="Show details"/>
+            </form>
+            <form action="updatediscussion.php" method="post">
+                <input type="hidden" name="id" value="<?= $discussion->id ?>"/>
+                <input type="submit" name="updateDiscussion" value="Update"/>
+            </form>
+        </div>
     <?php } ?>
     </body>

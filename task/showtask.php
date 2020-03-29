@@ -19,16 +19,23 @@ use Classes\Employee as allEmployeeFunction;
         $task = $t->getTaskById($tid, $db);
         $taskEmployees = $e->showEmployeesWithTask($tid, $db);
 
-//        if (isset($_POST['assignEmployee'])) {
-//            $eid = $_POST['assignEmployee'];
-//            $db = dbConnect::getDb();
-//            $e = new allEmployeeFunction();
-//            $count = $e->assignEmployee($tid, $eid, $db);
-//        }
+//        $assignEmployees = $e->assignEmployee($db, $tid, $eid);
+//    //turn employee to Json object
+//        $jsonAssignEmployees = json_encode($allEmployees);
+//        header('Content-Type: application/json');
+//        echo $jsonEmployees;
     }
-    if (isset($_GET['assignEmployee'])) {
-        $eid = $_GET['assignEmployee'];
+    if (isset($_POST['assignEmployee'])) {
+        $eid = $_POST['employeeId'];
+        $db = dbConnect::getDb();
+        $e = new allEmployeeFunction();
         $count = $e->assignEmployee($tid, $eid, $db);
+        if ($count) {
+            header("Location: listtask.php");
+        }
+        else {
+            echo "Bugs ahead! Go back";
+        }
     }
     //TO DO:
     // debug assign employee doing each task
@@ -48,6 +55,10 @@ use Classes\Employee as allEmployeeFunction;
         <link rel="stylesheet" href ="../Stylesheets/landing-uniform.css">
         <link rel="stylesheet" href ="../Stylesheets/uniform.css">
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!--        <script src="assignEmployee.js"></script>-->
     </head>
     <body>
         <? include '../includes/index-header.php' ?>
@@ -62,13 +73,13 @@ use Classes\Employee as allEmployeeFunction;
                 <div class="showemployee">
                     <div>Done by:
                         <? foreach ($taskEmployees as $taskEmployee) { ?>
-                            <?= $taskEmployee->name ?>
+                            <div><?= $taskEmployee->name ?></div>
                         <? } ?>
                     </div>
                     <div>
-                        <form method="get" action="">
+                        <form method="POST" action="">
                             <label for="assignEmployee">Assign employee:</label>
-                            <select name="assignEmployee">
+                            <select name="emmployeeId" id="employeeId">
                                 <? foreach ($allEmployees as $employee) { ?>
                                     <option value ="<?=$employee->id?>"><?= $employee->name ?></option>
                                 <? } ?>
@@ -88,8 +99,6 @@ use Classes\Employee as allEmployeeFunction;
                         <input type="submit" class="button btn btn-primary" name="deleteTask" value="Delete"/>
                     </form>
                 </div>
-
-
         <? include '../includes/footer.php' ?>
     </body>
 </html>
