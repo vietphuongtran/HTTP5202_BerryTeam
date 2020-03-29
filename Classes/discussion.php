@@ -32,5 +32,29 @@ use PDO;
             $count = $pst->execute();
             return $count;
         }
+        public function addDiscussion($content, $topic, $db)
+        {
+            $sql = "INSERT INTO discussions (content, topic) 
+              VALUES (:content, :topic) ";
+            $pst = $db->prepare($sql);
+
+            $pst->bindParam(':content', $content);
+            $pst->bindParam(':topic', $topic);
+
+            $count = $pst->execute();
+            return $count;
+        }
+        public function deleteDiscussion($id, $db)
+        {
+            $sql = "Delete from discussions
+            WHERE id = :id";
+            $pst = $db->prepare($sql);
+
+            $pst->bindParam(':id', $id);
+
+
+            $count = $pst->execute();
+            return $count;
+        }
     }
     ?>

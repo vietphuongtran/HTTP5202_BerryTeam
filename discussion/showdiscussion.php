@@ -22,5 +22,9 @@ $db = dbConnect::getDb();
     <body>
         <div><?=$discussion->topic?></div>
         <div><?=$discussion->content?></div>
+        <form action="deletediscussion.php" method="post">
+            <input type="hidden" name="id" value="<?= $did ?>" />
+            <input type="submit" class="button btn btn-primary" name="deleteDiscuss" value="Delete"/>
+        </form>
     </body>
 </html>

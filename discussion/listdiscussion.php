@@ -30,6 +30,8 @@ $dicussions =  $d->showAllDiscussions($dbcon);
                 <input type="hidden" name="id" value="<?= $discussion->id ?>"/>
                 <input type="submit" name="updateDiscussion" value="Update"/>
             </form>
+
         </div>
     <?php } ?>
+    <a href="newdiscussion.php">Add a discussion</a>
     </body>
