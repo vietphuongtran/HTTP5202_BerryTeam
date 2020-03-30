@@ -3,6 +3,20 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    overflow: hidden;
+    color: whitesmoke;
+}
+body::after {
+    content: "";
+    background: url("../img/PhotobyRyanonUnsplash.jpg");
+    background-size: cover;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -3;
 }
 
 a {
@@ -13,95 +27,116 @@ a {
 /*************** header ****************/
 #header {
     width: 100%;
-    height: 6em;
+    height: 4em;
     position: relative;
     margin: 0;
     padding: 0;
-    
     display: flex;
     flex-flow: row wrap;
 }
 #header::after {
     content: "";
-    background: #FFE066;
-    opacity: 1;
+    background: #B493C1;
+    opacity: 0.8;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: absolute;
-    z-index: -1;
+    z-index: -2;
 }
 
 .h-logo {
     width: 7em;
     height: 5em;
-    margin-left: 8em; 
+    margin-left: 5vw;
+    margin-top: 1vw;
 }
 
 .logoimg {
-    width: 7em;
+    width: 15em;
 }
 
 .log {
     position: absolute;
-    top: 1.4em;
+    top: 2em;
     right: 12em;
 }
 .login {
     width: 5.5em;
-    padding: 0.8em 0.8em;
+    padding: 0.5em;
     font-size: 18px;
-    margin-right: 2em;
+    margin-right: 1.5vw;
     border-radius: 0.8em;
     border: none;
-    background: #EF767A;
-    color: white;
-
-    -moz-box-shadow:    inset 0 0 10px #000000;
-    -webkit-box-shadow: inset 0 0 10px #000000;
-    box-shadow:         inset 0 0 8px #000000;
+    background: none;
+    color: #b0d248;
+    text-shadow: 1px 1px 4px #000000;
+    text-decoration: underline;
+    /*-moz-box-shadow:    inset 0 0 10px #000000;*/
+    /*-webkit-box-shadow: inset 0 0 10px #000000;*/
+    /*box-shadow:         inset 0 0 8px #000000;*/
 
 }
 .signup {
     width: 5.5em;
-    padding: 0.8em 0.8em;
+    padding: 0.5em;
     font-size: 18px;
     border-radius: 0.8em;
-    border: 1px solid #B493C1;
-    background: #B493C1;
-    color: white;
-           -moz-box-shadow:    inset 0 0 10px #000000;
-   -webkit-box-shadow: inset 0 0 10px #000000;
-   box-shadow:         inset 0 0 8px #000000;
+    border: none;
+    background: none;
+    color: #ffdd6e;
+    text-shadow: 1px 1px 5px #000000;
+    text-decoration: underline;
+    /*-moz-box-shadow:    inset 0 0 10px #000000;*/
+    /*-webkit-box-shadow: inset 0 0 10px #000000;*/
+    /*box-shadow:         inset 0 0 8px #000000;*/
 }
 .faq {
     position: absolute;
-    top: 2em;
+    top: 2.2em;
     right: 6em;
     font-size: 18px;
+    text-shadow: 1px 1px 4px #000000;
 }
 /*************** navigation ***************/
 ul {
     list-style-type: none;
-    background-color: #FFE066;
-    padding: 1em;
+    padding-top: 0;
+    padding-bottom: 0.5vw;
+    padding-left: 25%;
     margin: 0;
+    position: relative;
+    color: whitesmoke;
+    box-shadow: 0 8px 6px -6px black;
+}
+ul::after {
+    content: "";
+    background: #B493C1;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
 }
 
 li {
     display: inline;
-    color: darkgray;
+    /*color: darkgray;*/
     text-align: center;
     padding-right: 3em;
+    color: whitesmoke;
 }
 
 li a {
     text-align: center;
     line-height: 3em;
-    color: darkgray;
+    /*color: darkgray;*/
     /*background: #2f3036;*/
     text-decoration: none;
+
 }
 
 /*li:hover a {*/
@@ -148,13 +183,47 @@ li a {
     height: 600px;
 }
 
+.quote {
+    width: 75%;
+    position: relative;
+    margin-top: 15vw;
+    padding: 3vw 2vw;
+    font-size: 1.8em;
+    font-weight: bold;
+    font-style: italic;
+}
+.quote::after {
+    content: "";
+    background: whitesmoke;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+h2 {
+    margin: 0;
+    padding: 0;
+    color: black;
+    /*text-shadow: 1px 1px 1px #000;*/
+}
+.banner-text {
+    display: block;
+    margin-top: 1vw;
+    margin-left: 5vw;
+
+}
+
 
 
 
 /*************** footer ****************/
 #footer {
     width: 100%;
-    height: 3.5em;
+    height: 1.2vw;
+    line-height: 1.2vw;
     position: absolute;
     left: 0;
     right: 0;
@@ -167,8 +236,8 @@ li a {
 
 #footer::after {
     content: "";
-    background: #FFE066;
-    opacity: 1;
+    background: #B493C1;
+    opacity: 0.8;
     top: 0;
     left: 0;
     bottom: 0;
@@ -177,5 +246,6 @@ li a {
     z-index: -1;
 }
 .footer-content {
-    margin: 1em auto;
+    color: whitesmoke;
+    font-size: 0.9em;
 }
