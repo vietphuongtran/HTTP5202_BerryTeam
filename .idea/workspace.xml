@@ -137,7 +137,7 @@
       <workItem from="1585450757476" duration="196000" />
       <workItem from="1585508867736" duration="138000" />
       <workItem from="1585523632528" duration="4226000" />
-      <workItem from="1585581003555" duration="254000" />
+      <workItem from="1585581003555" duration="346000" />
     </task>
     <task id="LOCAL-00001" summary="add public and admin interface">
       <created>1583963261692</created>
@@ -251,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585581159370</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="database ERD added">
+      <created>1585581275942</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1585581275942</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +279,8 @@
     <MESSAGE value="discussion CRUD" />
     <MESSAGE value="code fixing in colleague" />
     <MESSAGE value="update Readme and database design" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Readme and database design" />
+    <MESSAGE value="database ERD added" />
+    <option name="LAST_COMMIT_MESSAGE" value="database ERD added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="492" y="19" key="#PHP" timestamp="1583853393736">
@@ -291,10 +299,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584991830779" />
-    <state x="406" y="12" key="CommitChangelistDialog2" timestamp="1585581158690">
+    <state x="406" y="12" key="CommitChangelistDialog2" timestamp="1585581295516">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="406" y="12" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585581158690" />
+    <state x="406" y="12" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585581295516" />
     <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1585438341917">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -373,14 +381,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="553" y="311" key="PhpMappingAdvancedResolveDialog/0.0.1536.824@0.0.1536.824" timestamp="1584891389088" />
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1585581026469">
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1585582883312">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585581026469" />
-    <state x="580" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585581174353">
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585582883312" />
+    <state x="580" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585581311445">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="580" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1585581174353" />
+    <state x="580" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1585581311445" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
