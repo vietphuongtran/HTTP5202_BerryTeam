@@ -7,7 +7,7 @@ use Classes\Database as dbConnect;
 $fname = $lname = $department = $phone = $email = "";
 
 if(isset($_POST['updateColleague'])) {
-    $id= $_POST['id']; //!!!!![for name!!! not $name!!!!]
+    $id= $_POST['uid']; //!!!!![for name!!! not $name!!!!]
     $dbcon = dbConnect::getDb();
 
     $coll = new allcolleagues();
@@ -17,7 +17,7 @@ if(isset($_POST['updateColleague'])) {
     $lname = $colleagues->lname;
     $department = $colleagues->department;
     $phone= $colleagues->phone;
-    $email = $colleagues->email;
+    $email = $colleagues->Email;
 }
 
 if(isset($_POST['updColleague'])) {
