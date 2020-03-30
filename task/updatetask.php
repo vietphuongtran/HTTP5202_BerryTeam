@@ -38,7 +38,7 @@ if(isset($_POST['updTask'])){
 <html lang="en">
     <head>
         <title>Task management system</title>
-        <meta name="description" content="Student Management System">
+        <meta name="description" content="Task Management System">
         <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
         <link rel="stylesheet" href ="../Stylesheets/landing-uniform.css">
         <link rel="stylesheet" href ="../Stylesheets/uniform.css">

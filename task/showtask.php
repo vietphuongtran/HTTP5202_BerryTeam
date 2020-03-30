@@ -1,23 +1,26 @@
 <?php
 require_once '../Classes/database.php';
 require_once '../Classes/task.php';
-require_once '../Classes/employee.php';
+require_once '../Classes/colleague.php';
+require_once '../Classes/colleaguessxtasks.php';
 
 use Classes\Task as allTaskFunction;
 use Classes\Database as dbConnect;
-use Classes\Employee as allEmployeeFunction;
+use Classes\Colleague as allColleagues;
+use Classes\ColleaguesxTasks as colleaguesxtasks;
 
     $name = $description = $status = "";
     $db = dbConnect::getDb();
-    $e = new allEmployeeFunction();
-    $allEmployees = $e->selectAllEmployees($db);
+    $e = new allColleagues();
+    $allColleagues = $e->listColleague($db);
+    $ct = new colleaguesxtasks();
 
     if(isset($_POST['showTask'])){
         $tid= $_POST['id'];
 
         $t = new allTaskFunction();
         $task = $t->getTaskById($tid, $db);
-        $taskEmployees = $e->showEmployeesWithTask($tid, $db);
+        $taskColleagues = $ct->showColleaguesWithTask($tid, $db);
 
 //        $assignEmployees = $e->assignEmployee($db, $tid, $eid);
 //    //turn employee to Json object
@@ -28,8 +31,8 @@ use Classes\Employee as allEmployeeFunction;
     if (isset($_POST['assignEmployee'])) {
         $eid = $_POST['employeeId'];
         $db = dbConnect::getDb();
-        $e = new allEmployeeFunction();
-        $count = $e->assignEmployee($tid, $eid, $db);
+        $ct = new colleaguesxtasks();;
+        $count = $ct->assignColleague($tid, $eid, $db);
         if ($count) {
             header("Location: listtask.php");
         }
@@ -72,16 +75,16 @@ use Classes\Employee as allEmployeeFunction;
                 </div>
                 <div class="showemployee">
                     <div>Done by:
-                        <? foreach ($taskEmployees as $taskEmployee) { ?>
-                            <div><?= $taskEmployee->name ?></div>
+                        <? foreach ($taskColleagues as $taskColleague) { ?>
+                            <div><?= $taskColleague->fname ?></div>
                         <? } ?>
                     </div>
                     <div>
                         <form method="POST" action="">
-                            <label for="assignEmployee">Assign employee:</label>
+                            <label for="assignEmployee">Assign task:</label>
                             <select name="emmployeeId" id="employeeId">
-                                <? foreach ($allEmployees as $employee) { ?>
-                                    <option value ="<?=$employee->id?>"><?= $employee->name ?></option>
+                                <? foreach ($allColleagues as $colleague) { ?>
+                                    <option value ="<?=$colleague['id']?>"><?= $colleague['fname'] ?></option>
                                 <? } ?>
                             </select>
                             <div><input type="submit" name="assignEmployee" value="Assign"/></div>
