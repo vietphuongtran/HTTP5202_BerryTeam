@@ -4,7 +4,7 @@ use PDO;
 
 class Colleague {
     public function listColleague($dbcon) {
-        $sql = "SELECT * FROM berryteam";
+        $sql = "SELECT * FROM colleagues";
         $pdobtm = $dbcon->prepare($sql); //btm: berryteam system
         $pdobtm->execute();
 
@@ -13,7 +13,7 @@ class Colleague {
     }
 
     public function addColleague($dbcon, $fname, $lname, $department, $phone, $email) {
-        $sql = "INSERT INTO `berryteam` (`f-name`, `l-name`, `department`, `phone`, `email`) 
+        $sql = "INSERT INTO colleagues (fname, lname, department, phone, email) 
               VALUES (:fname, :lname, :department, :phone, :email)";
         $pst = $dbcon->prepare($sql);
 
@@ -24,11 +24,12 @@ class Colleague {
         $pst->bindParam(':email', $email);
 
         $count = $pst->execute();
-        return $pst->fetchAll(PDO::FETCH_OBJ);
+        return $count;
+        //return $pst->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function getColleagueById($id, $dbcon) {
-        $sql = "SELECT * FROM berryteam WHERE id = :id";
+        $sql = "SELECT * FROM colleagues WHERE id = :id";
         $pst = $dbcon->prepare($sql);
         $pst -> bindParam(':id', $id);
         $pst -> execute();
@@ -36,13 +37,14 @@ class Colleague {
     }
 
     public function updateColleague($dbcon, $fname, $lname, $department, $phone, $email, $id) {
-        $sql = "Update `berryteam`
-                set `f-name` = :fname,
-                `l-name` = :lname,
-                `department` = :department,
-                `phone` = :phone,
-                `email` = :email,
-                WHERE `ID` = :id
+        $sql = "Update colleagues
+                set fname = :fname,
+                lname = :lname,
+                department = :department,
+                phone = :phone,
+                Email = :email
+                WHERE id = :id
+                
         ";
 
         $pst =   $dbcon->prepare($sql);
