@@ -1,12 +1,12 @@
 <?php
 require_once '../Classes/database.php';
 require_once '../Classes/task.php';
-require_once '../Classes/employee.php';
+require_once '../Classes/colleaguessxtasks.php';
 
 
 use Classes\Task as allTaskFunction;
 use Classes\Database as dbConnect;
-use Classes\Employee as allEmployeeFunction;
+use Classes\ColleaguesxTasks as colleaguesxtasks;
 
 
     //generate new database connection
@@ -18,7 +18,7 @@ use Classes\Employee as allEmployeeFunction;
     $doingTasks =  $t->showDoingTasks($db);
 
     $doneTasks =  $t->showDoneTasks($db);
-    $e = new allEmployeeFunction();
+    $e = new colleaguesxtasks();
 //    $taskEmployees = $e->showEmployeesWithTask($id, $db);
 ?>
 <html lang="en">
@@ -47,11 +47,11 @@ use Classes\Employee as allEmployeeFunction;
                     <div><?= $toDoTask ->description ?></div>
                         <?
                             $id = $toDoTask->id;
-                            $taskEmployees = $e->showEmployeesWithTask($id, $db);
+                            $taskColleagues = $e->showColleaguesWithTask($id, $db);
                         ?>
                     <div class="showemployee"> Done by:
-                    <? foreach ($taskEmployees as $taskEmployee) { ?>
-                        <div><?= $taskEmployee->name ?></div>
+                    <? foreach ($taskColleagues as $taskColleague) { ?>
+                        <div><?= $taskColleague->fname ?></div>
                     <? } ?>
                     </div>
                     <div>
@@ -74,11 +74,11 @@ use Classes\Employee as allEmployeeFunction;
                     <div><?= $doingTask ->description ?></div>
                     <?
                     $id = $doingTask->id;
-                    $taskEmployees = $e->showEmployeesWithTask($id, $db);
+                    $taskColleagues = $e->showColleaguesWithTask($id, $db);
                     ?>
                     <div class="showemployee"> Done by:
-                        <? foreach ($taskEmployees as $taskEmployee) { ?>
-                            <div><?= $taskEmployee->name ?></div>
+                        <? foreach ($taskColleagues as $taskColleague) { ?>
+                            <div><?= $taskColleague->fname ?></div>
                         <? } ?>
                     </div>
                     <div>
@@ -98,14 +98,14 @@ use Classes\Employee as allEmployeeFunction;
                 <?php foreach ($doneTasks as $doneTask) { ?>
                     <div><?= $doneTask ->name ?></div>
                     <div><?= $doneTask ->description ?></div>
-                    <?
-                    $id = $doneTask->id;
-                    $taskEmployees = $e->showEmployeesWithTask($id, $db);
-                    ?>
-                    <div class="showemployee"> Done by:
-                        <? foreach ($taskEmployees as $taskEmployee) { ?>
-                            <div><?= $taskEmployee->name ?></div>
-                        <? } ?>
+                <?
+                $id = $doneTask->id;
+                $taskColleagues = $e->showColleaguesWithTask($id, $db);
+                ?>
+                <div class="showemployee"> Done by:
+                    <? foreach ($taskColleagues as $taskColleague) { ?>
+                        <div><?= $taskColleague->fname ?></div>
+                    <? } ?>
                     </div>
                     <div>
                         <form action="showtask.php" method="post">
