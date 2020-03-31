@@ -7,7 +7,7 @@ use Classes\database as dbConnect;
 
 $question = $answer = "";
 
-if(isset($_POST['updateFaq'])){
+if(isset($_POST['updFaq'])){
     $id= $_POST['id'];
     $db = dbConnect::getDb();
 

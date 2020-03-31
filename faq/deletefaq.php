@@ -18,13 +18,13 @@ if(isset($_POST['id'])) {
 
 }
 if(isset($_POST['deleteFaq'])) {
-    $id = $_POST['tid'];
+    $id = $_POST['id'];
     $db = dbConnect::getDb();
 
     $s = new allFaq();
     $count = $s->deleteFaq($id, $db);
     if ($count) {
-        header("Location: listfaqs.php");
+        header("Location: listfaq.php");
     } else {
         echo "There was a problem deleting FAQ";
     }
@@ -44,11 +44,11 @@ if(isset($_POST['deleteFaq'])) {
 <body>
 <? include '../includes/index-header.php' ?>
 <? include '../includes/navigation.php' ?>
-<h2>Are you sure you want to delete <?= $question; ?> faq?</h2>
+<h2>Are you sure you want to delete this faq?</h2>
 <form method="POST" action="">
-    <input type="hidden" name="tid" value="<?= $id; ?>" />
-    <button type="submit" name="delTask" id="submit">Delete FAQ</button>
-    <a href="listtask.php">No, go back to list</a>
+    <input type="hidden" name="id" value="<?= $id; ?>" />
+    <button type="submit" name="deleteFaq" id="submit">Delete FAQ</button>
+    <a href="listfaq.php">No, go back to list</a>
 </form>
 <? include '../includes/footer.php' ?>
 </body>

@@ -41,10 +41,10 @@ use Classes\database as dbConnect;
                 <input type="submit" name="showFaq" value="Show FAQ"/>
             </form>
 
-            <form action="updatefaq.php" method="post">
-                <input type="hidden" name="id" value="<?= $faq->id ?>"/>
-                <input type="submit" name="updateFaq" value="Update FAQ"/>
-            </form>
+<!--            <form action="updatefaq.php" method="post">-->
+<!--                <input type="hidden" name="id" value="--><?//= $faq->id ?><!--"/>-->
+<!--                <input type="submit" name="updFaq" value="Update FAQ"/>-->
+<!--            </form>-->
         </div>
 
                 <?php } ?>
