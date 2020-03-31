@@ -37,7 +37,7 @@ use Classes\database as dbConnect;
         </div>
         <div>
             <form action="showfaq.php" method="post">
-                <input type="hidden" name="id" value="<?= $faq->id ?>"/>
+                <input type="hidden" name="uid" value="<?= $faq->id ?>"/>
                 <input type="submit" name="showFaq" value="Show FAQ"/>
             </form>
 

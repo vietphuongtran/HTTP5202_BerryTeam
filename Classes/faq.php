@@ -11,7 +11,7 @@ class faq {
         return $faqs;
     }
     public function getFaqById($id,  $db) {
-        $sql = "SELECT * FROM faqs WHERE id = :id";
+        $sql = "SELECT * FROM faq WHERE id = :id";
         $pst = $db->prepare($sql);
         $pst->bindParam(':id', $id);
         $pst->execute();

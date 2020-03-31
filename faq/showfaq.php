@@ -10,16 +10,16 @@ use Classes\database as dbConnect;
 
 
     if(isset($_POST['showFaq'])){
-    $tid= $_POST['id'];
+    $id= $_POST['uid'];
 
-    $b = new allFaq();
-    $faq = $t->getFaqById($tid, $db);
+    $t = new allFaq();
+    $faq = $t->getFaqById($id, $db);
 
-    if ($b) {
-        header("Location: listfaq.php");
-    } else {
-        echo "There was a problem showing a FAQ";
-    }
+//    if ($b) {
+//        header("Location: listfaq.php");
+//    } else {
+//        echo "There was a problem showing a FAQ";
+//    }
 
 }
 
@@ -41,9 +41,9 @@ use Classes\database as dbConnect;
 <? include '../includes/index-header.php' ?>
 <? include '../includes/navigation.php' ?>
 
-<h2>Frequently Asked Question<?=$faq->name ?> faq</h2>
+<h2>Frequently Asked Question</h2>
 
-    <div class="faqs" id="showfaq">
+    <div class="faqs">
         <div>Question: <?=$faq->question ?></div>
         <div>Answer: <?=$faq->answer ?></div>
     </div>
@@ -51,11 +51,11 @@ use Classes\database as dbConnect;
 
     <div>
     <form action="updatefaq.php" method="post">
-        <input type="hidden" name="id" value="<?= $tid ?>"/>
+        <input type="hidden" name="id" value="<?= $id ?>"/>
         <input type="submit" name="updFaq" value="Update FAQ"/>
     </form>
     <form action="deletefaq.php" method="post">
-        <input type="hidden" name="id" value="<?= $tid ?>" />
+        <input type="hidden" name="id" value="<?= $id ?>" />
         <input type="submit" class="button btn btn-primary" name="deleteFAQ" value="Delete FAQ"/>
     </form>
     </div>
