@@ -41,7 +41,7 @@ class Registration {
     public function updateRegistration($dbcon){
         $name = $_POST['name'];
         $username = $_POST['username'];
-        $regpassword = $_POST['regpassword'];
+        $regpassword = password_hash($_POST['regpassword'], PASSWORD_DEFAULT);
         $email = $_POST['email'];
         $phone = $_POST['phone'];
         $isadmin = $_POST['isadmin'];

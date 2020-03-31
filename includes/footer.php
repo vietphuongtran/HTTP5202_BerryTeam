@@ -6,7 +6,7 @@
         <div class="footer-content">
             <div class="copyright">
                 All right Reserved ©Berry.com
-                Developer Ella, Lili, Ossy, Paul
+                Developer   Paul, Ella, Lili, Ossy
             </div>
         </div>
     </footer>
