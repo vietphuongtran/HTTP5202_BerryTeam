@@ -2,7 +2,7 @@
 require_once '../Classes/database.php';
 require_once '../Classes/task.php';
 require_once '../Classes/colleague.php';
-require_once '../Classes/colleaguessxtasks.php';
+require_once '../Classes/colleaguesxtasks.php';
 
 use Classes\Task as allTaskFunction;
 use Classes\Database as dbConnect;
