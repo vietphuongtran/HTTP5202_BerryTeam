@@ -5,49 +5,57 @@ require_once 'Classes/registration.php';
 use Classes\Database;
 use Classes\Registration;
 
+$nameerr = "";
+$unameerr = "";
+$passerr = "";
+$emailerr = "";
+$phoneerr = "";
+
+$errorsending = false;
+
+$phonepattern = '/^(\d[\s-]?)?[\(\[\s-]{0,2}?\d{3}[\)\]\s-]{0,2}?\d{3}[\s-]?\d{4}$/i';
+
+
 if(isset($_POST['register'])) {
 
-    $dbcon = Database::getDb();
-
-    $s = new Registration();
-    $registrations = $s->addRegistration($dbcon);
-
-    if($s){
-        header("Location: listRegistered.php");
-    } else {
-        echo "problem registering a team member";
+    if($_POST['name'] == "") {
+        $nameerr = "Please Enter a Name";
+        $errorsending = true;
     }
-//    $name = $_POST['name'];
-//    $username = $_POST['username'];
-//    $regpassword = $_POST['regpassword'];
-//    $email = $_POST['email'];
-//    $phone = $_POST['phone'];
-//    $isadmin = $_POST['isadmin'];
-//
-//    $user = 'root';
-//    $password = 'root';
-//    $dbname = 'phpclass';
-//    $dsn = 'mysql:host=localhost;dbname=' . $dbname;
-//
-//    $dbcon = new PDO($dsn, $user, $password);
+    if($_POST['username'] == "") {
+        $unameerr = "Please Enter a UserName";
+        $errorsending = true;
+    }
+    if($_POST['regpassword'] == "") {
+        $passerr = "Please Enter a Password";
+        $errorsending = true;
+    }
+    if($_POST['email'] == "") {
+        $emailerr = "Please Enter an Email";
+        $errorsending = true;
+    } else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        $emailerr = "Please enter a valid email format";
+        $errorsending = true;
+    }
+    if($_POST['phone'] == "") {
+        $phoneerr = "Please Enter a Phone Number";
+        $errorsending = true;
+    } else if (!preg_match($phonepattern, $_POST['phone'])) {
+        $phoneerr = "Please enter a valid phone number ex.(000-000-0000)";
+        $errorsending = true;
+    }
+    if($errorsending != true) {
+        $dbcon = Database::getDb();
 
-//    $sql = "INSERT INTO registrations (registeredName, registeredLogin, registeredPassword, registeredEmail, registeredPhoneNum, isAdmin)
-//              VALUES (:name, :username, :regpassword, :email, :phone, :isadmin) ";
-//    $pst = $dbcon->prepare($sql);
-//
-//    $pst->bindParam(':name', $name);
-//    $pst->bindParam(':username', $username);
-//    $pst->bindParam(':regpassword', $regpassword);
-//    $pst->bindParam(':email', $email);
-//    $pst->bindParam(':phone', $phone);
-//    $pst->bindParam(':isadmin', $isadmin);
-//
-//    $count = $pst->execute();
-//    if($count){
-//        header("Location: listRegistered.php");
-//    } else {
-//        echo "problem registering a team member";
-//    }
+        $s = new Registration();
+        $registrations = $s->addRegistration($dbcon);
+
+        if ($s) {
+            header("Location: listRegistered.php");
+        } else {
+            echo "problem registering a team member";
+        }
+    }
 }
 ?>
 
@@ -67,43 +75,44 @@ if(isset($_POST['register'])) {
             <label for="name">Name :</label>
             <input type="text" class="form-control" name="name" id="name" value=""
                    placeholder="Enter name">
-            <span style="color: red">
-
-            </span>
+            <span style="color:red;"><?= $nameerr; ?></span>
         </div>
 
         <div class="form-group">
             <label for="username">UserName :</label>
             <input type="text" class="form-control" name="username" id="username" value=""
                    placeholder="Enter a User Name">
-            <span style="color: red">
-
-            </span>
+            <span style="color:red;"><?= $unameerr; ?></span>
         </div>
         <div class="form-group">
-            <label for="password">Password :</label>
-            <input type="text" class="form-control" name="regpassword" id="regpassword" value=""
+            <label for="regpassword">Password :</label>
+            <input type="password" class="form-control" name="regpassword" id="regpassword" value=""
                    placeholder="Enter a password">
-            <span style="color: red">
-
-            </span>
+            <input type="checkbox" onclick="showPass()">Show Password
+            <div><span style="color:red;"><?= $passerr; ?></span></div>
+            <script>
+                function showPass() {
+                    let x = document.getElementById("regpassword");
+                    if (x.type === "password") {
+                        x.type = "text";
+                    } else {
+                        x.type = "password";
+                    }
+                }
+                </script>
         </div>
 
         <div class="form-group">
             <label for="email">Email :</label>
             <input type="text" class="form-control" id="email" name="email"
                    value="" placeholder="Enter email">
-            <span style="color: red">
-
-            </span>
+            <span style="color:red;"><?= $emailerr; ?></span>
         </div>
         <div class="form-group">
             <label for="phone">Phone :</label>
             <input type="text" name="phone" value="" class="form-control"
                    id="phone" placeholder="Enter phone number">
-            <span style="color: red">
-
-            </span>
+            <span style="color:red;"><?= $phoneerr; ?></span>
         </div>
 
         <div class="form-group">

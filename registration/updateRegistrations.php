@@ -9,7 +9,7 @@ if(isset($_POST['updateRegistrations'])){
     $id= $_POST['id'];
     $user = 'root';
     $password = 'root';
-    $dbname = 'phpclass';
+    $dbname = 'berryteam';
     $dsn = 'mysql:host=localhost;dbname=' . $dbname;
 
     $dbcon = new PDO($dsn, $user, $password);
@@ -31,41 +31,7 @@ if(isset($_POST['updateRegistrations'])){
 
 }
 if(isset($_POST['updRegistration'])) {
-//    $name = $_POST['name'];
-//    $username = $_POST['username'];
-//    $regpassword = $_POST['regpassword'];
-//    $email = $_POST['email'];
-//    $phone = $_POST['phone'];
-//    $isadmin = $_POST['isadmin'];
-//    $id = $_POST['rid'];
-//
-//    $user = 'root';
-//    $password = 'root';
-//    $dbname = 'phpclass';
-//    $dsn = 'mysql:host=localhost;dbname=' . $dbname;
-//
-//    $dbcon = new PDO($dsn, $user, $password);
-//
-//    $sql = "Update registrations
-//                set registeredName = :name,
-//                registeredLogin = :username,
-//                registeredPassword = :regpassword,
-//                registeredEmail = :email,
-//                registeredPhoneNum = :phone,
-//                isAdmin = :isadmin
-//                WHERE registrationId = :id;
-//
-//        ";
-//
-//    $pst =   $dbcon->prepare($sql);
-//
-//    $pst->bindParam(':name', $name);
-//    $pst->bindParam(':username', $username);
-//    $pst->bindParam(':regpassword', $regpassword);
-//    $pst->bindParam(':email', $email);
-//    $pst->bindParam(':phone', $phone);
-//    $pst->bindParam(':isadmin', $isadmin);
-//    $pst->bindParam(':id', $id);
+
 
     $dbcon = Database::getDb();
 
@@ -117,11 +83,20 @@ if(isset($_POST['updRegistration'])) {
 
         <div class="form-group">
             <label for="password">Password :</label>
-            <input type="text" class="form-control" name="regpassword" id="regpassword" value="<?= $regpassword; ?>"
+            <input type="password" class="form-control" name="regpassword" id="regpassword" value="<?= $regpassword; ?>"
                    placeholder="Enter a password">
-            <span style="color: red">
-
-            </span>
+            <input type="checkbox" onclick="showPass()">Show Password
+            <div><span style="color:red;"></span></div>
+            <script>
+                function showPass() {
+                    let x = document.getElementById("regpassword");
+                    if (x.type === "password") {
+                        x.type = "text";
+                    } else {
+                        x.type = "password";
+                    }
+                }
+            </script>
         </div>
 
         <div class="form-group">
