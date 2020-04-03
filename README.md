@@ -52,7 +52,6 @@
        * ###### listMotiQuotes.php
        * ###### updateMotiQuote.php
        * ###### deleteMotiQuote.php
-       * ###### searchMotiQuote.php
     * Stylesheets:
        * ###### landing-uniform.css
        * ###### uniform.css
