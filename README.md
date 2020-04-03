@@ -39,6 +39,8 @@
   * File contributed:
      * Classes:
        * ###### colleague.php
+       * ###### motivationquotes.php
+       * ###### quotes-database.php
      * Colleague: 
        * ###### addColleague.php
        * ###### listColleague.php
@@ -46,10 +48,16 @@
        * ###### deleteColleague.php
        * ###### searchClleague.php
     * Motivational Quote:
+       * ###### addMotiQuote.php
+       * ###### listMotiQuotes.php
+       * ###### updateMotiQuote.php
+       * ###### deleteMotiQuote.php
+       * ###### searchMotiQuote.php
     * Stylesheets:
        * ###### landing-uniform.css
        * ###### uniform.css
      * ###### index.php
+     * ###### error404.php
 
 ### 3. Lily: FAQ + Survey + Logo design + Searching banner images
   * Features:
