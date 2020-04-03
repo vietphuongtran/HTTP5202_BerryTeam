@@ -3,6 +3,16 @@ namespace Classes;
 use PDO;
 
 class Colleague {
+    public function searchColleague($dbcon, $searchContent) {
+        $sql = "SELECT * FROM berryteam 
+        WHERE `ID` =  :searchContent || `f-name` = :searchContent || `l-name` = :searchContent || `department` = :searchContent || `phone` = :searchContent || `email` = :searchContent";
+        $pdobtm = $dbcon->prepare($sql); //btm: berryteam system
+        $pdobtm->execute();
+//        $count = $pdobtm->execute();
+        $colleagues = $pdobtm->fetchAll(PDO::FETCH_ASSOC);
+        return $colleagues;
+    }
+
     public function listColleague($dbcon) {
         $sql = "SELECT * FROM colleagues";
         $pdobtm = $dbcon->prepare($sql); //btm: berryteam system

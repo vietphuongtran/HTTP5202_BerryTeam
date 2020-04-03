@@ -7,7 +7,7 @@ use Classes\Database as dbConnect;
 $fname = $lname = $department = $phone = $email = "";
 
 if(isset($_POST['updateColleague'])) {
-    $id= $_POST['uid']; //!!!!![for name!!! not $name!!!!]
+    $id= $_POST['id']; //!!!!![for name!!! not $name!!!!]
     $dbcon = dbConnect::getDb();
 
     $coll = new allcolleagues();
@@ -44,7 +44,7 @@ if(isset($_POST['updColleague'])) {
 <html lang="en">
 
 <head>
-    <title>Update Colleague - Berryteam</title>
+    <title>Edit Team member|Berryteam</title>
     <meta name="description" content="Berryteam System">
     <meta name="keywords" content="Berryteam, Colleague, Admission">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -54,6 +54,7 @@ if(isset($_POST['updColleague'])) {
 <body>
 
 <div>
+    <h1>Edit team member <?= $fname; ?> <?= $lname; ?> information</h1>
     <!--    Form to Update  Colleague -->
     <form action="" method="post">
         <input type="hidden" name="collid" value="<?= $id; ?>" />
@@ -101,7 +102,7 @@ if(isset($_POST['updColleague'])) {
         <a href="listColleague.php" id="btn_back" class="btn btn-success float-left">Back</a>
         <button type="submit" name="updColleague"
                 class="btn btn-primary float-right" id="btn-submit">
-            Update Colleague
+            Save
         </button>
     </form>
 </div>

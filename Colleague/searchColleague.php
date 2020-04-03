@@ -7,31 +7,23 @@ use Classes\Database as dbConnect;
 if(isset($_POST['searchColleague'])) {
     $searchContent = $_POST['searchContent'];
 
-    $user = 'root';
-    $password = 'passwordroot';
-    $dbname = 'phpclass';
-    $dsn = 'mysql:host=localhost;dbname=' . $dbname;
+    $dbcon = dbConnect::getDb();
 
-    $dbcon = new PDO($dsn, $user, $password);
+    $coll = new allcolleagues();
+    $colleagues = $coll->listColleague($dbcon);
 
-    $sql = "SELECT * FROM berryteam 
-    WHERE `ID` =  \"$searchContent\" || `f-name` = \"$searchContent\" || `l-name` = \"$searchContent\" || `department` = \"$searchContent\" || `phone` = \"$searchContent\" || `email` = \"$searchContent\"";
-    $pdobtm = $dbcon->prepare($sql); //btm: berryteam system
-    //$pdobtm->execute();
-    $count = $pdobtm->execute();
-    $colleagues = $pdobtm->fetchAll(PDO::FETCH_ASSOC);
+    $searchContent = "";
 
     //$count = $pdobtm->execute();
-    if ($count == "" || $count == null) {
-        echo "Couldn't find a result";
+    if ($colleagues == "" || $colleagues == null) {
+        echo "No result, change your search keyword and try again.";
     }
 }
-
 ?>
 
 <html lang="en">
 <head>
-    <title>List of colleagues</title>
+    <title>Search Result|Berryteam</title>
     <meta name="description" content="Berryteam">
     <meta name="keywords" content="Berryteam, Colleague, Admission">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -47,7 +39,7 @@ if(isset($_POST['searchColleague'])) {
     <table class="table table-bordered tbl">
         <thead>
         <tr>
-            <th scope="col">ID</th>
+            <th scope="col"></th>
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">Department</th>
@@ -83,9 +75,9 @@ if(isset($_POST['searchColleague'])) {
         </tbody>
     </table>
     <div name="endresult">
-        --- end of result ---
+        --- end ---
     </div>
-    <a href="addColleague.php" id="btn_addColleague" class="btn btn-success btn-lg float-right">New Colleague</a>
+    <a href="addColleague.php" id="btn_addColleague" class="btn btn-success btn-lg float-right">Add a new team member</a>
 
 </div>
 </body>

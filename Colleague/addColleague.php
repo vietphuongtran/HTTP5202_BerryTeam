@@ -33,7 +33,7 @@ if(isset($_POST['addColleague'])) {
 <html lang="en">
 
     <head>
-        <title>Add Colleague - Berryteam</title>
+        <title>Add A Team Member|Berryteam</title>
         <meta name="description" content="Berryteam System">
         <meta name="keywords" content="Berryteam, Colleague, Admission">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -89,11 +89,10 @@ if(isset($_POST['addColleague'])) {
             <a href="listColleague.php" id="btn_back" class="btn btn-success float-left">Back</a>
             <button type="submit" name="addColleague"
                     class="btn btn-primary float-right" id="btn-submit">
-                New Colleague
+                Add this member to your team
             </button>
         </form>
     </div>
-
 
     </body>
 </html

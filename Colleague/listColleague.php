@@ -10,19 +10,18 @@ $c = new allcolleagues();
 $colleagues = $c->listColleague($dbcon);
 
 $searchContent = "";
-
 ?>
 
 <html lang="en">
 <head>
-    <title>List of colleagues</title>
+    <title>List of team members|Berryteam</title>
     <meta name="description" content="Berryteam">
     <meta name="keywords" content="Berryteam, Colleague, Admission">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
-<p class="h1 text-center">Berryteam</p>
+<p class="h1 text-center">All team members</p>
 
 <!--    search colleagues   -->
 <div class="s-1">
@@ -38,7 +37,7 @@ $searchContent = "";
     <table class="table table-bordered tbl">
         <thead>
         <tr>
-            <th scope="col">ID</th>
+            <th scope="col"></th>
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">Department</th>
