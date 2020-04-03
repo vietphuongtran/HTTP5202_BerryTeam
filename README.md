@@ -1,10 +1,10 @@
 # HTTP5202_BerryTeam
 ## Project URL: berryteam-4u.com
 ## project-repo-berryteam instruction (to team members)
-  * 1. Class contain "database.php" together with all the classes that will be used in your code
-  * 2. The interface or CRUD will be stored in the folder with the respective name 
+  *  Class contain "database.php" together with all the classes that will be used in your code
+  *  The interface or CRUD will be stored in the folder with the respective name 
 (i.e. task will be stored in task, employee will be stored in employee folder, please use singular to be consistent)
-  * 3. GOLDEN RULES: Pull before you push and commit often to avoid conflict
+  *  GOLDEN RULES: Pull before you push and commit often to avoid conflict
 ## Each team member's tasks and contribution:
 ### 1. Paul: Task + Discussion + Navigation
   * Features:
