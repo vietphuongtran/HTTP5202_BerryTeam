@@ -22,7 +22,7 @@
       * ###### listtask.php
       * ###### updatetask.php
       * ###### deletetask.php
-    * Discussion: All files under Discussion folder
+    * Discussion: 
       * ###### newdiscussion.php
       * ###### showdiscussion.php
       * ###### listdiscussion.php
