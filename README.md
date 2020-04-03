@@ -1,10 +1,10 @@
 # HTTP5202_BerryTeam
 ## Project URL: berryteam-4u.com
 ## project-repo-berryteam instruction (to team members)
-  * 1 Class contain "database.php" together with all the classes that will be used in your code
-  * 2 The interface or CRUD will be stored in the folder with the respective name 
-(i.e.: task will be stored in task, employee will be stored in employee folder, please use singular to be consistent)
-  * 3 GOLDEN RULES: Pull before you push and commit often to avoid conflict
+  * 1. Class contain "database.php" together with all the classes that will be used in your code
+  * 2. The interface or CRUD will be stored in the folder with the respective name 
+(i.e. task will be stored in task, employee will be stored in employee folder, please use singular to be consistent)
+  * 3. GOLDEN RULES: Pull before you push and commit often to avoid conflict
 ## Each team member's tasks and contribution:
 ### 1. Paul: Task + Discussion + Navigation
   * Features:
@@ -33,9 +33,9 @@
 ### 2. Ella: Colleague + Motivational Quote + Styling
   * Features:
     * Colleaues: 
-      *A page lisiting all colleagues information (name, phone number, email). You can add, update, delete and search for colleague there*
+      *A page lisiting all team members' information (name, department, phone number, email). Users can add, update, delete and search for team members*
     * Motivational quote: 
-      *After logging in to personal page of each employees a random quote will be drawn from the database and display on the screen. The quote will be different everyday*
+      *Display on the index page banner; will change everyday*
   * File contributed:
      * Classes:
        * ###### colleague.php
