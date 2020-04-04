@@ -27,7 +27,7 @@ if(isset($_POST['addMotiQuotes'])) {
     $quote = new addMotiQuotes();
     $count = $quote->addMotiQuotes($dbcon, $quotes, $category);
     if ($count) {
-        header("Location: listMotiQuotes.php");
+        header("Location: list.php");
     } else {
         echo "Problem adding a motivation quote...";
     }
@@ -70,7 +70,7 @@ if(isset($_POST['addMotiQuotes'])) {
                     </span>
                 </div>
 
-                <a href="listMotiQuotes.php" id="btn_back" class="btn btn-success float-left">Back</a>
+                <a href="list.php" id="btn_back" class="btn btn-success float-left">Back</a>
                 <button type="submit" name="addMotiQuotes"
                         class="btn btn-primary float-right" id="btn-submit">
                     Add this quote

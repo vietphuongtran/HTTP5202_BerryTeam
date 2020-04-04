@@ -12,7 +12,7 @@ if(isset($_POST['deleteMotiQuote'])) {
     $q = new allmotiquotes();
     $count = $q->deleteMotiQuote($dbcon, $id);
     if($count){
-        header("Location: listMotiQuotes.php");
+        header("Location: list.php");
     }
     else {
         echo "Problem deleting the current quote...";
@@ -38,10 +38,10 @@ if(isset($_POST['deleteMotiQuote'])) {
         <div>
             <h2>Deleted the motivation quote successfully</h2>
             <div>
-                <a href="addMotiQuote.php" id="btn_back" class="btn btn-success float-left">Create your own motivation quote</a>
+                <a href="add.php" id="btn_back" class="btn btn-success float-left">Create your own motivation quote</a>
             </div>
             <div>
-                <a href="listMotiQuotes.php" id="btn_back" class="btn btn-success float-left">Back</a>
+                <a href="list.php" id="btn_back" class="btn btn-success float-left">Back</a>
             </div>
         </div>
         <? include '../includes/footer.php' ?>

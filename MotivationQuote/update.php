@@ -30,7 +30,7 @@ if(isset($_POST['updMotiQuote'])) {
     $q = new allmotiquotes();
     $count = $q->updateMotiQuotes($quote, $category, $id);
     if($count){
-        header("Location: listMotiQuotes.php");
+        header("Location: list.php");
     } else {
         echo "Problem updating this motivation quote...";
     }
@@ -74,7 +74,7 @@ if(isset($_POST['updMotiQuote'])) {
                     </span>
                 </div>
 
-                <a href="listMotiQuotes.php" id="btn_back" class="btn btn-success float-left">Back</a>
+                <a href="list.php" id="btn_back" class="btn btn-success float-left">Back</a>
                 <button type="submit" name="updMotiQuote"
                         class="btn btn-primary float-right" id="btn-submit">
                     Save changes

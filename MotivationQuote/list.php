@@ -43,13 +43,13 @@ $motiquotes = $q->listQuotes($dbcon);
                         <th><?= $motiquote['quotes'] ?></th>
                         <td><?= $motiquote['category'] ?></td>
                         <td>
-                            <form action="updateMotiQuote.php" method="post">
+                            <form action="update.php" method="post">
                                 <input type="hidden" name="uid" value="<?= $motiquote['id'] ?>"/>
                                 <input type="submit" class="button btn btn-primary" name="updateMotiQuote" value="Update"/>
                             </form>
                         </td>
                         <td>
-                            <form action="deleteMotiQuote.php" method="post">
+                            <form action="delete.php" method="post">
                                 <input type="hidden" name="id" value="<?= $motiquote['id'] ?>"/>
                                 <input type="submit" class="button btn btn-danger" name="deleteMotiQuote" value="Delete"/>
                             </form>
@@ -58,7 +58,7 @@ $motiquotes = $q->listQuotes($dbcon);
                 <?php } ?>
                 </tbody>
             </table>
-            <a href="addMotiQuote.php" id="btn_addMotiQuote" class="btn btn-success btn-lg float-right">Create your own motivation team quotes</a>
+            <a href="add.php" id="btn_addMotiQuote" class="btn btn-success btn-lg float-right">Create your own motivation team quotes</a>
         </div>
         <? include '../includes/footer.php' ?>
     </body>
