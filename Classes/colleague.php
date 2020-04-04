@@ -5,7 +5,7 @@ use PDO;
 class Colleague {
     public function searchColleague($dbcon, $searchContent) {
         $sql = "SELECT * FROM berryteam 
-        WHERE `ID` =  :searchContent || `f-name` = :searchContent || `l-name` = :searchContent || `department` = :searchContent || `phone` = :searchContent || `email` = :searchContent";
+        WHERE `id` =  :searchContent || `f-name` = :searchContent || `l-name` = :searchContent || `department` = :searchContent || `phone` = :searchContent || `email` = :searchContent";
         $pdobtm = $dbcon->prepare($sql); //btm: berryteam system
         $pdobtm->execute();
 //        $count = $pdobtm->execute();
@@ -71,7 +71,7 @@ class Colleague {
     }
 
     public function deleteColleague($db, $id) {
-        $sql = "DELETE FROM berryteam WHERE `ID` = :id";
+        $sql = "DELETE FROM berryteam WHERE `id` = :id";
 
         $pst = $db->prepare($sql);
         $pst->bindParam(':id', $id);

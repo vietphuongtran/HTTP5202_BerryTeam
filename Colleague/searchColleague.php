@@ -56,7 +56,7 @@ if(isset($_POST['searchColleague'])) {
                 <tbody>
                 <?php foreach ($colleagues as $colleague) { ?>
                     <tr>
-                        <th><?= $colleague['ID'] ?></th>
+                        <th><?= $colleague['id'] ?></th>
                         <td><?= $colleague['f-name'] ?></td>
                         <td><?= $colleague['l-name'] ?></td>
                         <td><?= $colleague['department'] ?></td>
@@ -64,13 +64,13 @@ if(isset($_POST['searchColleague'])) {
                         <td><?= $colleague['email'] ?></td>
                         <td>
                             <form action="updateColleague.php" method="post">
-                                <input type="hidden" name="id" value="<?= $colleague['ID'] ?>"/>
+                                <input type="hidden" name="id" value="<?= $colleague['id'] ?>"/>
                                 <input type="submit" class="button btn btn-primary" name="updateColleague" value="Update"/>
                             </form>
                         </td>
                         <td>
                             <form action="deleteColleague.php" method="post">
-                                <input type="hidden" name="id" value="<?= $colleague['ID'] ?>"/>
+                                <input type="hidden" name="id" value="<?= $colleague['id'] ?>"/>
                                 <input type="submit" class="button btn btn-danger" name="deleteColleague" value="Delete"/>
                             </form>
                         </td>
