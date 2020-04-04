@@ -44,8 +44,8 @@ a {
 }
 #header::after {
     content: "";
-    background: #ffdd6e;
-    opacity: 0.15;
+    background: #B493C1;
+    opacity: 0.4;
     top: 0;
     left: 0;
     bottom: 0;
@@ -183,6 +183,7 @@ h2 {
     color: whitesmoke;
     text-shadow: 2px 2px 3px #000;
     z-index: 1;
+    font-weight: bolder;
 }
 .banner-text {
     display: block;
