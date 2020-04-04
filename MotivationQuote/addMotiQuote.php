@@ -40,11 +40,11 @@ if(isset($_POST['addMotiQuotes'])) {
         <meta name="description" content="Berryteam System">
         <meta name="keywords" content="Berryteam, Motivation, Quotes">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="CSS/main.css" type="text/css">
+        <link rel="stylesheet" href="/CSS/main.css" type="text/css">
 
-        <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-        <link rel="stylesheet" href="../Stylesheets/landing-uniform.css">
-        <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
+        <link rel="stylesheet" href="/Stylesheets/taskcrud.css">
+        <link rel="stylesheet" href="/Stylesheets/landing-uniform.css">
+        <link rel="stylesheet" type="text/css" href="/Stylesheets/navigation.css">
     </head>
     <body>
         <? include '../includes/index-header.php' ?>
