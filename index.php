@@ -7,12 +7,13 @@
         <link rel="stylesheet" type="text/css" href="Stylesheets/uniform.css">
     </head>
     <body>
-    <?php
-    include "includes/index-header.php";
-    include "includes/navigation.php";
-    include "includes/banner.php";
-    include "includes/text-body.php";
-    include "includes/footer.php";
-    ?>
-</body>
+        <div class="color-overlay"></div>
+
+        <?php
+        include "includes/index-header.php";
+        include "includes/navigation.php";
+        include "includes/banner.php";
+        //include "includes/text-body.php";
+        include "includes/footer.php"; ?>
+    </body>
 </html>

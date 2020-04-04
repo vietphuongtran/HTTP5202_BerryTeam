@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Roboto', sans-serif;
     overflow: hidden;
     color: whitesmoke;
 }
-body::after {
+#banner::after {
     content: "";
-    background: url("../img/PhotobyRyanonUnsplash.jpg");
+    background: url("../img/PhotobyDylanGillisonUnsplash.jpg");
     background-size: cover;
     opacity: 1;
     top: 0;
@@ -23,7 +23,14 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
+.color-overlay {
+    width: 100%;
+    height: 100%;
+    background: #12EAEA;
+    opacity: 0.05;
+    position: absolute;
+    z-index: -1;
+}
 /*************** header ****************/
 #header {
     width: 100%;
@@ -33,11 +40,13 @@ a {
     padding: 0;
     display: flex;
     flex-flow: row wrap;
+    z-index: 1;
+    /*box-shadow: 0 1px 1px -1px black;*/
 }
 #header::after {
     content: "";
-    background: #B493C1;
-    opacity: 0.8;
+    background: #ffdd6e;
+    opacity: 0.15;
     top: 0;
     left: 0;
     bottom: 0;
@@ -50,84 +59,86 @@ a {
     width: 7em;
     height: 5em;
     margin-left: 5vw;
-    margin-top: 1vw;
+    /*margin-top: 1vw;*/
 }
 
 .logoimg {
-    width: 15em;
+    width: 12em;
+    margin-top: 0.5vw;
+    z-index: 1;
 }
 
 .log {
     position: absolute;
-    top: 2em;
-    right: 12em;
+    top: 1.5vw;
+    right: 5.5vw;
 }
 .login {
-    width: 5.5em;
-    padding: 0.5em;
-    font-size: 18px;
-    margin-right: 1.5vw;
+    width: 5em;
+    padding: 0.1em;
+    margin-right: 1vw;
     border-radius: 0.8em;
     border: none;
     background: none;
     color: #b0d248;
+    font-size: 18px;
     text-shadow: 1px 1px 4px #000000;
-    text-decoration: underline;
     /*-moz-box-shadow:    inset 0 0 10px #000000;*/
     /*-webkit-box-shadow: inset 0 0 10px #000000;*/
     /*box-shadow:         inset 0 0 8px #000000;*/
 
 }
 .signup {
-    width: 5.5em;
-    padding: 0.5em;
+    width: 5em;
+    padding: 0.1em;
     font-size: 18px;
-    border-radius: 0.8em;
     border: none;
     background: none;
     color: #ffdd6e;
     text-shadow: 1px 1px 5px #000000;
-    text-decoration: underline;
     /*-moz-box-shadow:    inset 0 0 10px #000000;*/
     /*-webkit-box-shadow: inset 0 0 10px #000000;*/
     /*box-shadow:         inset 0 0 8px #000000;*/
 }
 .faq {
-    position: absolute;
-    top: 2.2em;
-    right: 6em;
+    width: 5em;
+    padding: 0.1em;
+    border: none;
+    background: none;
     font-size: 18px;
-    text-shadow: 1px 1px 4px #000000;
+    color: #EF767A;
 }
 /*************** navigation ***************/
 ul {
+    width: 70%;
     list-style-type: none;
-    padding-top: 0;
     padding-bottom: 0.5vw;
-    padding-left: 25%;
-    margin: 0;
+    /*padding-left: 25%;*/
+    margin: 0 auto;
     position: relative;
-    color: whitesmoke;
-    box-shadow: 0 8px 6px -6px black;
+    text-align: center;
+    z-index: 1;
 }
-ul::after {
-    content: "";
-    background: #B493C1;
-    opacity: 0.8;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -2;
-}
+/*ul::after {*/
+/*    content: "";*/
+/*    background: #ffdd6e;*/
+/*    opacity: 0.5;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    position: absolute;*/
+/*    z-index: -3;*/
+/*}*/
 
 li {
     display: inline;
     /*color: darkgray;*/
     text-align: center;
-    padding-right: 3em;
+    padding: 0 2vw;
     color: whitesmoke;
+    text-shadow: 2px 2px 3px #000;
+    font-size: 1.4vw;
 }
 
 li a {
@@ -179,50 +190,105 @@ li a {
 
 
 /*************** body test ****************/
-.b-content {
-    height: 600px;
+/*.b-content {*/
+/*    height: 600px;*/
+/*}*/
+#banner {
+    text-align: center;
 }
-
 .quote {
-    width: 75%;
+    width: 80%;
+    line-height: 2.8em;
     position: relative;
-    margin-top: 15vw;
-    padding: 3vw 2vw;
-    font-size: 1.8em;
+    margin: 0 auto;
+    padding-top: 12vw;
+    font-size: 1.9em;
     font-weight: bold;
-    font-style: italic;
-}
-.quote::after {
-    content: "";
-    background: whitesmoke;
-    opacity: 0.8;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
+    /*font-style: italic;*/
+    text-align: center;
+    z-index: 1;
 }
 h2 {
     margin: 0;
     padding: 0;
-    color: black;
-    /*text-shadow: 1px 1px 1px #000;*/
+    color: whitesmoke;
+    text-shadow: 2px 2px 3px #000;
+    z-index: 1;
 }
 .banner-text {
     display: block;
     margin-top: 1vw;
     margin-left: 5vw;
-
 }
 
+.intro {
+    text-align: center;
+    font-size: 1.5em;
+    color: #ffdd6e;
+    line-height: 2em;
+    text-shadow: 1px 1px 3px #000;
+}
 
+.logbtn {
+    width: 30%;
+    margin: 2vw auto;
+}
+.b-login {
+    width: 10vw;
+    border: #b0d248 1px solid;
+    border-radius: 1em;
+    padding: 0.8vw 1.5vw;
+    font-size: 1.5em;
+    background: none;
+    color: #b0d248;
+    text-shadow: 1px 1px 5px #000;
+    margin-right: 2vw;
+    box-shadow: 1px 1px 1px 1px gray;
+    position: relative;
+}
+.b-login::after {
+    content: "";
+    background: #b0d248;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+    border-radius: 1em;
+}
+.b-signup {
+    width: 10vw;
+    border: #ffdd6e 1px solid;
+    border-radius: 1em;
+    padding: 0.8vw 1.5vw;
+    font-size: 1.5em;
+    background: none;
+    color: #ffdd6e;
+    text-shadow: 1px 1px 5px #000;
+    margin-left: 2vw;
+    box-shadow: 1px 1px 1px 1px gray;
+    position: relative;
+}
+.b-signup::after {
+    content: "";
+    background: #ffdd6e;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+    border-radius: 1em;
+}
 
 
 /*************** footer ****************/
 #footer {
     width: 100%;
-    height: 1.2vw;
+    height: 2vw;
     line-height: 1.2vw;
     position: absolute;
     left: 0;
@@ -234,17 +300,17 @@ h2 {
     color: darkgray;
 }
 
-#footer::after {
-    content: "";
-    background: #B493C1;
-    opacity: 0.8;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-}
+/*#footer::after {*/
+/*    content: "";*/
+/*    background: #B493C1;*/
+/*    opacity: 0.8;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    position: absolute;*/
+/*    z-index: -1;*/
+/*}*/
 .footer-content {
     color: whitesmoke;
     font-size: 0.9em;
