@@ -205,9 +205,9 @@ h2 {
 .intro {
     text-align: center;
     font-size: 1.3em;
-    color: #ffdd6e;
+    color: #B493C1;
     line-height: 2em;
-    text-shadow: 1px 1px 3px #000;
+    text-shadow: 1px 2px 3px #000;
 }
 
 .logbtn {
@@ -230,7 +230,7 @@ h2 {
 .b-login::after {
     content: "";
     background: #b0d248;
-    opacity: 0.2;
+    opacity: 0.4;
     top: 0;
     left: 0;
     bottom: 0;
@@ -255,7 +255,7 @@ h2 {
 .b-signup::after {
     content: "";
     background: #ffdd6e;
-    opacity: 0.2;
+    opacity: 0.4;
     top: 0;
     left: 0;
     bottom: 0;
