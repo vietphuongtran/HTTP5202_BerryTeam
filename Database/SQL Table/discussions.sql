@@ -7,6 +7,9 @@
 -- Server version: 5.7.24-log
 -- PHP Version: 7.2.10
 
+-- NOTE: add using database "berry_team":
+USE berry_team;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
