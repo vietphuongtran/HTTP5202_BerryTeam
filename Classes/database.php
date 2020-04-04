@@ -4,9 +4,13 @@ use PDO;
 use PDOException;
  class Database {
      private static $user = 'root';
-     private static $password = 'root';
-     private static $dbname = 'berryteam';
-     private static $dsn = 'mysql:host=localhost;dbname=berryteam' ;
+
+     //remember to change the password:
+     private static $password = 'root_pass';
+     //remember to change the database:
+     private static $dbname = 'phpclass';
+
+     private static $dsn = 'mysql:host=mysql_berry;dbname=berry_team' ;
      private static $dbcon;
 
      private function __construct()
