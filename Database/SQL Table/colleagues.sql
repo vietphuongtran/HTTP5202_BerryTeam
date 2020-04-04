@@ -32,7 +32,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `colleagues` (
-  `ID` int(225) NOT NULL,
+  `id` int(225) NOT NULL,
   `fname` varchar(550) NOT NULL,
   `lname` varchar(550) NOT NULL,
   `department` varchar(550) NOT NULL,
@@ -44,14 +44,14 @@ CREATE TABLE `colleagues` (
 -- Dumping data for table `colleagues`
 --
 
-INSERT INTO `colleagues` (`ID`, `fname`, `lname`, `department`, `phone`, `email`) VALUES
+INSERT INTO `colleagues` (`id`, `fname`, `lname`, `department`, `phone`, `email`) VALUES
 (1, ' Oswaldo ', 'Brun', 'Game', '4168878988', 'contact@ossy.com'),
 (2, 'Ellen', 'Green', 'Design', '4168877055', 'contact@ellen.com'),
 (3, 'Rosario', 'Hernandez', 'HR', '68970774003', 'contact@lili.com'),
 (4, 'Paul', 'Tran', 'Marketing', '4168837033', 'market@paultran.com'),
 (5, 'Paul', 'Lee', 'Marketing', '4168837033', 'market@paultran.com'),
-(14, 'Ella', 'Qi', 'Design', '416-999-8888', 'contact@ella.com'),
-(15, 'Sandy', 'Sheer', 'Design', '614-999-4325', 'contact@sandy.com');
+(6, 'Ella', 'Qi', 'Design', '416-999-8888', 'contact@ella.com'),
+(7, 'Sandy', 'Sheer', 'Design', '614-999-4325', 'contact@sandy.com');
 
 --
 -- Indexes for dumped tables
@@ -61,7 +61,7 @@ INSERT INTO `colleagues` (`ID`, `fname`, `lname`, `department`, `phone`, `email`
 -- Indexes for table `colleagues`
 --
 ALTER TABLE `colleagues`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -71,7 +71,7 @@ ALTER TABLE `colleagues`
 -- AUTO_INCREMENT for table `colleagues`
 --
 ALTER TABLE `colleagues`
-  MODIFY `ID` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
