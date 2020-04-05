@@ -2,14 +2,11 @@
 namespace Classes;
 use PDO;
 use PDOException;
+
  class Database {
+     //server sql connection:
      private static $user = 'root';
-
-     //remember to change the password:
      private static $password = 'root_pass';
-     //remember to change the database:
-     private static $dbname = 'phpclass';
-
      private static $dsn = 'mysql:host=mysql_berry;dbname=berry_team' ;
      private static $dbcon;
 
@@ -32,5 +29,4 @@ use PDOException;
          }
          return self::$dbcon;
      }
-
  }
