@@ -4,11 +4,17 @@ use PDO;
 
 class Colleague {
     public function searchColleague($dbcon, $searchContent) {
-        $sql = "SELECT * FROM berryteam 
-        WHERE `id` =  :searchContent || `f-name` = :searchContent || `l-name` = :searchContent || `department` = :searchContent || `phone` = :searchContent || `email` = :searchContent";
+        $sql = "SELECT * FROM colleagues 
+        WHERE `id` =  :searchContent 
+        OR `fname` LIKE '% :searchContent%' 
+        OR `lname` LIKE '% :searchContent%'
+        OR `department` LIKE '% :searchContent%'
+        OR `phone` LIKE '% :searchContent%' 
+        OR `email` LIKE '% :searchContent%'; ";
         $pdobtm = $dbcon->prepare($sql); //btm: berryteam system
+        $pdobtm->bindParam(':searchContent', $searchContent);
+
         $pdobtm->execute();
-//        $count = $pdobtm->execute();
         $colleagues = $pdobtm->fetchAll(PDO::FETCH_ASSOC);
         return $colleagues;
     }
@@ -71,7 +77,7 @@ class Colleague {
     }
 
     public function deleteColleague($db, $id) {
-        $sql = "DELETE FROM berryteam WHERE `id` = :id";
+        $sql = "DELETE FROM colleagues WHERE `id` = :id";
 
         $pst = $db->prepare($sql);
         $pst->bindParam(':id', $id);
