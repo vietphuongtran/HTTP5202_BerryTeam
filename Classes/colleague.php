@@ -20,7 +20,7 @@ class Colleague {
     }
 
     public function listColleague($dbcon) {
-        $sql = "SELECT * FROM colleagues";
+        $sql = "SELECT * FROM colleagues ORDER BY department";
         $pdobtm = $dbcon->prepare($sql); //btm: berryteam system
         $pdobtm->execute();
 
