@@ -1,8 +1,9 @@
 <?php
 require_once '../Classes/quote-database.php';
 require_once '../Classes/motivationquotes.php';
-use Classes\colleague as allcolleagues;
+use Classes\Motivationquote as allmotiquotes;
 use Classes\Database as dbConnect;
+
 //new database connection
 $dbcon = dbConnect::getDb();
 //new instance of quotes class
@@ -18,11 +19,11 @@ $motiquotes = $q->listQuotes($dbcon);
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
         <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-        <link rel="stylesheet" href="../Stylesheets/landing-uniform.css">
+        <link rel="stylesheet" href="../Stylesheets/uniform.css">
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
     <body>
-        <? include '../includes/index-header.php' ?>
+        <? include '../includes/header-index.php' ?>
         <? include '../includes/navigation.php' ?>
         <h1 class="h1 text-center">Default motivation quotes</h1>
         <div class="m-1">
@@ -40,11 +41,12 @@ $motiquotes = $q->listQuotes($dbcon);
                 <tbody>
                 <?php foreach ($motiquotes as $motiquote) { ?>
                     <tr>
-                        <th><?= $motiquote['quotes'] ?></th>
+                        <td><?= $motiquote['id'] ?></td>
+                        <td><?= $motiquote['quotes'] ?></td>
                         <td><?= $motiquote['category'] ?></td>
                         <td>
                             <form action="update.php" method="post">
-                                <input type="hidden" name="uid" value="<?= $motiquote['id'] ?>"/>
+                                <input type="hidden" name="id" value="<?= $motiquote['id'] ?>"/>
                                 <input type="submit" class="button btn btn-primary" name="updateMotiQuote" value="Update"/>
                             </form>
                         </td>
@@ -60,6 +62,5 @@ $motiquotes = $q->listQuotes($dbcon);
             </table>
             <a href="add.php" id="btn_addMotiQuote" class="btn btn-success btn-lg float-right">Create your own motivation team quotes</a>
         </div>
-        <? include '../includes/footer.php' ?>
     </body>
 </html>

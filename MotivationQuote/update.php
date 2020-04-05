@@ -1,23 +1,25 @@
 <?php
 require_once '../Classes/quote-database.php';
 require_once '../Classes/motivationquotes.php';
-use Classes\colleague as allcolleagues;
+use Classes\Motivationquote as allmotiquotes;
 use Classes\Database as dbConnect;
 
-$quote = $category = "";
+$id = $quote = $category = "";
 
 //get previous data
 if(isset($_POST['updateMotiQuote'])) {
-    $id= $_POST['id'];
+    $id = $_POST['id'];
     //new database connection
     $dbcon = dbConnect::getDb();
     //new instance of quotes class
-    $q = new allmotiquotes();
-    $motiquotes = $q->getMotiQuoteById($id, $dbcon);
+    $upq = new allmotiquotes();
+    $upmotiquotes = $upq->getMotiQuoteById($id, $dbcon);
 
-    $quote = $motiquotes->quote;
-    $category = $motiquotes->category;
+    // ->column name in the table;
+    $upquote = $upmotiquotes->quotes;
+    $upcategory = $upmotiquotes->category;
 }
+
 //update data
 if(isset($_POST['updMotiQuote'])) {
     $quote = $_POST['quote'];
@@ -28,7 +30,7 @@ if(isset($_POST['updMotiQuote'])) {
     $dbcon = dbConnect::getDb();
     //new instance of quotes class
     $q = new allmotiquotes();
-    $count = $q->updateMotiQuotes($quote, $category, $id);
+    $count = $q->updateMotiQuote($dbcon, $quote, $category, $id);
     if($count){
         header("Location: list.php");
     } else {
@@ -46,11 +48,11 @@ if(isset($_POST['updMotiQuote'])) {
         <link rel="stylesheet" href="CSS/main.css" type="text/css">
 
         <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-        <link rel="stylesheet" href="../Stylesheets/landing-uniform.css">
+        <link rel="stylesheet" href="../Stylesheets/uniform.css">
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
     <body>
-        <? include '../includes/index-header.php' ?>
+        <? include '../includes/header-index.php' ?>
         <? include '../includes/navigation.php' ?>
         <div>
             <!--    Form to Update current quote -->
@@ -60,7 +62,7 @@ if(isset($_POST['updMotiQuote'])) {
                 <div class="form-group">
                     <!--            <label for="quote">First Name :</label>-->
                     <input type="text" class="form-control" name="quote" id="quote" value="<?= $quote; ?>"
-                           placeholder="<?= $quote; ?>">
+                           placeholder="<?= $upquote; ?>">
                     <span style="color: red">
 
                     </span>
@@ -68,20 +70,19 @@ if(isset($_POST['updMotiQuote'])) {
                 <div class="form-group">
                     <!--            <label for="lname">Last Name :</label>-->
                     <input type="text" class="form-control" name="category" id="category" value="<?= $category; ?>"
-                           placeholder="<?= $category; ?>">
+                           placeholder="<?= $upcategory; ?>">
                     <span style="color: red">
 
                     </span>
                 </div>
 
                 <a href="list.php" id="btn_back" class="btn btn-success float-left">Back</a>
-                <button type="submit" name="updMotiQuote"
-                        class="btn btn-primary float-right" id="btn-submit">
+                <button type="submit" name="updMotiQuote" class="btn btn-primary float-right" id="btn-submit">
                     Save changes
                 </button>
             </form>
         </div>
-        <? include '../includes/footer.php' ?>
+
     </body>
 </html
 

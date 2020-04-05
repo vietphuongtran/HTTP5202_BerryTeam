@@ -1,5 +1,6 @@
 <?php
-require_once '../Classes/database.php';
+//require_once '../Classes/database.php';
+require_once '../Classes/quote-database.php';
 require_once '../Classes/colleague.php';
 use Classes\colleague as allcolleagues;
 use Classes\Database as dbConnect;
@@ -20,18 +21,18 @@ $searchContent = "";
         <meta name="keywords" content="Berryteam, Colleague, Admission">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-        <link rel="stylesheet" href="../Stylesheets/landing-uniform.css">
+<!--        <link rel="stylesheet" href="../Stylesheets/taskcrud.css">-->
+        <link rel="stylesheet" href="../Stylesheets/uniform.css">
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
     <body>
-        <? include '../includes/index-header.php' ?>
+        <? include '../includes/header-landing.php' ?>
         <? include '../includes/navigation.php' ?>
         <p class="h1 text-center">All team members</p>
         <!--    search colleagues   -->
         <div class="s-1">
-            <form action="searchColleague.php" method="post">
-                <input type="text" name="searchContent" value="<?= $searchContent ?>">
+            <form action="search.php" method="post">
+                <input type="text" name="searchContent" value="<?= $searchContent; ?>">
                 <input type="submit" class="button btn btn-primary" name="searchColleague" value="Search"/>
             </form>
         </div>
@@ -59,15 +60,15 @@ $searchContent = "";
                         <td><?= $colleague['lname'] ?></td>
                         <td><?= $colleague['department'] ?></td>
                         <td><?= $colleague['phone'] ?></td>
-                        <td><?= $colleague['Email'] ?></td>
+                        <td><?= $colleague['email'] ?></td>
                         <td>
-                            <form action="updateColleague.php" method="post">
+                            <form action="update.php" method="post">
                                 <input type="hidden" name="uid" value="<?= $colleague['id'] ?>"/>
                                 <input type="submit" class="button btn btn-primary" name="updateColleague" value="Update"/>
                             </form>
                         </td>
                         <td>
-                            <form action="deleteColleague.php" method="post">
+                            <form action="delete.php" method="post">
                                 <input type="hidden" name="id" value="<?= $colleague['id'] ?>"/>
                                 <input type="submit" class="button btn btn-danger" name="deleteColleague" value="Delete"/>
                             </form>
@@ -76,8 +77,8 @@ $searchContent = "";
                 <?php } ?>
                 </tbody>
             </table>
-            <a href="addColleague.php" id="btn_addColleague" class="btn btn-success btn-lg float-right">New Colleague</a>
+            <a href="add.php" id="btn_addColleague" class="btn btn-success btn-lg float-right">New Colleague</a>
         </div>
-        <? include '../includes/footer.php' ?>
+        <? include '../includes/footer-landing.php' ?>
     </body>
 </html>

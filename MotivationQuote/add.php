@@ -2,7 +2,7 @@
 //require_once 'autoload/composer.json';
 require_once '../Classes/quote-database.php';
 require_once '../Classes/motivationquotes.php';
-use Classes\colleague as allcolleagues;
+use Classes\Motivationquote as allmotiquotes;
 use Classes\Database as dbConnect;
 
 //waiting to use:
@@ -24,7 +24,7 @@ if(isset($_POST['addMotiQuotes'])) {
     //new database connection
     $dbcon = dbConnect::getDb();
     //new instance of quotes class
-    $quote = new addMotiQuotes();
+    $quote = new allmotiquotes();
     $count = $quote->addMotiQuotes($dbcon, $quotes, $category);
     if ($count) {
         header("Location: list.php");
@@ -43,11 +43,11 @@ if(isset($_POST['addMotiQuotes'])) {
         <link rel="stylesheet" href="/CSS/main.css" type="text/css">
 
         <link rel="stylesheet" href="/Stylesheets/taskcrud.css">
-        <link rel="stylesheet" href="/Stylesheets/landing-uniform.css">
+        <link rel="stylesheet" href="/Stylesheets/uniform.css">
         <link rel="stylesheet" type="text/css" href="/Stylesheets/navigation.css">
     </head>
     <body>
-        <? include '../includes/index-header.php' ?>
+        <? include '../includes/header-index.php' ?>
         <? include '../includes/navigation.php' ?>
         <div>
             <h1>Create your own motivation quotes</h1>
@@ -77,6 +77,6 @@ if(isset($_POST['addMotiQuotes'])) {
                 </button>
             </form>
         </div>
-        <? include '../includes/footer.php' ?>
+        <? include '../includes/footer-landing.php' ?>
     </body>
 </html>

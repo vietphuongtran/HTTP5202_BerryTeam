@@ -8,9 +8,9 @@ class Database {
     //remember to change the password:
     private static $password = 'passwordroot';
     //remember to change the database:
-    private static $dbname = 'berryteam';
+    //private static $dbname = 'berryteam';
 
-    private static $dsn = 'mysql:host=localhost;dbname=quotes' ;
+    private static $dsn = 'mysql:host=localhost;dbname=berry team';
     private static $dbcon;
 
     private function __construct()
@@ -24,8 +24,10 @@ class Database {
 
             try {
                 self::$dbcon = new PDO(self::$dsn, self::$user, self::$password);
+
             } catch (PDOException $e) {
                 $msg = $e->getMessage();
+                echo $msg;
                 echo "Problem connecting quotes database";
                 exit();
             }

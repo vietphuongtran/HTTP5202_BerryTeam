@@ -13,9 +13,9 @@ class Motivationquote {
     }
 
     public function addMotiQuotes($dbcon, $quotes, $category) {
-        $sql = "INSERT INTO quotes (quotes, category)";
+        $sql = "INSERT INTO quotes (quotes, category)
+                VALUES (:quotes, :category)";
         $pst = $dbcon->prepare($sql);
-
         $pst->bindParam(':quotes', $quotes);
         $pst->bindParam(':category', $category);
 
@@ -31,13 +31,13 @@ class Motivationquote {
         return $pst->fetch(PDO::FETCH_OBJ);
     }
 
-    public function updateMotiQuotes($dbcon, $quotes, $category, $id) {
-        $sql = "Update quotes
-                set quotes = :quotes,
-                category = :category,
+    public function updateMotiQuote($dbcon, $quotes, $category, $id) {
+        $sql = "UPDATE quotes
+                SET quotes = :quotes,
+                category = :category
                 WHERE id = :id";
 
-        $pst =   $dbcon->prepare($sql);
+        $pst = $dbcon->prepare($sql);
 
         $pst->bindParam(':quotes', $quotes);
         $pst->bindParam(':category', $category);
@@ -47,7 +47,7 @@ class Motivationquote {
         return $count;
     }
 
-    public function deleteMotiQuotes($db, $id) {
+    public function deleteMotiQuote($db, $id) {
         $sql = "DELETE FROM quotes WHERE `ID` = :id";
 
         $pst = $db->prepare($sql);
@@ -55,11 +55,4 @@ class Motivationquote {
         $count = $pst->execute();
         return $count;
     }
-
-
-
-
-
-
-
 }

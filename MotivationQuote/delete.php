@@ -1,7 +1,7 @@
 <?php
 require_once '../Classes/quote-database.php';
 require_once '../Classes/motivationquotes.php';
-use Classes\colleague as allcolleagues;
+use Classes\Motivationquote as allmotiquotes;
 use Classes\Database as dbConnect;
 
 if(isset($_POST['deleteMotiQuote'])) {
@@ -12,7 +12,7 @@ if(isset($_POST['deleteMotiQuote'])) {
     $q = new allmotiquotes();
     $count = $q->deleteMotiQuote($dbcon, $id);
     if($count){
-        header("Location: list.php");
+        header("Location: delete.php");
     }
     else {
         echo "Problem deleting the current quote...";
@@ -29,22 +29,21 @@ if(isset($_POST['deleteMotiQuote'])) {
         <link rel="stylesheet" href="CSS/main.css" type="text/css">
 
         <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-        <link rel="stylesheet" href="../Stylesheets/landing-uniform.css">
+        <link rel="stylesheet" href="../Stylesheets/uniform.css">
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
     <body>
-        <? include '../includes/index-header.php' ?>
+        <? include '../includes/header-index.php' ?>
         <? include '../includes/navigation.php' ?>
         <div>
             <h2>Deleted the motivation quote successfully</h2>
             <div>
-                <a href="add.php" id="btn_back" class="btn btn-success float-left">Create your own motivation quote</a>
-            </div>
-            <div>
                 <a href="list.php" id="btn_back" class="btn btn-success float-left">Back</a>
             </div>
+            <div>
+                <a href="add.php" id="btn_back" class="btn btn-success float-right">Create your own motivation quote</a>
+            </div>
         </div>
-        <? include '../includes/footer.php' ?>
     </body>
 </html>
 
