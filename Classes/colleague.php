@@ -10,7 +10,7 @@ class Colleague {
         OR `lname` LIKE '% :searchContent%'
         OR `department` LIKE '% :searchContent%'
         OR `phone` LIKE '% :searchContent%' 
-        OR `email` LIKE '% :searchContent%'; ";
+        OR `email` LIKE '% :searchContent%';";
         $pdobtm = $dbcon->prepare($sql); //btm: berryteam system
         $pdobtm->bindParam(':searchContent', $searchContent);
 

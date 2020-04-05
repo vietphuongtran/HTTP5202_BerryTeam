@@ -69,7 +69,7 @@ $searchContent = "";
                             <td>
                                 <form action="update.php" method="post">
                                     <input type="hidden" name="uid" value="<?= $colleague['id'] ?>"/>
-                                    <input type="submit" class="button btn btn-primary" name="updateColleague" value="Update"/>
+                                    <input type="submit" class="button btn btn-primary" name="updateColleague" value="Edit"/>
                                 </form>
                             </td>
                             <td>

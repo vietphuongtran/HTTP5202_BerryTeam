@@ -82,18 +82,18 @@ a {
     margin-top: 3vw;
     position: relative;
 }
-.la-logout::after {
-    content: "";
-    background: #ffdd6e;
-    opacity: 0.15;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    /*z-index: -1;*/
-    border-radius: 1.3em;
-}
+/*.la-logout::after {*/
+/*    content: "";*/
+/*    background: #ffdd6e;*/
+/*    opacity: 0.15;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    position: absolute;*/
+/*    !*z-index: -1;*!*/
+/*    border-radius: 1.3em;*/
+/*}*/
 .la-faq {
     font-size: 0.9em;
     margin-left: 2vw;
