@@ -34,7 +34,7 @@ if(isset($_POST['searchColleague'])) {
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
     <body>
-        <? include '../includes/header-index.php' ?>
+        <? include '../includes/header-landing.php' ?>
         <? include '../includes/navigation.php' ?>
         <p class="h1 text-center">Berryteam </p>
         <p>Search result</p>

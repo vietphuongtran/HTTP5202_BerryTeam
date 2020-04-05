@@ -97,7 +97,7 @@ if(isset($_POST['updColleague'])) {
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
     <body>
-        <? include '../includes/header-index.php' ?>
+        <? include '../includes/header-landing.php' ?>
         <? include '../includes/navigation.php' ?>
         <div>
             <h1>Edit team member <?= $fname; ?> <?= $lname; ?> information</h1>
@@ -152,6 +152,7 @@ if(isset($_POST['updColleague'])) {
                 </button>
             </form>
         </div>
+        <? include '../includes/footer-landing.php' ?>
     </body>
 </html
 

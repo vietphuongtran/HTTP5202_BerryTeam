@@ -35,7 +35,7 @@ if(isset($_POST['deleteColleague'])) {
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
     <body>
-        <? include '../includes/header-index.php' ?>
+        <? include '../includes/header-landing.php' ?>
         <? include '../includes/navigation.php' ?>
         <div>
             <h2>Deleted team member successfully</h2>
@@ -46,6 +46,7 @@ if(isset($_POST['deleteColleague'])) {
                 <a href="add.php" id="btn_back" class="btn btn-success float-right">Add new team member</a>
             </div>
         </div>
+        <? include '../includes/footer-landing.php' ?>
     </body>
 </html>
 
