@@ -41,8 +41,8 @@ if(isset($_POST['upFaq'])){
     <title>Frequently Asked Questions</title>
     <meta name="description" content="Frequently Asked Questions">
     <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-    <link rel="stylesheet" href ="../Stylesheets/landing-uniform.css">
     <link rel="stylesheet" href ="../Stylesheets/uniform.css">
+    <link rel="stylesheet" href ="../Stylesheets/index.css">
     <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
 </head>
 <body>
@@ -64,6 +64,6 @@ if(isset($_POST['upFaq'])){
     <button type="submit" name="upFaq" id="submit">Update FAQ</button>
     <a href="listfaq.php" id="backBtn">Back to List</a>
 </form>
-<? include "footer.php" ?>
+<? include "footer-landing.php" ?>
 </body>
 </html>

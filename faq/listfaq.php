@@ -17,12 +17,12 @@ use Classes\database as dbConnect;
     <title>FAQ List</title>
     <meta name="description" content="Frequently Asked Questions">
     <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-    <link rel="stylesheet" href ="../Stylesheets/landing-uniform.css">
     <link rel="stylesheet" href ="../Stylesheets/uniform.css">
+    <link rel="stylesheet" href ="../Stylesheets/index.css">
     <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
 
-    <? include '../includes/index-header.php' ?>
+    <? include '../includes/header-index.php' ?>
     <? include '../includes/navigation.php' ?>
     <body>
 
@@ -52,5 +52,5 @@ use Classes\database as dbConnect;
 
 
         <div><a href="addfaq.php" id="btn_addfaq">Add New FAQ</a></div>
-        <? include '../includes/footer.php' ?>
+        <? include '../includes/footer-landing.php' ?>
     </body>

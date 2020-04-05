@@ -35,8 +35,8 @@ if(isset($_POST['updDiscuss'])){
 <head>
     <title>Task management system</title>
     <meta name="description" content="Task Management System">
-    <link rel="stylesheet" href ="../Stylesheets/landing-uniform.css">
     <link rel="stylesheet" href ="../Stylesheets/uniform.css">
+    <link rel="stylesheet" href ="../Stylesheets/index.css">
     <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
 </head>
 <body>

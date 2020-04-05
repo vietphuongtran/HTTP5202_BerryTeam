@@ -10,15 +10,15 @@
         <link rel="stylesheet" href="CSS/main.css" type="text/css">
 
         <link rel="stylesheet" href="Stylesheets/taskcrud.css">
-        <link rel="stylesheet" href="Stylesheets/landing-uniform.css">
+        <link rel="stylesheet" href="Stylesheets/uniform.css">
         <link rel="stylesheet" type="text/css" href="Stylesheets/navigation.css">
     </head>
     <body>
-        <? include 'includes/index-header.php' ?>
+        <? include 'includes/header-index.php' ?>
         <? include 'includes/navigation.php' ?>
         <div>
             <h1>404 NOT FOUND...</h1>
         </div>
-        <? include 'includes/footer.php' ?>
+        <? include 'includes/footer-landing.php' ?>
     </body>
 </html>

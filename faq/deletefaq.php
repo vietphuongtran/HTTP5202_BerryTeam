@@ -36,13 +36,13 @@ if(isset($_POST['deleteFaq'])) {
     <title>Frequent Asked Questions</title>
     <meta name="description" content="FAQdelete">
     <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-    <link rel="stylesheet" href ="../Stylesheets/landing-uniform.css">
     <link rel="stylesheet" href ="../Stylesheets/uniform.css">
+    <link rel="stylesheet" href ="../Stylesheets/index.css">
     <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
 </head>
 
 <body>
-<? include '../includes/index-header.php' ?>
+<? include '../includes/header-index.php' ?>
 <? include '../includes/navigation.php' ?>
 <h2>Are you sure you want to delete this faq?</h2>
 <form method="POST" action="">
@@ -50,7 +50,7 @@ if(isset($_POST['deleteFaq'])) {
     <button type="submit" name="deleteFaq" id="submit">Delete FAQ</button>
     <a href="listfaq.php">No, go back to list</a>
 </form>
-<? include '../includes/footer.php' ?>
+<? include '../includes/footer-landing.php' ?>
 </body>
 </html>
 

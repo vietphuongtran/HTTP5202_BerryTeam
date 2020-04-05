@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    color: whitesmoke;
+}
+#banner::after {
+    content: "";
+    background: url("../img/PhotobyDylanGillisonUnsplash.jpg");
+    background-size: cover;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -3;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.color-overlay {
+    width: 100%;
+    height: 100%;
+    background: #12EAEA;
+    opacity: 0.18;
+    position: absolute;
+    z-index: -1;
+}
+/*************** header ****************/
+#header {
+    width: 100%;
+    height: 4em;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    z-index: 1;
+}
+#header::after {
+    content: "";
+    background: #B493C1;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+}
+
+.h-logo {
+    width: 7em;
+    height: 5em;
+    margin-left: 5vw;
+}
+
+.logoimg {
+    width: 12em;
+    margin-top: 0.5vw;
+    z-index: 1;
+}
+
+.log {
+    position: absolute;
+    top: 1.5vw;
+    right: 5.5vw;
+}
+.login {
+    width: 5em;
+    padding: 0.1em;
+    margin-right: 1vw;
+    border-radius: 0.8em;
+    border: none;
+    background: none;
+    color: #b0d248;
+    font-size: 18px;
+    text-shadow: 1px 1px 4px gray;
+}
+.signup {
+    width: 5em;
+    padding: 0.1em;
+    font-size: 18px;
+    border: none;
+    background: none;
+    color: #ffdd6e;
+    text-shadow: 1px 1px 4px gray;
+}
+.faq {
+    width: 5em;
+    padding: 0.1em;
+    border: none;
+    background: none;
+    font-size: 18px;
+    color: #EF767A;
+    text-shadow: 1px 1px 4px gray;
+}
+/*************** navigation ***************/
+ul {
+    width: 70%;
+    list-style-type: none;
+    padding-bottom: 0.5vw;
+    /*padding-left: 25%;*/
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+li {
+    display: inline;
+    text-align: center;
+    padding: 0 2vw;
+    color: whitesmoke;
+    text-shadow: 2px 2px 3px #000;
+    font-size: 1.4vw;
+}
+
+li a {
+    text-align: center;
+    line-height: 3em;
+    text-decoration: none;
+}
+
+.show-menu {
+    text-decoration: none;
+    color: #fff;
+    background: #B0DB43;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
+
+#mobilenav {
+    display: none;
+}
+
+#mobilenav:checked ~ #menu{
+    display: block;
+}
+
+@media screen and (max-width : 760px){
+    ul {
+        display: none;
+    }
+    li {
+        margin-bottom: 1px;
+    }
+    /*Make the menu appear full width*/
+    li a {
+        display: inline-block;
+        width: 100%;
+    }
+    .show-menu {
+        display:block;
+    }
+}
+
+/*************** banner ****************/
+#banner {
+    text-align: center;
+}
+.quote {
+    width: 60%;
+    line-height: 2.5em;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 12vw;
+    font-size: 1.9em;
+    font-weight: bold;
+    /*font-style: italic;*/
+    text-align: center;
+    z-index: 1;
+}
+h2 {
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    text-shadow: 2px 2px 3px #000;
+    z-index: 1;
+    font-weight: bolder;
+}
+.banner-text {
+    display: block;
+    margin-top: 1vw;
+    margin-left: 5vw;
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.3em;
+    color: #B493C1;
+    line-height: 2em;
+    text-shadow: 1px 2px 3px #000;
+}
+
+.logbtn {
+    width: 30%;
+    margin: 2vw auto;
+}
+.b-login {
+    width: 10vw;
+    border: #b0d248 1px solid;
+    border-radius: 1em;
+    padding: 0.8vw 1.5vw;
+    font-size: 1.5em;
+    background: none;
+    color: #b0d248;
+    text-shadow: 1px 1px 5px #000;
+    margin-right: 2vw;
+    box-shadow: 1px 1px 1px 1px gray;
+    position: relative;
+}
+.b-login::after {
+    content: "";
+    background: #b0d248;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+    border-radius: 1em;
+}
+.b-signup {
+    width: 10vw;
+    border: #ffdd6e 1px solid;
+    border-radius: 1em;
+    padding: 0.8vw 1.5vw;
+    font-size: 1.5em;
+    background: none;
+    color: #ffdd6e;
+    text-shadow: 1px 1px 5px #000;
+    margin-left: 2vw;
+    box-shadow: 1px 1px 1px 1px gray;
+    position: relative;
+}
+.b-signup::after {
+    content: "";
+    background: #ffdd6e;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+    border-radius: 1em;
+}
+
+/*************** footer ****************/
+#footer {
+    width: 100%;
+    height: 2vw;
+    line-height: 1.2vw;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: darkgray;
+}
+.footer-content {
+    color: whitesmoke;
+    font-size: 0.9em;
+}

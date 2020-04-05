@@ -29,13 +29,13 @@ if (isset($_POST['addFaq'])) {
     <title>Add FAQ</title>
     <meta name="description" content="Frequently Asked Questions">
     <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-    <link rel="stylesheet" href="../Stylesheets/landing-uniform.css">
     <link rel="stylesheet" href="../Stylesheets/uniform.css">
+    <link rel="stylesheet" href="../Stylesheets/index.css">
     <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
 </head>
 
 <body>
-<? include '../includes/index-header.php' ?>
+<? include '../includes/header-index.php' ?>
 <? include '../includes/navigation.php' ?>
 
 
@@ -55,7 +55,7 @@ if (isset($_POST['addFaq'])) {
     <button type="submit" name="addFaq" id="submit">Add New FAQ</button>
     <a href="listfaq.php" id="backBtn">Back to List</a>
 </form>
-<? include '../includes/footer.php' ?>
+<? include '../includes/footer-landing.php' ?>
 </body>
 </html>
 
