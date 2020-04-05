@@ -54,7 +54,7 @@ if(isset($_POST['addMotiQuotes'])) {
     <body>
         <? include '../includes/header-landing.php' ?>
         <? include '../includes/navigation.php' ?>
-        <div>
+        <div class="maincontainer">
             <h1>Create your own motivation quotes</h1>
             <!--    Form to Add a Motivation Quote    -->
             <form action="" method="post">

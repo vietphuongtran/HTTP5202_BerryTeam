@@ -81,7 +81,6 @@ if(isset($_POST['updColleague'])) {
         echo "Problem updating this team member...";
     }
 }
-
 ?>
 
 <html lang="en">
@@ -99,7 +98,7 @@ if(isset($_POST['updColleague'])) {
     <body>
         <? include '../includes/header-landing.php' ?>
         <? include '../includes/navigation.php' ?>
-        <div>
+        <div class="maincontainer">
             <h1>Edit team member <?= $fname; ?> <?= $lname; ?> information</h1>
             <!--    Form to Update  Colleague -->
             <form action="" method="post">

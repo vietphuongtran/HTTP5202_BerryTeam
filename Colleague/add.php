@@ -84,7 +84,7 @@ if(isset($_POST['addColleague'])) {
     <body>
         <? include '../includes/header-landing.php' ?>
         <? include '../includes/navigation.php' ?>
-        <div>
+        <div class="maincontainer">
             <!--    Form to Add A Team Member   -->
             <form action="" method="post">
 

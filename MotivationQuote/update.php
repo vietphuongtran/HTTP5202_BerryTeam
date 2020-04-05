@@ -54,7 +54,7 @@ if(isset($_POST['updMotiQuote'])) {
     <body>
         <? include '../includes/header-landing.php' ?>
         <? include '../includes/navigation.php' ?>
-        <div>
+        <div class="maincontainer">
             <!--    Form to Update current quote -->
             <form action="" method="post">
                 <input type="hidden" name="motiquoteid" value="<?= $id; ?>" />

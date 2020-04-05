@@ -37,7 +37,7 @@ if(isset($_POST['deleteColleague'])) {
     <body>
         <? include '../includes/header-landing.php' ?>
         <? include '../includes/navigation.php' ?>
-        <div>
+        <div class="maincontainer">
             <h2>Deleted team member successfully</h2>
             <div>
                 <a href="list.php" id="btn_back" class="btn btn-success float-left">Back</a>
