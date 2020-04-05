@@ -13,6 +13,6 @@
         include "includes/header-index.php";
         include "includes/navigation.php";
         include "includes/banner-index.php";
-        include "includes/footer-landing.php"; ?>
+        include "includes/footer-index.php"; ?>
     </body>
 </html>
