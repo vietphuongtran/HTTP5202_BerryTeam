@@ -53,7 +53,7 @@
        * ###### updateMotiQuote.php
        * ###### deleteMotiQuote.php
     * Stylesheets:
-       * ###### landing-uniform.css
+       * ###### index.css
        * ###### uniform.css
      * ###### index.php
      * ###### error404.php
