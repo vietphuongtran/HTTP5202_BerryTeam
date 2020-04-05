@@ -40,7 +40,7 @@
      * Classes:
        * ###### colleague.php
        * ###### motivationquotes.php
-       * ###### quotes-database.php
+       * ###### database-server.php
      * Colleague: 
        * ###### addColleague.php
        * ###### listColleague.php
@@ -52,12 +52,19 @@
        * ###### listMotiQuotes.php
        * ###### updateMotiQuote.php
        * ###### deleteMotiQuote.php
+       * ###### motivation.php
+    * includes:
+       * ###### banner-index.php
+       * ###### header-index.php
+       * ###### header-landing.php
+       * ###### footer-index.php
+       * ###### footer-landing.php
     * Stylesheets:
        * ###### index.css
        * ###### uniform.css
+       * ###### displayMotivationQuote.css
      * ###### index.php
      * ###### error404.php
-
 ### 3. Lily: FAQ + Survey + Logo design + Searching banner images
   * Features:
     * FAQ: 
