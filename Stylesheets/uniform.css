@@ -22,22 +22,25 @@ a {
     text-decoration: none;
     color: inherit;
 }
+.maincontainer {
+    padding: 0 9vw;
+}
 /*************** header ****************/
 #la-header {
     width: 100%;
-    height: 9vw;
+    height: 8vw;
     position: relative;
     margin: 0;
     padding: 0;
     display: flex;
     flex-flow: row wrap;
-    box-shadow: 0 0 #FFFFFF inset, 0 1px 4px rgba(0, 0, 0, 0.3);
+    /*box-shadow: 0 0 #FFFFFF inset, 0 1px 4px rgba(0, 0, 0, 0.3);*/
 }
 #la-header::after {
     content: "";
     background-image: url("/img/PhotobyJeremyRickettsonUnsplash.jpg");
     background-size: cover;
-    opacity: 1;
+    opacity: 0.9;
     top: -3vw;
     left: 0;
     bottom: 0;
@@ -67,16 +70,16 @@ a {
 
 .la-logout {
     width: 8vw;
-    border: #ffdd6e 1px solid;
-    border-radius: 1em;
-    padding: 0.3vw 0.2vw;
+    /*border: #ffdd6e 1px solid;*/
+    /*border-radius: 1em;*/
+    border: none;
+    padding: 0.8vw 0.2vw;
     font-size: 0.9em;
     background: none;
     color: #ffdd6e;
     text-shadow: 1px 1px 5px #000;
     margin-left: 31vw;
     margin-top: 3vw;
-    box-shadow: 1px 1px 1px 1px gray;
     position: relative;
 }
 .la-logout::after {
@@ -89,7 +92,7 @@ a {
     right: 0;
     position: absolute;
     /*z-index: -1;*/
-    border-radius: 1em;
+    border-radius: 1.3em;
 }
 .la-faq {
     font-size: 0.9em;
