@@ -55,8 +55,8 @@ use Classes\ColleaguesxTasks as colleaguesxtasks;
         <title>Task management system</title>
         <meta name="description" content="Student Management System">
         <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-        <link rel="stylesheet" href ="../Stylesheets/landing-uniform.css">
         <link rel="stylesheet" href ="../Stylesheets/uniform.css">
+        <link rel="stylesheet" href ="../Stylesheets/index.css">
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -64,7 +64,7 @@ use Classes\ColleaguesxTasks as colleaguesxtasks;
 <!--        <script src="assignEmployee.js"></script>-->
     </head>
     <body>
-        <? include '../includes/index-header.php' ?>
+        <? include '../includes/header-index.php' ?>
         <? include '../includes/navigation.php' ?>
         <h2>Detail information for <?=$task->name ?> task</h2>
             <div class="flexbox" id="showtaskemployee">
@@ -102,6 +102,6 @@ use Classes\ColleaguesxTasks as colleaguesxtasks;
                         <input type="submit" class="button btn btn-primary" name="deleteTask" value="Delete"/>
                     </form>
                 </div>
-        <? include '../includes/footer.php' ?>
+        <? include '../includes/footer-landing.php' ?>
     </body>
 </html>

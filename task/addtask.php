@@ -29,12 +29,12 @@ if(isset($_POST['addTask'])){
         <title>Task management system</title>
         <meta name="description" content="Student Management System">
         <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-        <link rel="stylesheet" href ="../Stylesheets/landing-uniform.css">
         <link rel="stylesheet" href ="../Stylesheets/uniform.css">
+        <link rel="stylesheet" href ="../Stylesheets/index.css">
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
     <body>
-        <? include '../includes/index-header.php' ?>
+        <? include '../includes/header-index.php' ?>
         <? include '../includes/navigation.php' ?>
         <h1>Add a task</h1>
         <form action="" method="post">
@@ -58,7 +58,7 @@ if(isset($_POST['addTask'])){
             <button type="submit" name="addTask" id="submit">Add a task</button>
             <a href="listtask.php" id="btn_back">Back to List</a>
         </form>
-        <? include '../includes/footer.php' ?>
+        <? include '../includes/footer-landing.php' ?>
     </body>
 </html>
 

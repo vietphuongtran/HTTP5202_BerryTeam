@@ -25,11 +25,11 @@ use Classes\ColleaguesxTasks as colleaguesxtasks;
         <title>Task List</title>
         <meta name="description" content="Task Management System">
         <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-        <link rel="stylesheet" href ="../Stylesheets/landing-uniform.css">
         <link rel="stylesheet" href ="../Stylesheets/uniform.css">
+        <link rel="stylesheet" href ="../Stylesheets/index.css">
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
-    <? include '../includes/index-header.php' ?>
+    <? include '../includes/header-index.php' ?>
     <? include '../includes/navigation.php' ?>
     <body>
 
@@ -119,6 +119,6 @@ use Classes\ColleaguesxTasks as colleaguesxtasks;
             </div>
         </div>
         <div><a href="addtask.php">Add a task</a></div>
-        <? include '../includes/footer.php' ?>
+        <? include '../includes/footer-landing.php' ?>
     </body>
 
