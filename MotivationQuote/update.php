@@ -52,7 +52,7 @@ if(isset($_POST['updMotiQuote'])) {
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
     <body>
-        <? include '../includes/header-index.php' ?>
+        <? include '../includes/header-landing.php' ?>
         <? include '../includes/navigation.php' ?>
         <div>
             <!--    Form to Update current quote -->
@@ -82,7 +82,7 @@ if(isset($_POST['updMotiQuote'])) {
                 </button>
             </form>
         </div>
-
+        <? include '../includes/footer-landing.php' ?>
     </body>
 </html
 

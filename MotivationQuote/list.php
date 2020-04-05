@@ -23,7 +23,7 @@ $motiquotes = $q->listQuotes($dbcon);
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
     <body>
-        <? include '../includes/header-index.php' ?>
+        <? include '../includes/header-landing.php' ?>
         <? include '../includes/navigation.php' ?>
         <h1 class="h1 text-center">Default motivation quotes</h1>
         <div class="m-1">
@@ -62,5 +62,6 @@ $motiquotes = $q->listQuotes($dbcon);
             </table>
             <a href="add.php" id="btn_addMotiQuote" class="btn btn-success btn-lg float-right">Create your own motivation team quotes</a>
         </div>
+        <? include '../includes/footer-landing.php' ?>
     </body>
 </html>
