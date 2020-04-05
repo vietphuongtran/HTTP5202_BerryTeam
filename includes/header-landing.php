@@ -6,7 +6,7 @@ $gdate = date("m-d-Y") . ",  " . date("l");
 <!----------- header ------------>
 <header id="la-header">
     <div class="la-logo">
-        <a href=""><img class="la-logoimg" src="/img/logo.png" alt="logo"></a>
+        <a href="/index.php"><img class="la-logoimg" src="/img/logo.png" alt="logo"></a>
     </div>
     <div class="la-greeting">
         Hi, Ella Qi ! <?= $username; ?> <span>Today is <?= $gdate; ?>.</span>
@@ -17,7 +17,7 @@ $gdate = date("m-d-Y") . ",  " . date("l");
         </button>
 
         <button class="la-faq">
-            <a href="">FAQ</a>
+            <a href="/faq/listfaq.php">FAQ</a>
         </button>
     </div>
 </header>

@@ -13,12 +13,11 @@
 <!--        <a class="customizeQuote" href="MotivationQuote/listMotiQuotes.php">Customize motivation quotes</a>-->
 <!--    </div>-->
     <div class="logbtn">
-        <button class="b-login">
-            <a href="">Log in</a>
+        <button class="b-login" name="displayMotiQuote">
+            <a href="/MotivationQuote/motivation.php">Log in</a>
         </button>
         <button class="b-signup">
             <a href="">Sign up</a>
         </button>
     </div>
-
 </div>
