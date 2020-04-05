@@ -1,5 +1,5 @@
 <?php
-require_once '../Classes/quote-database.php';
+require_once '../Classes/database.php';
 require_once '../Classes/motivationquotes.php';
 use Classes\Motivationquote as allmotiquotes;
 use Classes\Database as dbConnect;
@@ -30,10 +30,10 @@ $motiquotes = $q->listQuotes($dbcon);
                 <table class="table table-bordered tbl">
                     <thead>
                     <tr>
-                        <th scope="col">ID</th>
+                        <th scope="col"></th>
                         <th scope="col">Quotes</th>
                         <th scope="col">Category</th>
-                        <th scope="col">Edit</th>
+                        <th scope="col">Update</th>
                         <th scope="col">Delete</th>
                     </tr>
                     </thead>
@@ -46,13 +46,13 @@ $motiquotes = $q->listQuotes($dbcon);
                             <td>
                                 <form action="update.php" method="post">
                                     <input type="hidden" name="id" value="<?= $motiquote['id'] ?>"/>
-                                    <input type="submit" class="button btn btn-primary" name="updateMotiQuote" value="Update"/>
+                                    <input type="submit" class="button btn btn-primary" name="updateMotiQuote" value="Edit"/>
                                 </form>
                             </td>
                             <td>
                                 <form action="delete.php" method="post">
                                     <input type="hidden" name="id" value="<?= $motiquote['id'] ?>"/>
-                                    <input type="submit" class="button btn btn-danger" name="deleteMotiQuote" value="Delete"/>
+                                    <input type="submit" class="button btn btn-danger" name="deleteMotiQuote" value="Remove"/>
                                 </form>
                             </td>
                         </tr>

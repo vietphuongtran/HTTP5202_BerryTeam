@@ -1,5 +1,5 @@
 <?php
-require_once '../Classes/quote-database.php';
+require_once '../Classes/database.php';
 require_once '../Classes/motivationquotes.php';
 use Classes\Motivationquote as allmotiquotes;
 use Classes\Database as dbConnect;
