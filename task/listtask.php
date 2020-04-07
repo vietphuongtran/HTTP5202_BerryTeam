@@ -26,7 +26,6 @@ use Classes\ColleaguesxTasks as colleaguesxtasks;
         <meta name="description" content="Task Management System">
         <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
         <link rel="stylesheet" href ="../Stylesheets/uniform.css">
-        <link rel="stylesheet" href ="../Stylesheets/index.css">
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
     <? include '../includes/header-index.php' ?>

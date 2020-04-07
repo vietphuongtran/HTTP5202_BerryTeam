@@ -23,12 +23,12 @@ if(isset($_POST['displayMotiQuote'])) {
         <title>BerryTeam|Motivation</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="/Stylesheets/displayMotiQuote.css">
-        <link rel="stylesheet" href="../Stylesheets/uniform.css">
-        <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
+        <link rel="stylesheet" href="/Stylesheets/uniform.css">
+        <link rel="stylesheet" type="text/css" href="/Stylesheets/navigation.css">
     </head>
     <body>
-        <? include '../includes/header-landing.php' ?>
-        <? include '../includes/navigation.php' ?>
+        <? include '/includes/header-landing.php' ?>
+        <? include '/includes/navigation.php' ?>
         <div class="color-overlay"></div>
 
         <div class="container">

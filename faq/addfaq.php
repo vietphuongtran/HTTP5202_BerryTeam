@@ -30,15 +30,13 @@ if (isset($_POST['addFaq'])) {
     <meta name="description" content="Frequently Asked Questions">
     <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
     <link rel="stylesheet" href="../Stylesheets/uniform.css">
-    <link rel="stylesheet" href="../Stylesheets/index.css">
+<!--    <link rel="stylesheet" href="../Stylesheets/index.css">-->
     <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
 </head>
 
 <body>
-<? include '../includes/header-index.php' ?>
+<? include '../includes/header-landing.php' ?>
 <? include '../includes/navigation.php' ?>
-
-
 <h1>Add New FAQ</h1>
 <form action="" method="post">
 

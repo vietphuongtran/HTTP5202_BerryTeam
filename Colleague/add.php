@@ -1,6 +1,6 @@
 <?php
 //require_once 'autoload/composer.json';
-require_once '../Classes/quote-database.php';
+require_once '../Classes/database.php';
 require_once '../Classes/colleague.php';
 use Classes\colleague as allcolleagues;
 use Classes\Database as dbConnect;
