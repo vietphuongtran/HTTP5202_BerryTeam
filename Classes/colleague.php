@@ -6,11 +6,13 @@ class Colleague {
     public function searchColleague($dbcon, $searchContent) {
         $sql = "SELECT * FROM colleagues 
         WHERE `id` =  :searchContent 
-        OR `fname` LIKE '% :searchContent%' 
-        OR `lname` LIKE '% :searchContent%'
-        OR `department` LIKE '% :searchContent%'
-        OR `phone` LIKE '% :searchContent%' 
-        OR `email` LIKE '% :searchContent%';";
+        OR `fname` LIKE :searchContent
+        OR `lname` LIKE :searchContent
+        OR `department` LIKE :searchContent
+        OR `phone` LIKE :searchContent
+        OR `email` LIKE :searchContent";
+        $searchContent = "%$searchContent%";
+
         $pdobtm = $dbcon->prepare($sql); //btm: berryteam system
         $pdobtm->bindParam(':searchContent', $searchContent);
 

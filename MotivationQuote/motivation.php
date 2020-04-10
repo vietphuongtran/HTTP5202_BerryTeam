@@ -22,18 +22,18 @@ if(isset($_POST['displayMotiQuote'])) {
         <meta charset="utf-8">
         <title>BerryTeam|Motivation</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/Stylesheets/displayMotiQuote.css">
-        <link rel="stylesheet" href="/Stylesheets/uniform.css">
-        <link rel="stylesheet" type="text/css" href="/Stylesheets/navigation.css">
+        <link rel="stylesheet" type="text/css" href="../Stylesheets/displayMotiQuote.css">
+        <link rel="stylesheet" href="../Stylesheets/uniform.css">
+        <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
     <body>
-        <? include '/includes/header-landing.php' ?>
-        <? include '/includes/navigation.php' ?>
+        <? include '../includes/header-landing.php' ?>
+        <? include '../includes/navigation.php' ?>
         <div class="color-overlay"></div>
 
         <div class="container">
             <div class="displayQuote">
-                <h1>Quote<?= $quote; ?></h1>
+                <h1><?= $quote; ?></h1>
             </div>
             <div class="customize">
                 <a href="list.php">Customize motivation quotes</a>

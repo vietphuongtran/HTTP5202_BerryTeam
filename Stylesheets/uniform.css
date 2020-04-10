@@ -38,7 +38,7 @@ a {
 }
 #la-header::after {
     content: "";
-    background-image: url("/img/PhotobyJeremyRickettsonUnsplash.jpg");
+    background-image: url("../img/PhotobyJeremyRickettsonUnsplash.jpg");
     background-size: cover;
     opacity: 0.9;
     top: -3vw;
