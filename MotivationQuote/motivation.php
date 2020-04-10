@@ -1,6 +1,6 @@
 <?php
 require_once '/var/www/html/Classes/database.php';
-require_once './var/www/html/Classes/motivationquotes.php';
+require_once '/var/www/html/Classes/motivationquotes.php';
 use Classes\Motivationquote as allmotiquotes;
 use Classes\Database as dbConnect;
 
