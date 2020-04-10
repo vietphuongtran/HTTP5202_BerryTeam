@@ -1,7 +1,7 @@
 <?php
 //require_once 'autoload/composer.json';
-require_once '../Classes/database.php';
-require_once '../Classes/colleague.php';
+require_once '/var/www/html/Classes/database.php';
+require_once '/var/www/html/Classes/colleague.php';
 use Classes\colleague as allcolleagues;
 use Classes\Database as dbConnect;
 

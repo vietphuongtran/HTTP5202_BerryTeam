@@ -1,6 +1,6 @@
 <?php
-require_once '../Classes/database.php';
-require_once '../Classes/motivationquotes.php';
+require_once '/var/www/html/Classes/database.php';
+require_once '/var/www/html/Classes/motivationquotes.php';
 use Classes\Motivationquote as allmotiquotes;
 use Classes\Database as dbConnect;
 
@@ -21,8 +21,8 @@ $motiquotes = $q->listQuotes($dbcon);
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
     <body>
-        <? include '../includes/header-landing.php' ?>
-        <? include '../includes/navigation.php' ?>
+        <? include '/var/www/html/includes/header-landing.php' ?>
+        <? include '/var/www/html/includes/navigation.php' ?>
         <div class="maincontainer">
             <h1 class="h1 text-center">Default motivation quotes</h1>
             <div class="m-1">

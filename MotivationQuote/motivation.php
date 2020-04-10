@@ -1,12 +1,11 @@
 <?php
-require_once '../Classes/database.php';
-require_once '../Classes/motivationquotes.php';
+require_once '/var/www/html/Classes/database.php';
+require_once './var/www/html/Classes/motivationquotes.php';
 use Classes\Motivationquote as allmotiquotes;
 use Classes\Database as dbConnect;
 
 $quote = "";
 //get a random quote
-if(isset($_POST['displayMotiQuote'])) {
     //new database connection
     $dbcon = dbConnect::getDb();
     //new instance of quotes class
@@ -14,7 +13,6 @@ if(isset($_POST['displayMotiQuote'])) {
     $motiquote = $q->displayMotiQuote($dbcon);
     // ->column name in the table;
     $quote = $motiquote->quotes;
-}
 ?>
 
 <html lang="en">
@@ -27,8 +25,8 @@ if(isset($_POST['displayMotiQuote'])) {
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
     <body>
-        <? include '../includes/header-landing.php' ?>
-        <? include '../includes/navigation.php' ?>
+        <? include '/var/www/html/includes/header-landing.php' ?>
+        <? include '/var/www/html/includes/navigation.php' ?>
         <div class="color-overlay"></div>
 
         <div class="container">
