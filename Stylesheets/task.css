@@ -1,0 +1,112 @@
+form, h1, h2 {
+    text-align: center;
+}
+.taskH2 {
+    color: white;
+    margin: 1em;
+}
+div {
+    margin-bottom: 1em;
+    text-align: center;
+}
+.flexbox {
+    display: flex;
+    flex-flow: row wrap;
+}
+.tasks {
+    flex: 1 0 0;
+    background: #FFE;
+    color: #000000;
+    margin: 2em;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+#showtaskemployee {
+    text-align: center;
+}
+.showemployee {
+    flex: 1 0 0;
+}
+.taskName {
+    font-weight:bold;
+}
+.taskList {
+    font-weight: bold;
+    font-size: 2em;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+#todo {
+    background: #EF767A;
+}
+#doing {
+    background: #12EAEA;
+}
+#done {
+    background: #B0DB43;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.updateButton {
+    color: white;
+    background: #4C8FFB;
+    border: 1px #3079ED solid;
+}
+
+.updateButton:hover {
+    border: 1px #2F5BB7 solid;
+    box-shadow: 0 1px 1px #EAEAEA, inset 0 1px 0 #5A94F1;
+    background: #3F83F1;
+}
+.showButton {
+    color: white;
+    background: #FDA251;
+    border: 1px solid #FB8F3D;
+}
+
+.showButton:hover {
+    border: 1px solid #EB5200;
+    box-shadow: 0 1px #EFEFEF;
+}
+/*Show page*/
+.contentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.taskContainer {
+    width:30%;
+    background: #FFE;
+    border-radius: 30px;
+    color: black;
+}
+.taskContainer div {
+    margin:1em;
+}
+/*Update and add page*/
+.inputfield {
+    width: 100%;
+    border-bottom: 2px solid #adadad;
+    height: 2.5em;
+    text-align: center;
+}
+.inputtext {
+    font-size: 15px;
+    color: #555555;
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    text-align: center;
+}
+.textareafield {
+    text-align: center;
+    width: 100%;
+    height: 8em;
+    text-align: center;
+}
+.errorMsg {
+    color: red;
+}

@@ -1,0 +1,87 @@
+h2 {
+    text-align: center;
+}
+/*list page*/
+.contentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.discussionContainer {
+    width:60%;
+    background: #FFE;
+    border-radius: 30px;
+    color: black;
+    text-align: center;
+}
+.discussionContainer div {
+    margin: 1em 0 1em 0;
+}
+.discussionH2 {
+    font-weight: bold;
+    font-size: 2em;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    background: #12EAEA;
+    color: white;
+}
+.updateButton {
+    color: white;
+    background: #4C8FFB;
+    border: 1px #3079ED solid;
+}
+
+.updateButton:hover {
+    border: 1px #2F5BB7 solid;
+    box-shadow: 0 1px 1px #EAEAEA, inset 0 1px 0 #5A94F1;
+    background: #3F83F1;
+}
+.showButton {
+    color: white;
+    background: #FDA251;
+    border: 1px solid #FB8F3D;
+}
+
+.showButton:hover {
+    border: 1px solid #EB5200;
+    box-shadow: 0 1px #EFEFEF;
+}
+/*add , update page*/
+.inputfield {
+    width: 80%;
+    border-bottom: 2px solid #adadad;
+    height: 2.5em;
+    text-align: center;
+}
+.inputtext {
+    font-size: 15px;
+    color: #555555;
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    text-align: center;
+}
+.textareafield {
+    text-align: center;
+    width: 80%;
+    height: 8em;
+    text-align: center;
+}
+.errorMsg {
+    color: red;
+}
+/*delete page*/
+#deleteDis {
+    width:50%;
+    height: 8em;
+}
+#discussionH2 {
+    margin: 1em;
+}
+.deleteContainer {
+    text-align: center;
+    background: #4C8FFB;
+}

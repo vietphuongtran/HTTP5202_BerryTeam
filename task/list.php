@@ -3,6 +3,7 @@ require_once '../Classes/database.php';
 require_once '../Classes/task.php';
 require_once '../Classes/colleaguesxtasks.php';
 
+//namespaces
 use Classes\Task as allTaskFunction;
 use Classes\Database as dbConnect;
 use Classes\ColleaguesxTasks as colleaguesxtasks;
@@ -12,11 +13,13 @@ use Classes\ColleaguesxTasks as colleaguesxtasks;
     $db = dbConnect::getDb();
     //instanciate a new instance of a class
     $t = new allTaskFunction();
+    //show tasks that are not been started
     $toDoTasks =  $t->showToDoTasks($db);
-
+    //show all tasks that are in progress
     $doingTasks =  $t->showDoingTasks($db);
-
+    //show all tasks that are done
     $doneTasks =  $t->showDoneTasks($db);
+    //this is to show employee with the task
     $e = new colleaguesxtasks();
 //    $taskEmployees = $e->showEmployeesWithTask($id, $db);
 ?>
@@ -24,24 +27,30 @@ use Classes\ColleaguesxTasks as colleaguesxtasks;
     <head>
         <title>Task List</title>
         <meta name="description" content="Task Management System">
-        <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
         <link rel="stylesheet" href ="../Stylesheets/uniform.css">
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
+        <link rel="stylesheet" href="../Stylesheets/task.css">
     </head>
-    <? include '../includes/header-index.php' ?>
-    <? include '../includes/navigation.php' ?>
     <body>
-
+    <? include '../includes/header-landing.php' ?>
+    <? include '../includes/navigation.php' ?>
     <div id="nav-bar">
         <label for="mobilenav" class="show-menu">Menu</label>
         <input type="checkbox" id="mobilenav" name="mobilenav">
     </div>
-    <h2>Task Management System</h2>
+    <h2 class="taskH2">Task Management System</h2>
+    <div>
+        <form method="post" action="search.php">
+            <input type="text" name="searchWord" />
+            <input type="submit" class="showButton" name="searchTask" value="Search for task"/>
+
+        </form>
+    </div>
         <div class="flexbox">
             <div class="tasks">
-                <div>To Do:</div>
+                <div class="taskList" id="todo">To Do:</div>
                 <?php foreach ($toDoTasks as $toDoTask) { ?>
-                    <div><?= $toDoTask ->name ?></div>
+                    <div class="taskName"><?= $toDoTask ->name ?></div>
                     <div><?= $toDoTask ->description ?></div>
                         <?
                             $id = $toDoTask->id;
@@ -53,22 +62,22 @@ use Classes\ColleaguesxTasks as colleaguesxtasks;
                     <? } ?>
                     </div>
                     <div>
-                        <form action="showtask.php" method="post">
+                        <form action="show.php" method="post">
                             <input type="hidden" name="id" value="<?= $toDoTask->id ?>"/>
-                            <input type="submit" name="showTask" value="Show details"/>
+                            <input type="submit" class="showButton" name="showTask" value="Show details"/>
                         </form>
-                        <form action="updatetask.php" method="post">
+                        <form action="update.php" method="post">
                             <input type="hidden" name="id" value="<?= $toDoTask->id ?>"/>
-                            <input type="submit" name="updateTask" value="Update"/>
+                            <input type="submit" class="updateButton" name="updateTask" value="Update"/>
                         </form>
                     </div>
 
                 <?php } ?>
             </div>
             <div class="tasks">
-                <div>Doing:</div>
+                <div class="taskList" id="doing">Doing:</div>
                 <?php foreach ($doingTasks as $doingTask) { ?>
-                    <div><?= $doingTask ->name ?></div>
+                    <div class="taskName"><?= $doingTask ->name ?></div>
                     <div><?= $doingTask ->description ?></div>
                     <?
                     $id = $doingTask->id;
@@ -80,21 +89,21 @@ use Classes\ColleaguesxTasks as colleaguesxtasks;
                         <? } ?>
                     </div>
                     <div>
-                        <form action="showtask.php" method="post">
+                        <form action="show.php" method="post">
                             <input type="hidden" name="id" value="<?= $doingTask->id ?>"/>
-                            <input type="submit" name="showTask" value="Show details"/>
+                            <input type="submit" class="showButton"  name="showTask" value="Show details"/>
                         </form>
-                        <form action="updatetask.php" method="post">
+                        <form action="update.php" method="post">
                             <input type="hidden" name="id" value="<?= $doingTask->id ?>"/>
-                            <input type="submit" name="updateTask" value="Update"/>
+                            <input class="updateButton" type="submit" name="updateTask" value="Update"/>
                         </form>
                     </div>
                 <?php } ?>
             </div>
             <div class="tasks">
-                <div>Done:</div>
+                <div class="taskList" id="done">Done:</div>
                 <?php foreach ($doneTasks as $doneTask) { ?>
-                    <div><?= $doneTask ->name ?></div>
+                    <div class="taskName"><?= $doneTask ->name ?></div>
                     <div><?= $doneTask ->description ?></div>
                 <?
                 $id = $doneTask->id;
@@ -102,22 +111,23 @@ use Classes\ColleaguesxTasks as colleaguesxtasks;
                 ?>
                 <div class="showemployee"> Done by:
                     <? foreach ($taskColleagues as $taskColleague) { ?>
-                        <div><?= $taskColleague->fname ?></div>
+                        <span><?= $taskColleague->fname ?></span>
                     <? } ?>
                     </div>
                     <div>
-                        <form action="showtask.php" method="post">
+                        <form action="show.php" method="post">
                             <input type="hidden" name="id" value="<?= $doneTask->id ?>"/>
-                            <input type="submit" name="showTask" value="Show details"/>
+                            <input type="submit" class="showButton"  name="showTask" value="Show details"/>
                         </form>
-                        <form action="updatetask.php" method="post">
+                        <form action="update.php" method="post">
                             <input type="hidden" name="id" value="<?= $doneTask->id ?>"/>
-                            <input type="submit" name="updateTask" value="Update"/>
+                            <input type="submit" class="updateButton" name="updateTask" value="Update"/>
                         </form>
                 <?php } ?>
             </div>
         </div>
-        <div><a href="addtask.php">Add a task</a></div>
+        <div><a href="add.php">Add a task</a></div>
         <? include '../includes/footer-landing.php' ?>
     </body>
+</html>
 

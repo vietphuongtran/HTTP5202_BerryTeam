@@ -46,15 +46,39 @@ use PDO;
         }
         public function deleteDiscussion($id, $db)
         {
-            $sql = "Delete from discussions
-            WHERE id = :id";
+            $sql = "Delete from discussions WHERE id = :id";
             $pst = $db->prepare($sql);
 
             $pst->bindParam(':id', $id);
 
-
             $count = $pst->execute();
             return $count;
+        }
+        public function ddlPopulate ($db) {
+            $sql = "Select id, topic from discussions";
+            $pdostm = $db->prepare($sql);
+            $pdostm->execute();
+            //fetching id and topic as associative array
+            //Source: https://phpdelusions.net/pdo/fetch_modes#FETCH_BOTH
+            $discussions = $pdostm->fetchAll(PDO::FETCH_KEY_PAIR);
+            return $discussions;
+
+        }
+        public function searchDiscussion ($searchWord, $db) {
+            $sql = "SELECT * FROM discussions
+        WHERE topic LIKE  :searchWord
+        OR content LIKE :searchWord";
+            $searchWord = "%$searchWord%";
+            $pdostm = $db->prepare($sql);
+            //PHP does not like the % sign
+            //need to get around that by declaring new variable
+            //Reference: https://thisinterestsme.com/wildcard-pdo-prepared-statement/
+            $pdostm->bindParam(':searchWord', $searchWord);
+            //execute
+            $pdostm->execute();
+            //fetch all the data to loop through
+            $searchDiscussions = $pdostm->fetchAll(PDO::FETCH_OBJ);
+            return $searchDiscussions;
         }
     }
     ?>
