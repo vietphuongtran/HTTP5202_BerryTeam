@@ -7,8 +7,9 @@ class Database {
     //server sql connection:
     private static $user = 'root';
     private static $password = 'root_pass';
+    private static $dsn = 'mysql:host=berry;dbname=berry_team';
     //private static $dsn = 'mysql:host=mysql_berry;dbname=berry_team';
-    private static $dsn = 'mysql:host=localhost;dbname=berry_team';
+    //private static $dsn = 'mysql:host=localhost;dbname=berry_team';
     private static $dbcon;
 
     //add driver
