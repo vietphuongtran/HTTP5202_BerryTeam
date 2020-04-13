@@ -14,7 +14,7 @@
 <!--    </div>-->
     <div class="logbtn">
         <button class="b-login" name="displayMotiQuote">
-            <a href="/var/www/html/MotivationQuote/motivation.php">Log in</a>
+            <a href="MotivationQuote/motivation.php">Log in</a>
         </button>
         <button class="b-signup">
             <a href="">Sign up</a>
