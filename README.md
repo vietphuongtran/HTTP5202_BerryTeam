@@ -16,20 +16,30 @@
     * Classes:
       * ###### database.php
       * ###### colleaguesxtasks.php
+      * ###### task.php
+      * ###### comment.php
+      * ###### discussion.php
     * Task: 
-      * ###### addtask.php
-      * ###### showtask.php
-      * ###### listtask.php
-      * ###### updatetask.php
-      * ###### deletetask.php
+      * ###### add.php
+      * ###### show.php
+      * ###### list.php
+      * ###### update.php
+      * ###### delete.php
+      * ###### search.php
     * Discussion: 
-      * ###### newdiscussion.php
-      * ###### showdiscussion.php
-      * ###### listdiscussion.php
-      * ###### updatediscussion.php
-      * ###### deletediscussion.php
+      * ###### add.php
+      * ###### addcomment.php
+      * ###### delete.php
+      * ###### deletecomment.php
+      * ###### list.php
+      * ###### search.php
+      * ###### show.php
+      * ###### update.php
     * Navigation: 
       * ###### Navigation.php
+    * Stylesheet: 
+      * ###### discussion.css
+      * ###### task.css
 ### 2. Ella: Colleague + Motivational Quote + Styling
   * Features:
     * Colleaues: 
