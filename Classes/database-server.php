@@ -10,6 +10,9 @@ class Database {
     private static $dsn = 'mysql:host=mysql_berry;dbname=berry_team' ;
     private static $dbcon;
 
+    //add driver
+    //public static PDO::getAvailableDrivers();
+
     private function __construct()
     {
     }
@@ -23,8 +26,7 @@ class Database {
                 self::$dbcon = new PDO(self::$dsn, self::$user, self::$password);
             } catch (PDOException $e) {
                 $msg = $e->getMessage();
-                echo $msg;
-                echo "Problem connecting to server database...";
+                echo "Problem connecting to server database... " . $msg;;
                 exit();
             }
         }
