@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
 </head>
 <body>
-<? include '../includes/header-landing.php' ?>
-<? include '../includes/navigation.php' ?>
+<? include 'includes/header-landing.php' ?>
+<? include 'includes/navigation.php' ?>
 <div class="maincontainer">
     <h1>404 NOT FOUND...</h1>
 <!--    <div>--><?//= $msg; ?><!--</div>-->
