@@ -69,10 +69,12 @@
        * ###### header-landing.php
        * ###### footer-index.php
        * ###### footer-landing.php
+       * ###### navigation-index.php
     * Stylesheets:
        * ###### index.css
        * ###### uniform.css
        * ###### displayMotivationQuote.css
+       * ###### landing-uniform.css
      * ###### index.php
      * ###### error404.php
 ### 3. Lily: FAQ + Survey + Logo design + Searching banner images
