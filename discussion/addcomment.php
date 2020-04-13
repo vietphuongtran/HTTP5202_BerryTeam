@@ -66,7 +66,7 @@ if (isset($_POST['commentAdd'])) {
     <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
 </head>
 <body>
-<? include '../includes/index-header.php' ?>
+<? include '../includes/header-landing.php' ?>
 <? include '../includes/navigation.php' ?>
 <h2>Add a comment</h2>
 <div class="contentContainer">
@@ -85,7 +85,7 @@ if (isset($_POST['commentAdd'])) {
     </div>
 </div>
 
-<? include '../includes/footer.php' ?>
+<? include '../includes/footer-landing.php' ?>
 </body>
 </html>
 

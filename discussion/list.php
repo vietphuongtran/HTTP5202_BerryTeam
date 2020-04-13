@@ -25,7 +25,8 @@ $dicussions =  $d->showAllDiscussions($dbcon);
     <body>
     <? include '../includes/header-landing.php' ?>
     <? include '../includes/navigation.php' ?>
-    <div class="contentContainer""><h2>Discussion list</h2></div>
+    <div class="contentContainer">
+	<div class="discussionH2"><h2>Discussion list</h2></div>
             <div>
                 <form method="post" action="search.php">
                     <input type="text" name="searchWord" />
@@ -52,7 +53,7 @@ $dicussions =  $d->showAllDiscussions($dbcon);
                 </div>
             <?php } ?>
             <a href="add.php">Add a discussion</a>
-        </div>
+       
     </div>
     <? include '../includes/footer-landing.php' ?>
     </body>

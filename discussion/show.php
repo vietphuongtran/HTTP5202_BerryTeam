@@ -31,7 +31,7 @@ $db = dbConnect::getDb();
 
     </head>
     <body>
-    <? include '../includes/index-header.php' ?>
+    <? include '../includes/header-landing.php' ?>
     <? include '../includes/navigation.php' ?>
         <div class="contentContainer">
             <div class="discussionContainer">
@@ -63,6 +63,6 @@ $db = dbConnect::getDb();
                 <!--Sollution: Create a adding comment page and all the topic of discussion will appear in dropdown list-->
             </div>
         </div>
-    <? include '../includes/footer.php' ?>
+    <? include '../includes/footer-landing.php' ?>
     </body>
 </html>
