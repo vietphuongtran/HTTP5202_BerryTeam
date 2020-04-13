@@ -1,5 +1,5 @@
 <?php
-require_once '../Classes/database.php';
+require_once '../Classes/databaseserver.php';
 require_once '../Classes/survey.php';
 
 use Classes\survey as allSurvey;

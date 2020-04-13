@@ -1,5 +1,5 @@
 <?php
-require_once '../Classes/database.php';
+require_once '../Classes/databaseserver.php';
 require_once '../Classes/faq.php';
 
 use Classes\faq as allFaq;

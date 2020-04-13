@@ -1,5 +1,5 @@
 <?php
-require_once '../Classes/database.php';
+require_once '../Classes/databaseserver.php';
 require_once '../Classes/discussion.php';
 use Classes\Discussion as allDiscussionFunction;
 use Classes\Database as dbConnect;
