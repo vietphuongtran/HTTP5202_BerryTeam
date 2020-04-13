@@ -1,5 +1,5 @@
 <?php
-require_once '/var/www/html/Classes/database.php';
+require_once '/var/www/html/Classes/database-server.php';
 require_once '/var/www/html/Classes/motivationquotes.php';
 use Classes\Motivationquote as allmotiquotes;
 use Classes\Database as dbConnect;
@@ -62,6 +62,6 @@ $motiquotes = $q->listQuotes($dbcon);
                 <a href="add.php" id="btn_addMotiQuote" class="btn btn-success btn-lg float-right">Create your own motivation team quotes</a>
             </div>
         </div>
-        <? include '../includes/footer-landing.php' ?>
+        <? include '/var/www/html/includes/footer-landing.php' ?>
     </body>
 </html>

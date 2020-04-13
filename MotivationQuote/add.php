@@ -1,7 +1,7 @@
 <?php
 //require_once 'autoload/composer.json';
-require_once '../Classes/database.php';
-require_once '../Classes/motivationquotes.php';
+require_once '/var/www/html/Classes/database-server.php';
+require_once '/var/www/html/Classes/motivationquotes.php';
 use Classes\Motivationquote as allmotiquotes;
 use Classes\Database as dbConnect;
 
@@ -87,6 +87,6 @@ if(isset($_POST['addMotiQuotes'])) {
         </button>
     </form>
 </div>
-<? include '../includes/footer-landing.php' ?>
+<? include '/var/www/html/includes/footer-landing.php' ?>
 </body>
 </html>
