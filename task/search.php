@@ -16,7 +16,7 @@ if (isset($_POST['searchTask'])) {
     $searchtasks = $t->searchTask($searchWord, $db);
     //this doesn't work, found out why
     $errorMsg = "";
-    if (mysqli_num_rows($searchWord)  || $searchtasks === "") {
+    if (empty($searchWord)  || $searchtasks === "") {
         $errorMsg = "No result, please change your search keyword and try again.";
     }
 }
