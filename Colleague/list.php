@@ -1,5 +1,5 @@
 <?php
-require_once '../Classes/database.php';
+require_once '../Classes/databaseserver.php';
 require_once '../Classes/colleague.php';
 use Classes\colleague as allcolleagues;
 use Classes\Database as dbConnect;
