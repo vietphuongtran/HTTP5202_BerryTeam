@@ -12,7 +12,6 @@ class Colleague {
         OR `phone` LIKE :searchContent
         OR `email` LIKE :searchContent";
         $searchContent = "%$searchContent%";
-
         $pdobtm = $dbcon->prepare($sql); //btm: berryteam system
         $pdobtm->bindParam(':searchContent', $searchContent);
 

@@ -6,24 +6,13 @@ body {
     color: darkblue;
     min-height:100%;
 }
-/*body::after {*/
-/*    content: "";*/
-/*    background-image: url("/img/PhotobyOrlovaMariaonUnsplash.jpg");*/
-/*    background-size: cover;*/
-/*    opacity: 0.2;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    bottom: 0;*/
-/*    right: 0;*/
-/*    position: absolute;*/
-/*    z-index: -2;*/
-/*}*/
 a {
     text-decoration: none;
     color: inherit;
 }
 .maincontainer {
-    padding: 0 9vw;
+    min-height: 45%;
+    padding: 3vw 9vw;
 }
 /*************** header ****************/
 #la-header {
@@ -74,13 +63,16 @@ a {
     /*border-radius: 1em;*/
     border: none;
     padding: 0.8vw 0.2vw;
-    font-size: 0.9em;
+    font-size: 1em;
     background: none;
     color: #ffdd6e;
     text-shadow: 1px 1px 5px #000;
     margin-left: 31vw;
     margin-top: 3vw;
     position: relative;
+}
+.la-logout a:hover {
+    color: whitesmoke;
 }
 /*.la-logout::after {*/
 /*    content: "";*/
@@ -95,13 +87,16 @@ a {
 /*    border-radius: 1.3em;*/
 /*}*/
 .la-faq {
-    font-size: 0.9em;
+    font-size: 1em;
     margin-left: 2vw;
     margin-top: 3vw;
     border: none;
     background: none;
     color: #EF767A;
     text-shadow: 1px 1px 4px gray;
+}
+.la-faq a:hover {
+    color: whitesmoke;
 }
 /*************** body test ****************/
 /*.b-content {*/
@@ -125,7 +120,7 @@ a {
 }
 #la-footer::after {
     content: "";
-    background-image: url("/img/PhotobyJeremyRickettsonUnsplash.jpg");
+    background-image: url("../img/PhotobyJeremyRickettsonUnsplash.jpg");
     background-size: cover;
     opacity: 0.6;
     top: -3vw;

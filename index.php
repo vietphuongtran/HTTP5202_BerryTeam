@@ -7,12 +7,12 @@
         <link rel="stylesheet" type="text/css" href="Stylesheets/index.css">
     </head>
     <body>
-        <div class="color-overlay"></div>
+    <div class="color-overlay"></div>
 
-        <?php
-        include "includes/header-index.php";
-        include "includes/navigation.php";
-        include "includes/banner-index.php";
-        include "includes/footer-index.php"; ?>
+    <?php
+    include "includes/header-index.php";
+    //include "includes/navigation-index.php";
+    include "includes/banner-index.php";
+    include "includes/footer-index.php"; ?>
     </body>
 </html>

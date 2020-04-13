@@ -3,19 +3,20 @@ namespace Classes;
 use PDO;
 
 class Motivationquote {
+
     public function displayMotiQuote($dbcon) {
         $sql = "SELECT quotes FROM quotes
         ORDER BY RAND() LIMIT 1";
         $pdobtm = $dbcon->prepare($sql);
-        $pdobtm -> execute();
-        return $pdobtm->fetch(PDO::FETCH_OBJ);
+        $pdobtm->execute();
+        $result = $pdobtm->fetch(PDO::FETCH_OBJ);
+        return $result;
     }
 
     public function listQuotes($dbcon) {
         $sql = "SELECT * FROM quotes";
         $pdobtm = $dbcon->prepare($sql); //btm: berryteam system
         $pdobtm->execute();
-
         $motivationquotes = $pdobtm->fetchAll(PDO::FETCH_ASSOC);
         return $motivationquotes;
     }

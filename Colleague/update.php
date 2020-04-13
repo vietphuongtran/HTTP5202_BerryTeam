@@ -84,74 +84,72 @@ if(isset($_POST['updColleague'])) {
 ?>
 
 <html lang="en">
-    <head>
-        <title>Edit Team member|Berryteam</title>
-        <meta name="description" content="Berryteam System">
-        <meta name="keywords" content="Berryteam, Colleague, Admission">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="CSS/main.css" type="text/css">
+<head>
+    <title>Edit Team member|Berryteam</title>
+    <meta name="description" content="Berryteam System">
+    <meta name="keywords" content="Berryteam, Colleague, Admission">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/main.css" type="text/css">
+    <link rel="stylesheet" href="../Stylesheets/uniform.css">
+    <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
+</head>
+<body>
+<? include '../includes/header-landing.php' ?>
+<? include '../includes/navigation.php' ?>
+<div class="maincontainer">
+    <h1>Edit team member <?= $fname; ?> <?= $lname; ?> information</h1>
+    <!--    Form to Update  Colleague -->
+    <form action="" method="post">
+        <input type="hidden" name="collid" value="<?= $id; ?>" />
 
-        <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-        <link rel="stylesheet" href="../Stylesheets/uniform.css">
-        <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
-    </head>
-    <body>
-        <? include '../includes/header-landing.php' ?>
-        <? include '../includes/navigation.php' ?>
-        <div class="maincontainer">
-            <h1>Edit team member <?= $fname; ?> <?= $lname; ?> information</h1>
-            <!--    Form to Update  Colleague -->
-            <form action="" method="post">
-                <input type="hidden" name="collid" value="<?= $id; ?>" />
-
-                <div class="form-group">
-                    <label for="fname">First Name :</label>
-                    <input type="text" class="form-control" name="fname" id="fname" value="<?= $fname; ?>"
-                           placeholder="<?= $fname; ?>">
-                    <span style="color: red">
+        <div class="form-group">
+            <label for="fname">First Name :</label>
+            <input type="text" class="form-control" name="fname" id="fname" value="<?= $fname; ?>"
+                   placeholder="<?= $fname; ?>">
+            <span style="color: red">
                         <?= $fnameerr; ?>
                     </span>
-                </div>
-                <div class="form-group">
-                    <label for="lname">Last Name :</label>
-                    <input type="text" class="form-control" name="lname" id="lname" value="<?= $lname; ?>"
-                           placeholder="<?= $lname; ?>">
-                    <span style="color: red">
+        </div>
+        <div class="form-group">
+            <label for="lname">Last Name :</label>
+            <input type="text" class="form-control" name="lname" id="lname" value="<?= $lname; ?>"
+                   placeholder="<?= $lname; ?>">
+            <span style="color: red">
                         <?= $lnameerr; ?>
                     </span>
-                </div>
-                <div class="form-group">
-                    <label for="department">Department :</label>
-                    <input type="text" class="form-control" name="department" id="department" value="<?= $department; ?>"
-                           placeholder="<?= $department; ?>">
-                    <span style="color: red">
+        </div>
+        <div class="form-group">
+            <label for="department">Department :</label>
+            <input type="text" class="form-control" name="department" id="department" value="<?= $department; ?>"
+                   placeholder="<?= $department; ?>">
+            <span style="color: red">
                         <?= $departmenterr; ?>
                     </span>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number :</label>
-                    <input type="text" class="form-control" name="phone" id="phone" value="<?= $phone; ?>"
-                           placeholder="<?= $phone; ?>">
-                    <span style="color: red">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number :</label>
+            <input type="text" class="form-control" name="phone" id="phone" value="<?= $phone; ?>"
+                   placeholder="<?= $phone; ?>">
+            <span style="color: red">
                         <?= $phoneerr; ?>
                     </span>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email :</label>
-                    <input type="text" class="form-control" id="email" name="email"
-                           value="<?= $email; ?>" placeholder="<?= $email; ?>">
-                    <span style="color: red">
+        </div>
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="text" class="form-control" id="email" name="email"
+                   value="<?= $email; ?>" placeholder="<?= $email; ?>">
+            <span style="color: red">
                         <?= $emailerr; ?>
                     </span>
-                </div>
-                <a href="list.php" id="btn_back" class="btn btn-success float-left">Back</a>
-                <button type="submit" name="updColleague"
-                        class="btn btn-primary float-right" id="btn-submit">
-                    Save
-                </button>
-            </form>
         </div>
-        <? include '../includes/footer-landing.php' ?>
-    </body>
+        <a href="list.php" id="btn_back" class="btn btn-success float-left">Back</a>
+        <button type="submit" name="updColleague"
+                class="btn btn-primary float-right" id="btn-submit">
+            Save
+        </button>
+    </form>
+</div>
+<? include '../includes/footer-landing.php' ?>
+</body>
 </html
 

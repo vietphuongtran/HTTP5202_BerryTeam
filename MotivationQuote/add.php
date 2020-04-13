@@ -15,11 +15,6 @@ if(isset($_POST['addMotiQuotes'])) {
     $quotes = $_POST['quotes'];
     $category = $_POST['category'];
 
-    //new database connection
-    $dbcon = dbConnect::getDb();
-    //new instance of quotes class
-    $quote = new allmotiquotes();
-    $count = $quote->addMotiQuotes($dbcon, $quotes, $category);
 
     //validation
     function validation ($input) {
@@ -31,57 +26,67 @@ if(isset($_POST['addMotiQuotes'])) {
         }
         return $errormsg;
     }
-    validation($quote);
+    validation($quotes);
+    validation($category);
+    if($errormsg == "") {
+        //new database connection
+        $dbcon = dbConnect::getDb();
+        //new instance of quotes class
+        $quote = new allmotiquotes();
+        $count = $quote->addMotiQuotes($dbcon, $quotes, $category);
 
-    if ($count) {
-        header("Location: list.php");
-    } else {
-        echo "Problem adding a motivation quote...";
+        if ($count) {
+            header("Location: list.php");
+        } else {
+            echo "Problem adding a motivation quote...";
+        }
     }
+
+
 }
 ?>
 
 <html lang="en">
-    <head>
-        <title>Add Your Motivation Quotes|Berryteam</title>
-        <meta name="description" content="Berryteam System">
-        <meta name="keywords" content="Berryteam, Motivation, Quotes">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+    <title>Add Your Motivation Quotes|Berryteam</title>
+    <meta name="description" content="Berryteam System">
+    <meta name="keywords" content="Berryteam, Motivation, Quotes">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="/Stylesheets/uniform.css">
-        <link rel="stylesheet" type="text/css" href="/Stylesheets/navigation.css">
-    </head>
-    <body>
-        <? include '../includes/header-landing.php' ?>
-        <? include '../includes/navigation.php' ?>
-        <div class="maincontainer">
-            <h1>Create your own motivation quotes</h1>
-            <!--    Form to Add a Motivation Quote    -->
-            <form action="" method="post">
-                <div class="form-group">
-                    <label for="quotes">Type your motivation quote </label>
-                    <input type="text" class="form-control" name="quotes" id="quotes" value=""
-                           placeholder="Add your customized motivation quote here">
-                    <span style="color: red">
+    <link rel="stylesheet" href="../Stylesheets/uniform.css">
+    <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
+</head>
+<body>
+<? include '../includes/header-landing.php' ?>
+<? include '../includes/navigation.php' ?>
+<div class="maincontainer">
+    <h1>Create your own motivation quotes</h1>
+    <!--    Form to Add a Motivation Quote    -->
+    <form action="" method="post">
+        <div class="form-group">
+            <label for="quotes">Type your motivation quote </label>
+            <input type="text" class="form-control" name="quotes" id="quotes" value=""
+                   placeholder="Add your customized motivation quote here">
+            <span style="color: red">
                         <?= $errormsg; ?>
                     </span>
-                </div>
-                <div class="form-group">
-                    <label for="category">Give it a category</label>
-                    <input type="text" class="form-control" name="category" id="category" value=""
-                           placeholder="Movie? Music? Or novel? Default category: other">
-                    <span style="color: red">
-
-                    </span>
-                </div>
-
-                <a href="list.php" id="btn_back" class="btn btn-success float-left">Back</a>
-                <button type="submit" name="addMotiQuotes"
-                        class="btn btn-primary float-right" id="btn-submit">
-                    Add this quote
-                </button>
-            </form>
         </div>
-        <? include '../includes/footer-landing.php' ?>
-    </body>
+        <div class="form-group">
+            <label for="category">Give it a category</label>
+            <input type="text" class="form-control" name="category" id="category" value=""
+                   placeholder="Movie? Music? Or novel? Default category: other">
+            <span style="color: red">
+                        <?= $errormsg; ?>
+                    </span>
+        </div>
+
+        <a href="list.php" id="btn_back" class="btn btn-success float-left">Back</a>
+        <button type="submit" name="addMotiQuotes"
+                class="btn btn-primary float-right" id="btn-submit">
+            Add this quote
+        </button>
+    </form>
+</div>
+<? include '../includes/footer-landing.php' ?>
+</body>
 </html>
