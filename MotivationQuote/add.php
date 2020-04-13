@@ -41,8 +41,6 @@ if(isset($_POST['addMotiQuotes'])) {
             echo "Problem adding a motivation quote...";
         }
     }
-
-
 }
 ?>
 
