@@ -17,7 +17,7 @@
 <body>
 <? include 'includes/header-landing.php' ?>
 <? include 'includes/navigation.php' ?>
-<div class="maincontainer">
+<div class="maincontainer error">
     <h1>404 NOT FOUND...</h1>
 <!--    <div>--><?//= $msg; ?><!--</div>-->
 </div>
