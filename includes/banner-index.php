@@ -11,10 +11,10 @@
     </div>
     <div class="logbtn">
         <button class="b-login" name="displayMotiQuote">
-            <a href="MotivationQuote/motivation.php">Log in</a>
+            <a href="/MotivationQuote/motivation.php">Log in</a>
         </button>
         <button class="b-signup">
-            <a href="registration/addRegistration.php">Sign up</a>
+            <a href="/registration/addRegistration.php">Sign up</a>
         </button>
     </div>
 </div>

@@ -1,6 +1,6 @@
 <?php
-require_once '/var/www/html/Classes/database-server.php';
-require_once '/var/www/html/Classes/motivationquotes.php';
+require_once '/Classes/database-server.php';
+require_once '/Classes/motivationquotes.php';
 use Classes\Motivationquote as allmotiquotes;
 use Classes\Database as dbConnect;
 
@@ -23,7 +23,7 @@ $quote = $motiquote->quotes;
     <title>BerryTeam|Motivation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/Stylesheets/displayMotiQuote.css">
-    <link rel="stylesheet" href="../Stylesheets/uniform.css">
+    <link rel="stylesheet" href="/Stylesheets/uniform.css">
     <link rel="stylesheet" type="text/css" href="/Stylesheets/navigation.css">
 </head>
 <body>
