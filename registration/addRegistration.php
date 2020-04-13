@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-require_once 'Classes/databaseserver.php';
+require_once 'Classes/database.php';
 require_once 'Classes/registration.php';
 use Classes\Database;
 use Classes\Registration;
