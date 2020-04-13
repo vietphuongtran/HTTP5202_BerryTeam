@@ -26,7 +26,7 @@ class Database {
             try {
                 self::$dbcon = new PDO(self::$dsn, self::$user, self::$password);
             } catch (PDOException $e) {
-                header("Location: /error404.php");
+                //header("Location: /error404.php");
                 $msg = $e->getMessage();
                 echo "Problem connecting to server database... " . $msg;
                 exit();
