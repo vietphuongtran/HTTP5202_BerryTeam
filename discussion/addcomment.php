@@ -42,7 +42,7 @@ if (isset($_POST['commentAdd'])) {
         if ($ddlInfo === "none") {
 
             $ddlErr = "Field required";
-        }
+        } //test comment
         return $ddlErr;
     }
 
