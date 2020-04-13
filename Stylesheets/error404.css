@@ -10,6 +10,3 @@
     position: absolute;
     z-index: -1;
 }
-.error {
-    max-height: 500px;
-}
