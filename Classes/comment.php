@@ -38,14 +38,6 @@ class Comment {
         $pst->bindParam(':id', $id);
         return $pst->execute();
     }
-
-    public function commentCount($db) {
-        $sql = "Select count(id) from comments group by discussion_id";
-        $pst = $db->prepare($sql);
-        $pst->bindParam(':discussion_id');
-        return $pst->execute();
-        return $pst->fetchColumn(PDO::FETCH_OBJ);
-    }
     //because there are 2 ids from discussions and comments table doing that give me just an id of comment to loop through
     public function getCommentToDelete ($id, $db) {
             $sql = "Select comments.id from comments 

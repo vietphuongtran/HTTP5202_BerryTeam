@@ -40,7 +40,7 @@
     * Stylesheet: 
       * ###### discussion.css
       * ###### task.css
-### 2. Ella: Colleague + Motivational Quote + Styling
+### 2. Ella: Colleague + Motivational Quote + Styling + Hosting
   * Features:
     * Colleaues: 
       *A page lisiting all team members' information (name, department, phone number, email). Users can add, update, delete and search for team members*

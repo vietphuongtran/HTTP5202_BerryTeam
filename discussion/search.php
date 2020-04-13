@@ -26,6 +26,7 @@ if (isset($_POST['searchDiscussion'])) {
     <link rel="stylesheet" href ="../Stylesheets/uniform.css">
     <link rel="stylesheet" href ="../Stylesheets/discussion.css">
     <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <? include '../includes/header-landing.php' ?>
@@ -54,11 +55,20 @@ if (isset($_POST['searchDiscussion'])) {
                 $comments = $c->getCommentByDiscussionId($id, $db);
                 ?>
                 <?php foreach ($comments as $comment) { ?>
-                    <div><?=$comment->comment?></div>
+                    <div>
+                        <form action="deletecomment.php" method="post">
+                            <?=$comment->comment ?>
+                            <input type="hidden" name="cid" value="<?=$comment->commentID?>" />
+                            <span><button type="submit" name="deleteComment" class="showButton"><i class="fa fa-trash"></span>  Delete<span></i></button></span>
+                        </form>
+                    </div>
                 <? } ?>
                 <!--Adding comment here create post back that will erase all show discussion-->
                 <!--Sollution: Create a adding comment page and all the topic of discussion will appear in dropdown list-->
-                <div><a href="addcomment.php">Add your comment</a></div>
+                <form action="addcomment.php" method="post">
+                    <input type="hidden" name="commentid" value="<?= $discussion->id ?>" />
+                    <input type="submit" class="updateButton" name="addComment" value="Adding comment"/>
+                </form>
             <?php } ?>
             <a href="list.php">Back to List</a>
         </div>
