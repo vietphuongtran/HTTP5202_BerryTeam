@@ -1,6 +1,6 @@
 
 <?php
-require_once '../Classes/database.php';
+require_once '../Classes/databaseserver.php';
 require_once '../Classes/comment.php';
 
 use Classes\Database as dbConnect;
