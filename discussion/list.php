@@ -1,24 +1,14 @@
 <?php
 require_once '../Classes/database.php';
 require_once '../Classes/discussion.php';
-require_once '../Classes/comment.php';
 
 use Classes\Discussion as allDiscussionFunction;
 use Classes\Database as dbConnect;
-use Classes\Comment as allComment;
 //generate new database connection
 $dbcon = dbConnect::getDb();
 //instanciate a new instance of a class
 $d = new allDiscussionFunction();
 $dicussions =  $d->showAllDiscussions($dbcon);
-
-$c = new allComment();
-//count the comment
-$commentCounts = $c->commentCount($dbcon);
-
-
-
-
 ?>
 
 <html lang="en">
@@ -33,7 +23,7 @@ $commentCounts = $c->commentCount($dbcon);
         <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
     </head>
     <body>
-    <? include '../includes/index-header.php' ?>
+    <? include '../includes/header-landing.php' ?>
     <? include '../includes/navigation.php' ?>
     <div class="contentContainer">
         <div class="discussionContainer">
@@ -66,6 +56,6 @@ $commentCounts = $c->commentCount($dbcon);
             <a href="add.php">Add a discussion</a>
         </div>
     </div>
-    <? include '../includes/footer.php' ?>
+    <? include '../includes/footer-landing.php' ?>
     </body>
 </html>
