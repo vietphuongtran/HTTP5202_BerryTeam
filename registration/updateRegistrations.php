@@ -4,7 +4,8 @@ require_once 'Classes/registration.php';
 use Classes\Database;
 use Classes\Registration;
 $name = $username = "";
-
+//This updates the selected values of a certain user.
+//we need to take the existing values first then automatically fill the form, so it can be changed
 if(isset($_POST['updateRegistrations'])){
     $id= $_POST['id'];
     $user = 'root';
@@ -54,10 +55,12 @@ if(isset($_POST['updRegistration'])) {
     <meta name="description" content="Team Registration System">
     <meta name="keywords" content="Team, Registration, Login, Admin">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/main.css" type="text/css">
+    <link rel="stylesheet" href="../Stylesheets/uniform.css">
+    <link rel="stylesheet" type="text/css" href="/Stylesheets/navigation.css">
 </head>
-
 <body>
+<? include '../includes/header-landing.php' ?>
+<? include '../includes/navigation.php' ?>
 
 <div>
     <!--     -->
@@ -131,7 +134,7 @@ if(isset($_POST['updRegistration'])) {
         </button>
     </form>
 </div>
-
+<? include '../includes/footer-landing.php' ?>
 
 </body>
 </html

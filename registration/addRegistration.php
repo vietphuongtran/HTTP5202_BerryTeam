@@ -4,7 +4,7 @@ require_once 'Classes/database.php';
 require_once 'Classes/registration.php';
 use Classes\Database;
 use Classes\Registration;
-
+//This page is where you will add a user.
 $nameerr = "";
 $unameerr = "";
 $passerr = "";
@@ -15,7 +15,7 @@ $errorsending = false;
 
 $phonepattern = '/^(\d[\s-]?)?[\(\[\s-]{0,2}?\d{3}[\)\]\s-]{0,2}?\d{3}[\s-]?\d{4}$/i';
 
-
+//once the form is filled out, it will validate that each value was filled in correctly.
 if(isset($_POST['register'])) {
 
     if($_POST['name'] == "") {
@@ -65,9 +65,12 @@ if(isset($_POST['register'])) {
     <meta name="description" content="Team Registration System">
     <meta name="keywords" content="Team, Registration, Login, Admin">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/main.css" type="text/css">
+    <link rel="stylesheet" href="../Stylesheets/uniform.css">
+    <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
 </head>
 <body>
+<? include '../includes/header-landing.php' ?>
+<? include '../includes/navigation.php' ?>
 <div>
     <!--    Form to Add  Student -->
     <form action="" method="post">
@@ -90,6 +93,7 @@ if(isset($_POST['register'])) {
                    placeholder="Enter a password">
             <input type="checkbox" onclick="showPass()">Show Password
             <div><span style="color:red;"><?= $passerr; ?></span></div>
+            <!--Show password when box is checked and vice versa-->
             <script>
                 function showPass() {
                     let x = document.getElementById("regpassword");
@@ -99,7 +103,7 @@ if(isset($_POST['register'])) {
                         x.type = "password";
                     }
                 }
-                </script>
+            </script>
         </div>
 
         <div class="form-group">
@@ -128,6 +132,6 @@ if(isset($_POST['register'])) {
         </button>
     </form>
 </div>
-
+<? include '../includes/footer-landing.php' ?>
 </body>
 </html>

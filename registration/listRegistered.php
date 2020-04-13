@@ -5,7 +5,7 @@ require_once 'Classes/registration.php';
 use Classes\Database;
 use Classes\Registration;
 
-
+//This is the page to show registered users to the site.
 $dbcon = Database::getDb();
 
 $s = new Registration();
@@ -35,10 +35,13 @@ $registrations = $s->listRegistered($dbcon);
     <meta name="description" content="Team Registration System">
     <meta name="keywords" content="Team, Registration, Login, Admin">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
+    <link rel="stylesheet" href="../Stylesheets/uniform.css">
+    <link rel="stylesheet" type="text/css" href="/Stylesheets/navigation.css">
 </head>
-
 <body>
+<? include '../includes/header-landing.php' ?>
+<? include '../includes/navigation.php' ?>
 <p class="h1 text-center">Team Registration System</p>
 <div class="m-1">
     <!--    Displaying Data in Table-->
@@ -48,7 +51,6 @@ $registrations = $s->listRegistered($dbcon);
             <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">User Name</th>
-            <th scope="col">Password</th>
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
             <th scope="col">Is Administrator</th>
@@ -57,41 +59,40 @@ $registrations = $s->listRegistered($dbcon);
         </tr>
         </thead>
         <tbody>
-            <?php
-                foreach($registrations as $registered) {
+        <?php
+        foreach($registrations as $registered) {
             ?>
-                    <tr>
-                        <th><?= $registered->registrationId; ?></th>
-                        <td><?= $registered->registeredName; ?></td>
-                        <td><?= $registered->registeredLogin; ?></td>
-                        <td><?= $registered->registeredPassword; ?></td>
-                        <td><?= $registered->registeredEmail; ?></td>
-                        <td><?= $registered->registeredPhoneNum; ?></td>
-                        <td><?php
-                        if ($registered->isAdmin == 1){
-                            echo 'Is an Administrator';
-                        }else{
-                            echo 'Is not an Administrator';
-                        }?></td>
-                        <td>
-                            <form action="updateRegistrations.php" method="post">
-                                <input type="hidden" name="id" value="<?= $registered->registrationId ?>"/>
-                                <input type="submit" class="button btn btn-primary" name="updateRegistrations" value="Update"/>
-                            </form>
-                        </td>
-                        <td>
-                            <form action="deleteRegistration.php" method="post">
-                                <input type="hidden" name="id" value="<?= $registered->registrationId ?>"/>
-                                <input type="submit" class="button btn btn-danger" name="deleteRegistration" value="Delete"/>
-                            </form>
-                        </td>
-                    </tr>
+            <tr>
+                <th><?= $registered->registrationId; ?></th>
+                <td><?= $registered->registeredName; ?></td>
+                <td><?= $registered->registeredLogin; ?></td>
+                <td><?= $registered->registeredEmail; ?></td>
+                <td><?= $registered->registeredPhoneNum; ?></td>
+                <td><?php
+                    if ($registered->isAdmin == 1){
+                        echo 'Is an Administrator';
+                    }else{
+                        echo 'Is not an Administrator';
+                    }?></td>
+                <td>
+                    <form action="updateRegistrations.php" method="post">
+                        <input type="hidden" name="id" value="<?= $registered->registrationId ?>"/>
+                        <input type="submit" class="button btn btn-primary" name="updateRegistrations" value="Update"/>
+                    </form>
+                </td>
+                <td>
+                    <form action="deleteRegistration.php" method="post">
+                        <input type="hidden" name="id" value="<?= $registered->registrationId ?>"/>
+                        <input type="submit" class="button btn btn-danger" name="deleteRegistration" value="Delete"/>
+                    </form>
+                </td>
+            </tr>
         <?php  } ?>
 
         </tbody>
     </table>
     <a href="addRegistration.php" id="btn_addRegistration" class="btn btn-success btn-lg float-right">Register</a>
-
 </div>
+<? include '../includes/footer-landing.php' ?>
 </body>
 </html>
