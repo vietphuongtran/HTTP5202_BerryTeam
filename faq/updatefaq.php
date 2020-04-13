@@ -1,69 +1,66 @@
 <?php
 require_once '../Classes/database.php';
-require_once '../Classes/faq.php';
+require_once '../Classes/survey.php';
 
-use Classes\faq as allFaq;
+use Classes\survey as allSurvey;
 use Classes\database as dbConnect;
 
-$question = $answer = "";
 
-if(isset($_POST['updFaq'])){
-    $id= $_POST['id'];
-    $db = dbConnect::getDb();
-
-    $t = new allFaq();
-    $faq = $t->getFaqById($id, $db);
-
-    $question =  $faq->question;
-    $answer = $faq->answer;
-
-
-}
-if(isset($_POST['upFaq'])){
-    $id= $_POST['tid'];
+if (isset($_POST['addSurvey'])) {
     $question = $_POST['question'];
-    $answer = $_POST['answer'];
+    $optionA = $_POST['optionA'];
+    $optionB = $_POST['optionB'];
+    $optionC = $_POST['optionC'];
 
 
     $db = dbConnect::getDb();
-    $s = new allFaq();
-    $count = $s->updateFaq($id, $question, $answer, $db);
+    $surv = new allSurvey();
+    $count = $surv->addSurvey($question, $optionA, $optionB, $optionC, $db);
 
-    if($count){
-        header('Location: listfaq.php');
+
+    if ($count) {
+        header("Location: listfaq.php");
     } else {
-        echo "There was a problem updating FAQ";
+        echo "There was a problem adding a Survey";
     }
+
 }
 ?>
 <html lang="en">
 <head>
-    <title>Frequently Asked Questions</title>
-    <meta name="description" content="Frequently Asked Questions">
+    <title>Add Survey</title>
+    <meta name="description" content="Survey">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/main.css" type="text/css">
     <link rel="stylesheet" href="../Stylesheets/taskcrud.css">
-    <link rel="stylesheet" href ="../Stylesheets/uniform.css">
-    <link rel="stylesheet" href ="../Stylesheets/index.css">
+    <link rel="stylesheet" href="../Stylesheets/uniform.css">
     <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
 </head>
+
 <body>
-<? include "header.php" ?>
+<? include '../includes/header-landing.php' ?>
 <? include '../includes/navigation.php' ?>
 
-<h1>Update a FAQ</h1>
-<form action="" method="post">
-    <input type="hidden" name="tid" value="<?= $id; ?>" />
-    <div>
-        <label for = "question">Question: </label>
-        <input type="text" name="question" id="question" value ="<?= $question; ?>">
-    </div>
-    <div>
-        <label for = "answer">Answer </label>
-        <textarea name="answer" id="answer"><?= $answer; ?></textarea>
-    </div>
+<div class="maincontainer">
+    <h1>Add New Survey </h1>
+    <form action="" method="post">
 
-    <button type="submit" name="upFaq" id="submit">Update FAQ</button>
-    <a href="listfaq.php" id="backBtn">Back to List</a>
-</form>
-<? include "footer-landing.php" ?>
+        <div>
+            <label for="question">Question: </label>
+            <input type="text" name="question" id="question">
+        </div>
+
+        <div>
+            <label for="answer">Answer: </label>
+            <input type="text" name="answer" id="answer">
+        </div>
+
+        <a href="list.php" id="btn_back" class="btn btn-success float-left">Back</a>
+        <button type="submit" name="addSurvey" class="btn btn-primary float-right" id="btn-submit">Add New Survey</button>
+    </form>
+</div>
+
+<? include '../includes/footer-landing.php' ?>
 </body>
 </html>
+
