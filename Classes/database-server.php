@@ -23,7 +23,8 @@ class Database {
                 self::$dbcon = new PDO(self::$dsn, self::$user, self::$password);
             } catch (PDOException $e) {
                 $msg = $e->getMessage();
-                echo "Problem connecting";
+                echo $msg;
+                echo "Problem connecting to server database...";
                 exit();
             }
         }
