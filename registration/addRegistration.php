@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
-require_once 'Classes/database.php';
-require_once 'Classes/registration.php';
+require_once '../Classes/databaseserver.php';
+require_once '../Classes/registration.php';
 use Classes\Database;
 use Classes\Registration;
 //This page is where you will add a user.
