@@ -1,5 +1,5 @@
 <?php
-require_once '../Classes/database.php';
+require_once '../Classes/databaseserver.php';
 require_once '../Classes/discussion.php';
 
 use Classes\Discussion as allDiscussionFunction;
@@ -25,9 +25,7 @@ $dicussions =  $d->showAllDiscussions($dbcon);
     <body>
     <? include '../includes/header-landing.php' ?>
     <? include '../includes/navigation.php' ?>
-    <div class="contentContainer">
-        <div class="discussionContainer">
-            <div class="discussionH2"><h2>Discussion list</h2></div>
+    <div class="contentContainer""><h2>Discussion list</h2></div>
             <div>
                 <form method="post" action="search.php">
                     <input type="text" name="searchWord" />
@@ -59,3 +57,4 @@ $dicussions =  $d->showAllDiscussions($dbcon);
     <? include '../includes/footer-landing.php' ?>
     </body>
 </html>
+

@@ -8,9 +8,9 @@ class Database {
     private static $user = 'root';
     private static $password = 'root_pass';
     //static $dsn = 'mysql:host=berry;dbname=berry_team';
+   //static $dsn = 'mysql:host=berry;dbname=berry_team';
     private static $dsn = 'mysql:host=berry_db;dbname=berry_team';
     private static $dbcon;
-
     //add driver
     //public static PDO::getAvailableDrivers();
 
