@@ -1,5 +1,5 @@
 # HTTP5202_BerryTeam
-## Project URL: berryteam-4u.com
+## Project URL: https://berryteam-4u.com/
 ## project-repo-berryteam instruction (to team members)
   *  Class contain "database.php" together with all the classes that will be used in your code
   *  The interface or CRUD will be stored in the folder with the respective name 
