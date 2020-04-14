@@ -43,7 +43,7 @@ if(isset($_POST['addDiscuss'])) {
         <link rel="stylesheet" type="text/css" href="../Stylesheets/navigation.css">
     </head>
     <body>
-    <? include '../includes/index-header.php' ?>
+    <? include '../includes/header-landing.php' ?>
     <? include '../includes/navigation.php' ?>
     <div class="contentContainer">
         <div class="discussionContainer">
@@ -64,6 +64,6 @@ if(isset($_POST['addDiscuss'])) {
             </form>
         </div>
     </div>
-    <? include '../includes/footer.php' ?>
+    <? include '../includes/footer-landing.php' ?>
     </body>
 </html>
