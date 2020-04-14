@@ -4,15 +4,9 @@ use PDO;
 use PDOException;
 class Database {
     private static $user = 'root';
-<<<<<<< Updated upstream
     private static $password = 'root';
     private static $dbname = 'berryteam';
     private static $dsn = 'mysql:host=localhost;dbname=berryteam' ;
-=======
-    private static $password = 'root_pass';
-    //private static $dbname = 'berryteam';
-    private static $dsn = 'mysql:host=berry_db;dbname=berry_team' ;
->>>>>>> Stashed changes
     private static $dbcon;
 
     private function __construct()

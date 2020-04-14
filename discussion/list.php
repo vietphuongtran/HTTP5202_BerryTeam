@@ -26,7 +26,8 @@ $dicussions =  $d->showAllDiscussions($dbcon);
     <? include '../includes/header-landing.php' ?>
     <? include '../includes/navigation.php' ?>
     <div class="contentContainer">
-	<div class="discussionH2"><h2>Discussion list</h2></div>
+        <div class="discussionContainer">
+            <div class="discussionH2"><h2>Discussion list</h2></div>
             <div>
                 <form method="post" action="search.php">
                     <input type="text" name="searchWord" />
@@ -36,10 +37,10 @@ $dicussions =  $d->showAllDiscussions($dbcon);
             <?php foreach ($dicussions as $discussion) { ?>
                 <div><?= $discussion->topic ?></div>
                 <div><?= $discussion->content ?></div>
-<!--                <div>-->
-<!--                    --><?php //foreach ($commentCounts as $key => $value) { ?>
-<!--                    --><?//$value?><!-- people has replied to this thread</div>-->
-<!--                --><?// } ?>
+                <!--                <div>-->
+                <!--                    --><?php //foreach ($commentCounts as $key => $value) { ?>
+                <!--                    --><?//$value?><!-- people has replied to this thread</div>-->
+                <!--                --><?// } ?>
                 <div>
                     <form action="show.php" method="post">
                         <input type="hidden" name="id" value="<?= $discussion->id ?>"/>
@@ -53,8 +54,9 @@ $dicussions =  $d->showAllDiscussions($dbcon);
                 </div>
             <?php } ?>
             <a href="add.php">Add a discussion</a>
-       
+        </div>
     </div>
+
     <? include '../includes/footer-landing.php' ?>
     </body>
 </html>
