@@ -1,4 +1,3 @@
-
 <?php
 require_once '../Classes/databaseserver.php';
 require_once '../Classes/comment.php';
