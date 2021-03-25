@@ -97,7 +97,7 @@
       * logo.png
       * logo5.png
 
-### 4. Ossy: Login system + Media/galery
+### 4. Ossy: Login system + Media/gallery
   * Features:
     * Login system: 
       *People can register using email and password and will be redirected to respective user page*
